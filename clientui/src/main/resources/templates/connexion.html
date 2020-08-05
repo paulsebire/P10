@@ -1,0 +1,70 @@
+<!DOCTYPE HTML>
+<html xmlns:th="http://www.thymeleaf.org"
+      xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout"
+      layout:decorate="~{layout}">
+<head>
+    <meta charset="UTF-8"/>
+    <title>Connexion</title>
+
+    <link href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet"
+          integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous"/>
+    <link rel="stylesheet" type="text/css" th:href="@{/css/style.css}"/>
+    <link
+            href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+            rel="stylesheet"
+            integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T"
+            crossorigin="anonymous" />
+    <script
+            src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+            integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
+            crossorigin="anonymous"></script>
+    <script
+            src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.bundle.min.js"
+            integrity="sha384-xrRywqdh3PHs8keKZN+8zzc5TX0GRTLCcmivcbNJWm2rs5C8PRhcEn3czEjhAO9o"
+            crossorigin="anonymous"></script>
+</head>
+<body layout:fragment="content">
+<div class="signup-form col-md-4 mx-auto spacer">
+    <div th:if="${param.error}">
+        <div class="alert alert-danger">
+            Pseudo ou mot de passe incorrects !
+        </div>
+    </div>
+    <div th:if="${param.logout}">
+        <div class="alert alert-info">
+            Vous avez été déconecté avec succès !
+        </div>
+    </div>
+    <form th:action="@{/connexion}" method="post" class="form-horizontal">
+        <fieldset>
+
+            <div class="col-xs-8 col-xs-offset-4 text-center">
+                <h2>Connexion</h2>
+            </div>
+
+            <div class="form-group">
+                <label class="control-label col-xs-4">Pseudo</label>
+                <div class="col-xs-8">
+                    <input type="text" class="form-control" name="username"
+                           required="required">
+                </div>
+            </div>
+            <div class="form-group">
+                <label class="control-label col-xs-4">Mot de passe</label>
+                <div class="col-xs-8">
+                    <input type="password" class="form-control" name="password"
+                           required="required">
+                </div>
+            </div>
+
+            <div class="form-group text-center">
+                <button type="submit" class="btn btn-primary btn-lg ">Envoyer</button>
+            </div>
+
+            <input type="hidden" name="${_csrf.parameterName}" value="${_csrf.token}" />
+
+        </fieldset>
+    </form>
+</div>
+</body>
+</html>

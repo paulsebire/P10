@@ -1,11 +1,9 @@
 package com.books.entities;
 
-import com.fasterxml.jackson.annotation.JsonBackReference;
 import com.fasterxml.jackson.annotation.JsonIgnore;
 import com.fasterxml.jackson.annotation.JsonManagedReference;
 
 import javax.persistence.*;
-import java.util.Collection;
 import java.util.Set;
 
 
@@ -23,7 +21,7 @@ public class Copy{
 
     @JsonIgnore
     @OneToMany(mappedBy = "copy",fetch = FetchType.EAGER, cascade = CascadeType.ALL )
-    private Set<Reservation> reservations;
+    private Set<Emprunt> emprunts;
 
     public Copy() { super();}
 
@@ -37,12 +35,12 @@ public class Copy{
         return id;
     }
 
-    public Set<Reservation> getReservations() {
-        return reservations;
+    public Set<Emprunt> getEmprunts() {
+        return emprunts;
     }
 
-    public void setReservations(Set<Reservation> reservations) {
-        this.reservations = reservations;
+    public void setEmprunts(Set<Emprunt> emprunts) {
+        this.emprunts = emprunts;
     }
 
     public void setId(Long id) {

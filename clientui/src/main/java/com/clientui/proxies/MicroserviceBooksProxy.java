@@ -2,10 +2,9 @@ package com.clientui.proxies;
 
 import com.clientui.beans.BookBean;
 import com.clientui.beans.CopyBean;
-import com.clientui.beans.ReservationBean;
+import com.clientui.beans.EmpruntBean;
 import com.clientui.configuration.FeignConfig;
 import org.springframework.cloud.openfeign.FeignClient;
-import org.springframework.http.ResponseEntity;
 import org.springframework.stereotype.Component;
 import org.springframework.web.bind.annotation.*;
 
@@ -40,18 +39,18 @@ public interface MicroserviceBooksProxy {
     List<CopyBean> CopiesDispo(@PathVariable("id") Long id);
 
     /**
-     * method to get  a list of reservations from microservice-books
+     * method to get  a list of emprunts from microservice-books
      * @param id idi oof the borrower
-     * @return a list of reservation
+     * @return a list of emprunts
      */
-    @GetMapping(value = "/microservice-books/utilisateur/{id}/reservations/")
-    List<ReservationBean> reservationList(@PathVariable(value = "id")Long id);
+    @GetMapping(value = "/microservice-books/utilisateur/{id}/emprunts/")
+    List<EmpruntBean> empruntList(@PathVariable(value = "id")Long id);
 
     /**
-     * method to give extra time to a reservation
-     * @param idResa id of the reservation
+     * method to give extra time to an emprunt
+     * @param idE id of the emprunt
      * @param idUser id of the borrower
      */
-    @PostMapping(value = "/microservice-books/utilisateur/{idUser}/reservations/{idResa}/prolonger")
-    void prolongerReservation(@PathVariable(value = "idResa")Long idResa, @PathVariable(value = "idUser") Long idUser);
+    @PostMapping(value = "/microservice-books/utilisateur/{idUser}/emprunt/{idE}/prolonger")
+    void prolongerEmprunt(@PathVariable(value = "idE")Long idE, @PathVariable(value = "idUser") Long idUser);
 }

@@ -2,16 +2,15 @@ package com.books.batch;
 
 import com.books.beans.UtilisateurBean;
 import com.books.dao.EmailRepository;
-import com.books.dao.ReservationRepository;
+import com.books.dao.EmpruntRepository;
 import com.books.entities.Email;
-import com.books.entities.Reservation;
+import com.books.entities.Emprunt;
 import com.books.poxies.MicroserviceUtilisateurProxy;
 import com.books.tools.EmailType;
 import org.springframework.batch.core.StepContribution;
 import org.springframework.batch.core.scope.context.ChunkContext;
 import org.springframework.batch.core.step.tasklet.Tasklet;
 import org.springframework.batch.repeat.RepeatStatus;
-import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.mail.SimpleMailMessage;
 import org.springframework.mail.javamail.JavaMailSenderImpl;
 
@@ -24,7 +23,7 @@ import java.util.Set;
 
 public class TaskOne implements Tasklet {
 
-    private final ReservationRepository reservationRepository;
+    private final EmpruntRepository empruntRepository;
     private final EmailRepository emailRepository;
     private final MicroserviceUtilisateurProxy microserviceUtilisateurProxy;
     private final JavaMailSenderImpl sender;
@@ -32,8 +31,8 @@ public class TaskOne implements Tasklet {
     /**
      * Tache par batch permettant de relancer les utilisateurs qui n'ont pas rendu leurs livres
      */
-    public TaskOne(ReservationRepository reservationRepository, EmailRepository emailRepository, MicroserviceUtilisateurProxy microserviceUtilisateurProxy, JavaMailSenderImpl sender) {
-        this.reservationRepository = reservationRepository;
+    public TaskOne(EmpruntRepository empruntRepository, EmailRepository emailRepository, MicroserviceUtilisateurProxy microserviceUtilisateurProxy, JavaMailSenderImpl sender) {
+        this.empruntRepository = empruntRepository;
         this.emailRepository = emailRepository;
         this.microserviceUtilisateurProxy=microserviceUtilisateurProxy;
         this.sender = sender;
@@ -47,12 +46,12 @@ public class TaskOne implements Tasklet {
 
         SimpleDateFormat oldFormat = new SimpleDateFormat("dd/MM/yyyy");
         Date date = new Date();
-        Set<Reservation> reservationList = reservationRepository.findByCloturerFalseAndDateRetourBefore(date);
+        Set<Emprunt> empruntList = empruntRepository.findByCloturerFalseAndDateRetourBefore(date);
 
         ArrayList<EmailType> emailType = new ArrayList<>();
 
-        if (reservationList.size() > 0){
-            for (Reservation res : reservationList) {
+        if (empruntList.size() > 0){
+            for (Emprunt res : empruntList) {
                 UtilisateurBean utilisateurBean = microserviceUtilisateurProxy.utilisateurById(res.getIdUtilisateur());
                 if (res.isCloturer()==false&&utilisateurBean!=null&&res.getDateRetour().compareTo(date)<0)
                 emailType.add(new EmailType(utilisateurBean.getEmail(),

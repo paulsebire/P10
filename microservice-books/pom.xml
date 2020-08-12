@@ -12,7 +12,7 @@
 	<artifactId>books</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
 	<name>books</name>
-	<description>module de gestion des livres et reservations</description>
+	<description>module de gestion des livres et emprunts</description>
 
 	<properties>
 		<java.version>1.8</java.version>

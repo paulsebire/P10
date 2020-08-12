@@ -6,14 +6,14 @@ import java.util.Collection;
 import java.util.Date;
 
 
-public class ReservationBean {
+public class EmpruntBean {
     private Long id;
     private Date dateEmprunt;
     private Date dateRetour;
     private boolean prolonger=false;
     private CopyBean copy;
     private boolean cloturer;
-    public ReservationBean() {
+    public EmpruntBean() {
     }
 
     public Long getId() {
@@ -66,7 +66,7 @@ public class ReservationBean {
 
     @Override
     public String toString() {
-        return "ReservationBean{" +
+        return "EmpruntBean{" +
                 "id=" + id +
                 ", dateEmprunt=" + dateEmprunt +
                 ", dateRetour=" + dateRetour +

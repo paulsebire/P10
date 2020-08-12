@@ -1,38 +1,26 @@
 package com.books;
 
-import com.books.beans.UtilisateurBean;
 import com.books.dao.BookRepository;
 import com.books.dao.CopiesRepository;
 import com.books.dao.EmailRepository;
-import com.books.dao.ReservationRepository;
+import com.books.dao.EmpruntRepository;
 import com.books.entities.Book;
 import com.books.entities.Copy;
 import com.books.entities.Email;
-import com.books.entities.Reservation;
+import com.books.entities.Emprunt;
 import com.books.exceptions.CustomErrorDecoder;
-import com.books.poxies.MicroserviceUtilisateurProxy;
 import com.books.services.BibliServiceImpl;
-import org.springframework.batch.core.Job;
-import org.springframework.batch.core.JobParameters;
-import org.springframework.batch.core.JobParametersBuilder;
-import org.springframework.batch.core.launch.JobLauncher;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.boot.CommandLineRunner;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
-import org.springframework.boot.context.properties.EnableConfigurationProperties;
 import org.springframework.cloud.client.discovery.EnableDiscoveryClient;
 import org.springframework.cloud.openfeign.EnableFeignClients;
 import org.springframework.context.annotation.Bean;
-import org.springframework.mail.javamail.JavaMailSender;
-import org.springframework.mail.javamail.JavaMailSenderImpl;
 import org.springframework.scheduling.annotation.EnableScheduling;
 
 import javax.annotation.PostConstruct;
 import java.util.Calendar;
-import java.util.Date;
 import java.util.GregorianCalendar;
-import java.util.Properties;
 
 @SpringBootApplication
 @EnableFeignClients("com.books")
@@ -41,7 +29,7 @@ import java.util.Properties;
 public class BooksApplication {
 
 	@Autowired
-	private ReservationRepository reservationRepository;
+	private EmpruntRepository empruntRepository;
 	@Autowired
 	private BibliServiceImpl bibliService;
 	@Autowired
@@ -131,40 +119,40 @@ public class BooksApplication {
 			copiesRepository.save(copy18);
 
 			
-			Reservation resa1 = new Reservation(copy1, new GregorianCalendar(2020, Calendar.FEBRUARY, 24).getTime());
-			resa1.setDateRetour(bibliService.ajouter4semaines(resa1.getDateEmprunt()));
-			resa1.setIdUtilisateur(3L);
+			Emprunt emprunt1 = new Emprunt(copy1, new GregorianCalendar(2020, Calendar.FEBRUARY, 24).getTime());
+			emprunt1.setDateRetour(bibliService.ajouter4semaines(emprunt1.getDateEmprunt()));
+			emprunt1.setIdUtilisateur(3L);
 			copy1.setDispo(false);
 			copiesRepository.save(copy1);
-			reservationRepository.save(resa1);
+			empruntRepository.save(emprunt1);
 
-			Reservation resa2 = new Reservation(copy8, new GregorianCalendar(2020, Calendar.JANUARY, 11).getTime());
-			resa2.setDateRetour(bibliService.ajouter4semaines(resa2.getDateEmprunt()));
-			resa2.setIdUtilisateur(3L);
+			Emprunt emprunt2 = new Emprunt(copy8, new GregorianCalendar(2020, Calendar.JANUARY, 11).getTime());
+			emprunt2.setDateRetour(bibliService.ajouter4semaines(emprunt2.getDateEmprunt()));
+			emprunt2.setIdUtilisateur(3L);
 			copy8.setDispo(false);
 			copiesRepository.save(copy8);
-			reservationRepository.save(resa2);
+			empruntRepository.save(emprunt2);
 
-			Reservation resa3 = new Reservation(copy10, new GregorianCalendar(2020, Calendar.MARCH, 16).getTime());
-			resa3.setDateRetour(bibliService.ajouter4semaines(resa3.getDateEmprunt()));
-			resa3.setIdUtilisateur(3L);
+			Emprunt emprunt3 = new Emprunt(copy10, new GregorianCalendar(2020, Calendar.MARCH, 16).getTime());
+			emprunt3.setDateRetour(bibliService.ajouter4semaines(emprunt3.getDateEmprunt()));
+			emprunt3.setIdUtilisateur(3L);
 			copy10.setDispo(false);
 			copiesRepository.save(copy10);
-			reservationRepository.save(resa3);
+			empruntRepository.save(emprunt3);
 
-			Reservation resa4 = new Reservation(copy14, new GregorianCalendar(2020, Calendar.MARCH, 21).getTime());
-			resa4.setDateRetour(bibliService.ajouter4semaines(resa4.getDateEmprunt()));
-			resa4.setIdUtilisateur(1L);
+			Emprunt emprunt4 = new Emprunt(copy14, new GregorianCalendar(2020, Calendar.MARCH, 21).getTime());
+			emprunt4.setDateRetour(bibliService.ajouter4semaines(emprunt4.getDateEmprunt()));
+			emprunt4.setIdUtilisateur(1L);
 			copy14.setDispo(false);
 			copiesRepository.save(copy14);
-			reservationRepository.save(resa4);
+			empruntRepository.save(emprunt4);
 
-			Reservation resa5 = new Reservation(copy18, new GregorianCalendar(2020, Calendar.FEBRUARY, 02).getTime());
-			resa5.setDateRetour(bibliService.ajouter4semaines(resa5.getDateEmprunt()));
-			resa5.setIdUtilisateur(1L);
+			Emprunt emprunt5 = new Emprunt(copy18, new GregorianCalendar(2020, Calendar.FEBRUARY, 02).getTime());
+			emprunt5.setDateRetour(bibliService.ajouter4semaines(emprunt5.getDateEmprunt()));
+			emprunt5.setIdUtilisateur(1L);
 			copy18.setDispo(false);
 			copiesRepository.save(copy18);
-			reservationRepository.save(resa5);
+			empruntRepository.save(emprunt5);
 
 		Email email = new Email();
 		email.setName("relance");

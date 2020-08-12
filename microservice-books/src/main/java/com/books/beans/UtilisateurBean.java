@@ -1,12 +1,5 @@
 package com.books.beans;
 
-import com.books.entities.Reservation;
-import com.fasterxml.jackson.annotation.JsonBackReference;
-
-import javax.persistence.ManyToOne;
-import javax.persistence.OneToMany;
-import java.util.Collection;
-
 public class UtilisateurBean {
 
     private Long idUser;

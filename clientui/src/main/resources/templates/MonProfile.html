@@ -25,17 +25,17 @@
 </head>
 <body layout:fragment="content">
     <div class="container">
-        <h1 class="text-center" >Mes réservations</h1>
+        <h1 class="text-center" >Mes emprunts</h1>
         <div class="row">
-            <div th:each="resa : ${reservations}" class="col-md-3 my-1">
-                <a th:href="@{|/fiche-livre/${resa.copy.book.id}|}" >
-                <img th:src="${resa.copy.book.coverUrl}"  class="card-img-top" width="200" height="350" /></a>
-                <p th:text= "${resa.copy.book.name}"></p>
-                <p th:text= "${resa.copy.book.author}"></p>
-                <p> Emprunté le: <span th:text="${#dates.format(resa.dateEmprunt, 'dd/MM/yyyy')}"/></p>
-                <p> A retourné le: <span th:text="${#dates.format(resa.dateRetour, 'dd/MM/yyyy')}"/></p>
-                <a class="btn btn-primary" th:text="Prolonger" th:if="${resa.prolongeable==true}"
-                   th:href="@{|/reservation/${resa.id}/prolonger|}"></a>
+            <div th:each="emprunt : ${emprunts}" class="col-md-3 my-1">
+                <a th:href="@{|/fiche-livre/${emprunt.copy.book.id}|}" >
+                <img th:src="${emprunt.copy.book.coverUrl}" class="card-img-top" width="200" height="350" /></a>
+                <p th:text= "${emprunt.copy.book.name}"></p>
+                <p th:text= "${emprunt.copy.book.author}"></p>
+                <p> Emprunté le: <span th:text="${#dates.format(emprunt.dateEmprunt, 'dd/MM/yyyy')}"/></p>
+                <p> A retourné le: <span th:text="${#dates.format(emprunt.dateRetour, 'dd/MM/yyyy')}"/></p>
+                <a class="btn btn-primary" th:text="Prolonger" th:if="${emprunt.prolongeable==false}"
+                   th:href="@{|/emprunt/${emprunt.id}/prolonger|}"></a>
             </div>
         </div>
     </div>

@@ -10,9 +10,9 @@ import java.util.Collection;
 import java.util.Date;
 
 @Entity
-public class Reservation {
+public class Emprunt {
     @Id@GeneratedValue
-    @Column(name = "id_reservation")
+    @Column(name = "id_emprunt")
     private Long id;
 
     private Long idUtilisateur;
@@ -25,11 +25,11 @@ public class Reservation {
     @JoinColumn(name ="ID_COPY" )
     private Copy copy;
 
-    public Reservation() {
+    public Emprunt() {
         super();
     }
 
-    public Reservation(Copy copy, Date dateEmprunt) {
+    public Emprunt(Copy copy, Date dateEmprunt) {
         this.dateEmprunt=dateEmprunt;
         this.prolonger=false;
         this.cloturer=false;
@@ -103,7 +103,7 @@ public class Reservation {
 
     @Override
     public String toString() {
-        return "Reservation{" +
+        return "Emprunt{" +
                 "id=" + id +
                 ", dateEmprunt=" + dateEmprunt +
                 ", dateRetour=" + dateRetour +

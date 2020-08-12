@@ -2,12 +2,11 @@ package com.clientui.controller;
 
 import com.clientui.beans.BookBean;
 import com.clientui.beans.CopyBean;
-import com.clientui.beans.ReservationBean;
+import com.clientui.beans.EmpruntBean;
 import com.clientui.beans.UtilisateurBean;
 import com.clientui.proxies.MicroserviceBooksProxy;
 
 import com.clientui.proxies.MicroserviceUtilisateurProxy;
-import com.netflix.discovery.converters.Auto;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -16,7 +15,6 @@ import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
-import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 
 import java.util.*;
@@ -88,21 +86,21 @@ public class ClientController {
     @GetMapping("/MonProfile")
     public String monProfile (Model model){
         UtilisateurBean utilisateur = (UtilisateurBean) SecurityContextHolder.getContext().getAuthentication().getPrincipal();
-        List<ReservationBean> reservations = booksProxy.reservationList(utilisateur.getIdUser());
-        model.addAttribute("reservations",reservations);
+        List<EmpruntBean> emprunts = booksProxy.empruntList(utilisateur.getIdUser());
+        model.addAttribute("emprunts",emprunts);
         return "MonProfile";
     }
 
     /**
-     * mehtod to give extra time to a reservation
-     * @param id  id of the reservation
+     * mehtod to give extra time to a emprunt
+     * @param id  id of the emprunt
      * @return the view monprofile
      */
-    @GetMapping("/reservation/{id}/prolonger")
-    public String prolongerResa(@PathVariable(value = "id")Long id){
+    @GetMapping("/emprunt/{id}/prolonger")
+    public String prolongerEmprunt(@PathVariable(value = "id")Long id){
         UtilisateurBean utilisateur = (UtilisateurBean) SecurityContextHolder.getContext().getAuthentication().getPrincipal();
         System.out.println("id"+utilisateur.getIdUser());
-        booksProxy.prolongerReservation(id,utilisateur.getIdUser());
+        booksProxy.prolongerEmprunt(id,utilisateur.getIdUser());
         return "redirect:/MonProfile";
     }
 }

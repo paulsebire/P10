@@ -1,4 +1,4 @@
-package com.mcommerce.configserver;
+package com.configserver;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;

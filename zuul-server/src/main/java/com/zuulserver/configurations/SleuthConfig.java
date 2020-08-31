@@ -1,6 +1,7 @@
 package com.zuulserver.configurations;
 
 
+
 import brave.sampler.Sampler;
 import org.springframework.context.annotation.Configuration;
 

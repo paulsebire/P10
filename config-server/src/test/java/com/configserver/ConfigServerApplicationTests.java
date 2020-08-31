@@ -1,4 +1,4 @@
-package com.mcommerce.configserver;
+package com.configserver;
 
 import org.junit.Test;
 import org.junit.runner.RunWith;

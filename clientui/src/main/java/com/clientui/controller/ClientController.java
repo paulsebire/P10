@@ -59,7 +59,6 @@ public class ClientController {
 
         BookBean livre = booksProxy.recupererUnLivre(id);
         List<CopyBean> copies = booksProxy.CopiesDispo(id);
-        System.out.println("copies"+copies);
         model.addAttribute("livre", livre);
         model.addAttribute("copies",copies);
         log.trace("Récupération de la fiche d'un livre");
@@ -99,7 +98,6 @@ public class ClientController {
     @GetMapping("/emprunt/{id}/prolonger")
     public String prolongerEmprunt(@PathVariable(value = "id")Long id){
         UtilisateurBean utilisateur = (UtilisateurBean) SecurityContextHolder.getContext().getAuthentication().getPrincipal();
-        System.out.println("id"+utilisateur.getIdUser());
         booksProxy.prolongerEmprunt(id,utilisateur.getIdUser());
         return "redirect:/MonProfile";
     }

@@ -60,6 +60,7 @@
                     <p th:text= "${reservation.book.author}"></p>
                     <p> Réservé le: <span th:text="${#dates.format(reservation.dateReservation, 'dd/MM/yyyy')}"/></p>
                     <p> place dans la file: <span th:text="${reservation.position}"/></p>
+                    <p> prochain retour le: <span th:text="${#dates.format(reservation.dateNextRetour, 'dd/MM/yyyy')}"/></p>
                 </div>
             </div>
         </div>

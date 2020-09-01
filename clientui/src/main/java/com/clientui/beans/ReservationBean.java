@@ -7,8 +7,10 @@ public class ReservationBean {
     private Long id;
     private Long idUtilisateur;
     private Date dateReservation;
+    private Date dateNextRetour;
     private BookBean book;
     private Integer position;
+    private boolean enCours;
 
     public ReservationBean() {
     }
@@ -29,6 +31,21 @@ public class ReservationBean {
         this.idUtilisateur = idUtilisateur;
     }
 
+    public boolean isEnCours() {
+        return enCours;
+    }
+
+    public void setEnCours(boolean enCours) {
+        this.enCours = enCours;
+    }
+
+    public Date getDateNextRetour() {
+        return dateNextRetour;
+    }
+
+    public void setDateNextRetour(Date dateNextRetour) {
+        this.dateNextRetour = dateNextRetour;
+    }
 
     public Date getDateReservation() {
         return dateReservation;

@@ -64,7 +64,7 @@ public class EmpruntController {
      * @param idCopy if of the copy borrowed
      * @return a response entity depending on the scenario
      */
-    @PostMapping(value = "/utilisateur/{idUser}/copie/{idCopy}/reserver")
+    @PostMapping(value = "/utilisateur/{idUser}/copie/{idCopy}/emprunt/ouvrir")
      ResponseEntity reserverCopy(@PathVariable(value = "idUser")Long idUser,@PathVariable(value = "idCopy")Long idCopy){
 
         Optional<Copy> c   = copiesRepository.findById(idCopy);
@@ -88,7 +88,7 @@ public class EmpruntController {
      * @param idE id of the emprunt
      * @return  a response entity depending on the scenario
      */
-    @PutMapping(value = "/emprunt/{idE}/cloturer")
+    @PutMapping(value = "/emprunt/{idE}/emprunt/cloturer")
     ResponseEntity cloturerEmprunt(@PathVariable(value = "idE")Long idE){
 
         Emprunt emprunt = empruntRepository.findById(idE).get();

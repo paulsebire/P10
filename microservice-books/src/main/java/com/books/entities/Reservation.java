@@ -12,12 +12,14 @@ public class Reservation {
 
     private Long idUtilisateur;
     private Date dateReservation;
+    private Date dateNextRetour;
 
     @ManyToOne
     @JoinColumn(name ="ID_BOOK" )
     private Book book;
 
     private Integer position;
+    private boolean enCours;
 
     public Reservation() {
         super();
@@ -25,6 +27,7 @@ public class Reservation {
 
     public Reservation(Book book) {
         this.dateReservation=new Date();
+        this.enCours=true;
         this.book=book;
     }
 
@@ -60,6 +63,14 @@ public class Reservation {
         this.dateReservation = dateReservation;
     }
 
+    public Date getDateNextRetour() {
+        return dateNextRetour;
+    }
+
+    public void setDateNextRetour(Date dateNextRetour) {
+        this.dateNextRetour = dateNextRetour;
+    }
+
     public Book getBook() {
         return book;
     }
@@ -68,6 +79,13 @@ public class Reservation {
         this.book = book;
     }
 
+    public boolean isEnCours() {
+        return enCours;
+    }
+
+    public void setEnCours(boolean enCours) {
+        this.enCours = enCours;
+    }
 
     @Override
     public String toString() {

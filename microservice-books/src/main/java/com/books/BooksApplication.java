@@ -108,10 +108,10 @@ public class BooksApplication {
 			Copy copy15 = new Copy("SN003", book5);
 			copiesRepository.save(copy15);
 
-			Copy copy16 = new Copy("SN001", book6);
+			/*Copy copy16 = new Copy("SN001", book6);
 			copiesRepository.save(copy16);
 			Copy copy17 = new Copy("SN002", book6);
-			copiesRepository.save(copy17);
+			copiesRepository.save(copy17);*/
 			Copy copy18 = new Copy("SN003", book6);
 			copiesRepository.save(copy18);
 
@@ -151,15 +151,11 @@ public class BooksApplication {
 			copiesRepository.save(copy18);
 			empruntRepository.save(emprunt5);
 
-			Reservation reservation1= new Reservation(book5);
+			Reservation reservation1= new Reservation(book6);
 			reservation1.setIdUtilisateur(3L);
 			reservation1.setPosition(1);
 			reservationRepository.save(reservation1);
 
-			Reservation reservation2= new Reservation(book5);
-			reservation2.setIdUtilisateur(1L);
-			reservation2.setPosition(2);
-			reservationRepository.save(reservation2);
 
 
 			Email email = new Email();

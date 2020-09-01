@@ -3,12 +3,14 @@ package com.clientui.proxies;
 import com.clientui.beans.BookBean;
 import com.clientui.beans.CopyBean;
 import com.clientui.beans.EmpruntBean;
+import com.clientui.beans.ReservationBean;
 import com.clientui.configuration.FeignConfig;
 import org.springframework.cloud.openfeign.FeignClient;
 import org.springframework.stereotype.Component;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
+import java.util.Set;
 
 @FeignClient(name = "zuul-server",contextId = "microserviceBooksProxy",
             configuration= FeignConfig.class)
@@ -53,4 +55,12 @@ public interface MicroserviceBooksProxy {
      */
     @PostMapping(value = "/microservice-books/utilisateur/{idUser}/emprunt/{idE}/prolonger")
     void prolongerEmprunt(@PathVariable(value = "idE")Long idE, @PathVariable(value = "idUser") Long idUser);
+
+    /**
+     * method to get  a list of reservations from microservice-books
+     * @param id id of the user
+     * @return a list of reservations
+     */
+    @GetMapping(value = "/microservice-books/utilisateur/{id}/reservations")
+    Set<ReservationBean> reservationsByUser(@PathVariable(value = "id")Long id);
 }

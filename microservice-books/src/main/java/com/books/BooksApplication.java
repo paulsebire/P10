@@ -1,15 +1,10 @@
 package com.books;
 
-import com.books.dao.BookRepository;
-import com.books.dao.CopiesRepository;
-import com.books.dao.EmailRepository;
-import com.books.dao.EmpruntRepository;
-import com.books.entities.Book;
-import com.books.entities.Copy;
-import com.books.entities.Email;
-import com.books.entities.Emprunt;
+import com.books.dao.*;
+import com.books.entities.*;
 import com.books.exceptions.CustomErrorDecoder;
 import com.books.services.BibliServiceImpl;
+import com.netflix.discovery.converters.Auto;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
@@ -38,6 +33,8 @@ public class BooksApplication {
 	private CopiesRepository copiesRepository;
 	@Autowired
 	private EmailRepository emailRepository;
+	@Autowired
+	private ReservationRepository reservationRepository;
 
 	public static void main(String[] args) {
 		SpringApplication.run(BooksApplication.class, args);
@@ -154,18 +151,29 @@ public class BooksApplication {
 			copiesRepository.save(copy18);
 			empruntRepository.save(emprunt5);
 
-		Email email = new Email();
-		email.setName("relance");
-		email.setObjet("relance pour livre non rendu");
-		email.setContenu("Bonjour [USERNAME], \n "+
-				"\n"+
-				"\tVous deviez rendre le livre [LIVRE_TITRE] à la blibliothèque au plus tard à la date : [DATE_FIN].\n" +
-				"à ce jour nous n'avons toujours pas enregistré le retour de ce livre.\n" +
-				"Nous vous invitons à régulariser la situation dès à présent.\n" +
-				"\n"+
-				"Cordialement.");
+			Reservation reservation1= new Reservation(book5);
+			reservation1.setIdUtilisateur(3L);
+			reservation1.setPosition(1);
+			reservationRepository.save(reservation1);
 
-		emailRepository.save(email);
+			Reservation reservation2= new Reservation(book5);
+			reservation2.setIdUtilisateur(1L);
+			reservation2.setPosition(2);
+			reservationRepository.save(reservation2);
+
+
+			Email email = new Email();
+			email.setName("relance");
+			email.setObjet("relance pour livre non rendu");
+			email.setContenu("Bonjour [USERNAME], \n "+
+					"\n"+
+					"\tVous deviez rendre le livre [LIVRE_TITRE] à la blibliothèque au plus tard à la date : [DATE_FIN].\n" +
+					"à ce jour nous n'avons toujours pas enregistré le retour de ce livre.\n" +
+					"Nous vous invitons à régulariser la situation dès à présent.\n" +
+					"\n"+
+					"Cordialement.");
+
+			emailRepository.save(email);
 	}
 
 

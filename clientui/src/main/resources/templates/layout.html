@@ -42,7 +42,7 @@
                         <input class="form-control" type="text" placeholder="Recherche..." aria-label="Recherche" name="mc" th:value="${mc}">
                     </form>
                 </li>
-                <li class="nav-item"  th:classappend="${#httpServletRequest.getRequestURI().contains('/MonProfile') ? 'active':''}">
+                <li class="nav-item"  th:classappend="${#httpServletRequest.getRequestURI().contains('*/MonProfile*') ? 'active':''}">
                     <a class="nav-link" th:href="@{/MonProfile}" th:if="${#request.userPrincipal != null}"
                     ><i class="fa fa-user"></i>  [[${#httpServletRequest.remoteUser}]]</a>
                 </li>

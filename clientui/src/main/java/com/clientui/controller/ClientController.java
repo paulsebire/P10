@@ -1,9 +1,6 @@
 package com.clientui.controller;
 
-import com.clientui.beans.BookBean;
-import com.clientui.beans.CopyBean;
-import com.clientui.beans.EmpruntBean;
-import com.clientui.beans.UtilisateurBean;
+import com.clientui.beans.*;
 import com.clientui.proxies.MicroserviceBooksProxy;
 
 import com.clientui.proxies.MicroserviceUtilisateurProxy;
@@ -31,6 +28,8 @@ public class ClientController {
     private MicroserviceBooksProxy booksProxy;
     @Autowired
     private MicroserviceUtilisateurProxy utilisateurProxy;
+
+
 
     /**
      * method to generate the home page
@@ -82,11 +81,25 @@ public class ClientController {
      * @param model model
      * @return the view monprofile
      */
-    @GetMapping("/MonProfile")
-    public String monProfile (Model model){
-        UtilisateurBean utilisateur = (UtilisateurBean) SecurityContextHolder.getContext().getAuthentication().getPrincipal();
-        List<EmpruntBean> emprunts = booksProxy.empruntList(utilisateur.getIdUser());
+    @GetMapping("/MonProfile/Emprunts")
+    public String monProfileMesEmprunts (Model model){
+        List<EmpruntBean> emprunts = booksProxy.empruntList(getUserConnected().getIdUser());
         model.addAttribute("emprunts",emprunts);
+        boolean mesEmprunts=true;
+        model.addAttribute("mesEmprunts",mesEmprunts);
+        return "MonProfile";
+    }
+    /**
+     * method to access to personal space
+     * @param model model
+     * @return the view monprofile
+     */
+    @GetMapping("/MonProfile/Reservations")
+    public String monProfileMesReservations (Model model){
+        Set<ReservationBean> reservations = booksProxy.reservationsByUser(getUserConnected().getIdUser());
+        model.addAttribute("reservations",reservations);
+        boolean mesEmprunts=false;
+        model.addAttribute("mesEmprunts",mesEmprunts);
         return "MonProfile";
     }
 
@@ -99,6 +112,11 @@ public class ClientController {
     public String prolongerEmprunt(@PathVariable(value = "id")Long id){
         UtilisateurBean utilisateur = (UtilisateurBean) SecurityContextHolder.getContext().getAuthentication().getPrincipal();
         booksProxy.prolongerEmprunt(id,utilisateur.getIdUser());
-        return "redirect:/MonProfile";
+        return "redirect:/MonProfile/Emprunts";
+    }
+
+    private UtilisateurBean getUserConnected(){
+        UtilisateurBean utilisateur=(UtilisateurBean) SecurityContextHolder.getContext().getAuthentication().getPrincipal();
+        return utilisateur;
     }
 }

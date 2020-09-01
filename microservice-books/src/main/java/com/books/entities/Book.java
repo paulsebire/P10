@@ -11,6 +11,7 @@ import java.util.List;
 @Entity
 public class Book{
     @Id @GeneratedValue
+    @Column(name = "id_book")
     private long id;
     private String name;
     private String author;

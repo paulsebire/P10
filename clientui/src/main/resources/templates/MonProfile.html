@@ -24,20 +24,48 @@
             crossorigin="anonymous"></script>
 </head>
 <body layout:fragment="content">
-    <div class="container">
-        <h1 class="text-center" >Mes emprunts</h1>
-        <div class="row">
-            <div th:each="emprunt : ${emprunts}" class="col-md-3 my-1">
-                <a th:href="@{|/fiche-livre/${emprunt.copy.book.id}|}" >
-                <img th:src="${emprunt.copy.book.coverUrl}" class="card-img-top" width="200" height="350" /></a>
-                <p th:text= "${emprunt.copy.book.name}"></p>
-                <p th:text= "${emprunt.copy.book.author}"></p>
-                <p> Emprunté le: <span th:text="${#dates.format(emprunt.dateEmprunt, 'dd/MM/yyyy')}"/></p>
-                <p> A retourné le: <span th:text="${#dates.format(emprunt.dateRetour, 'dd/MM/yyyy')}"/></p>
-                <a class="btn btn-primary" th:text="Prolonger" th:if="${emprunt.prolonger==false}"
-                   th:href="@{|/emprunt/${emprunt.id}/prolonger|}"></a>
+
+<div class="justify-content-center ml-auto mr-auto">
+    <div class="card text-center">
+        <div class="card-header">
+            <ul class="nav nav-tabs card-header-tabs">
+                <li class="nav-item" >
+                    <a class="nav-link" th:class="${mesEmprunts}==true?'nav-link active':'nav-link'" th:href="@{/MonProfile/Emprunts}">Mes Emprunts</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" th:class="${mesEmprunts}==false?'nav-link active':'nav-link'" th:href="@{/MonProfile/Reservations}">Mes Réservations</a>
+                </li>
+            </ul>
+        </div>
+        <div class="card-body justify-content-center" th:if="${mesEmprunts}==true">
+            <div class="row">
+                <div th:each="emprunt : ${emprunts}" class="col-md-3 my-1">
+                    <a th:href="@{|/fiche-livre/${emprunt.copy.book.id}|}" >
+                        <img th:src="${emprunt.copy.book.coverUrl}" class="card-img-top" width="200" height="350" /></a>
+                    <p th:text= "${emprunt.copy.book.name}"></p>
+                    <p th:text= "${emprunt.copy.book.author}"></p>
+                    <p> Emprunté le: <span th:text="${#dates.format(emprunt.dateEmprunt, 'dd/MM/yyyy')}"/></p>
+                    <p> A retourné le: <span th:text="${#dates.format(emprunt.dateRetour, 'dd/MM/yyyy')}"/></p>
+                    <a class="btn btn-primary" th:text="Prolonger" th:if="${emprunt.prolonger==false}"
+                       th:href="@{|/emprunt/${emprunt.id}/prolonger|}"></a>
+                </div>
+            </div>
+        </div>
+        <div class="card-body justify-content-center" th:if="${mesEmprunts}==false">
+            <div class="row">
+                <div th:each="reservation : ${reservations}" class="col-md-3 my-1">
+                    <a th:href="@{|/fiche-livre/${reservation.book.id}|}" >
+                        <img th:src="${reservation.book.coverUrl}" class="card-img-top" width="200" height="350" /></a>
+                    <p th:text= "${reservation.book.name}"></p>
+                    <p th:text= "${reservation.book.author}"></p>
+                    <p> Réservé le: <span th:text="${#dates.format(reservation.dateReservation, 'dd/MM/yyyy')}"/></p>
+                    <p> place dans la file: <span th:text="${reservation.position}"/></p>
+                </div>
             </div>
         </div>
     </div>
+</div>
+
+
 </body>
 </html>

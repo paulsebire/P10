@@ -31,7 +31,7 @@ layout:decorate="~{layout}">
         <div class="col-md-4 mx-auto text-center">
             <img th:src="${livre.coverUrl}" class="card-img-top" width="200" height="350"/>
             <p th:text="${livre.author}" class="font-weight-bold"></p>
-            <p>Nombre de copie disponibles: <span th:text="${copies.size()}"></span></p>
+            <p>Nombre de copie disponibles: <span th:text="${copies.size()}/${livre.nbCopy}"></span></p>
         </div>
     </div>
 </div>

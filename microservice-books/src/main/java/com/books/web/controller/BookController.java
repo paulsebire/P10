@@ -1,7 +1,9 @@
 package com.books.web.controller;
 
 import com.books.dao.BookRepository;
+import com.books.dao.CopiesRepository;
 import com.books.entities.Book;
+import com.books.entities.Copy;
 import com.books.web.exceptions.BookNotFoundException;
 import org.springframework.beans.factory.annotation.Autowired;
 
@@ -18,6 +20,8 @@ public class BookController {
 
     @Autowired
     private BookRepository bookRepository;
+    @Autowired
+    private CopiesRepository copiesRepository;
 
     /**
      * resume all books in the database
@@ -36,11 +40,17 @@ public class BookController {
      * @return an object book
      */
     @GetMapping( value = "/livre/{id}")
-    public Optional<Book> recupererUnLivre(@PathVariable long id) {
+    public Book recupererUnLivre(@PathVariable long id) {
 
-        Optional<Book> book = bookRepository.findById(id);
-
-        if(!book.isPresent())  throw new BookNotFoundException("Le livre correspondant à l'id " + id + " n'existe pas");
+        Optional<Book> b = bookRepository.findById(id);
+        List<Copy> copies= copiesRepository.findAllByBookId(id);
+        Book book;
+        if(b.isPresent()){
+            book=b.get();
+            book.setNbCopy(copies.size());
+        }else {
+            throw new BookNotFoundException("Le livre correspondant à l'id " + id + " n'existe pas");
+        }
 
         return book;
     }

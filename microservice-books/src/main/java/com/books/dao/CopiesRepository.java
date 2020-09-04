@@ -16,5 +16,7 @@ public interface CopiesRepository extends JpaRepository<Copy, Long> {
             countQuery = "select count (c) from Copy c inner join c.book b where b.id=:id and c.dispo=true")
     List<Copy> ListCopyDispoByBook(@Param("id") Long id);
 
+    List<Copy> findAllByBookId(Long id);
+
 
 }

@@ -16,6 +16,7 @@ import java.util.Collection;
     private String author;
     private String coverUrl;
     private Collection<CopyBean> copies;
+    private Integer nbCopy;
 
      public BookBean() {
 
@@ -49,7 +50,15 @@ import java.util.Collection;
         return coverUrl;
     }
 
-    public void setCoverUrl(String coverUrl) {
+     public Integer getNbCopy() {
+         return nbCopy;
+     }
+
+     public void setNbCopy(Integer nbCopy) {
+         this.nbCopy = nbCopy;
+     }
+
+     public void setCoverUrl(String coverUrl) {
         this.coverUrl = coverUrl;
     }
 

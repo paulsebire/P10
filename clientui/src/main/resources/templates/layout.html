@@ -43,7 +43,7 @@
                     </form>
                 </li>
                 <li class="nav-item"  th:classappend="${#httpServletRequest.getRequestURI().contains('*/MonProfile*') ? 'active':''}">
-                    <a class="nav-link" th:href="@{/MonProfile}" th:if="${#request.userPrincipal != null}"
+                    <a class="nav-link" th:href="@{/MonProfile/Emprunts}" th:if="${#request.userPrincipal != null}"
                     ><i class="fa fa-user"></i>  [[${#httpServletRequest.remoteUser}]]</a>
                 </li>
                 <li  class="nav-item active" th:if="${#request.userPrincipal == null}">

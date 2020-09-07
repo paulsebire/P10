@@ -104,4 +104,12 @@ public class EmpruntController {
             }
         }return new ResponseEntity<>("emprunt introuvable", HttpStatus.BAD_REQUEST);
     }
+
+    @GetMapping(value = "/utilisateur/{idUser}/livre/{idBook}/reservable")
+    boolean livreReservable(@PathVariable(value = "idUser")Long idUser,@PathVariable(value = "idBook")Long idBook){
+        List<Emprunt> emprunts = empruntRepository.livreDejaEmprunteParUtilisateur(idUser,idBook);
+        if (emprunts.isEmpty()){
+            return true;
+        } else return false;
+    }
 }

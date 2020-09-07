@@ -63,4 +63,14 @@ public interface MicroserviceBooksProxy {
      */
     @GetMapping(value = "/microservice-books/utilisateur/{id}/reservations")
     Set<ReservationBean> reservationsByUser(@PathVariable(value = "id")Long id);
+
+    /**
+     * Does the user as already an emprunt on a book to denied more reservation
+     * @param idUser id of the user
+     * @param idBook id of the book
+     * @return
+     */
+    @GetMapping(value = "/microservice-books/utilisateur/{idUser}/livre/{idBook}/reservable")
+    boolean livreReservable(@PathVariable(value = "idUser")Long idUser,@PathVariable(value = "idBook")Long idBook);
+
 }

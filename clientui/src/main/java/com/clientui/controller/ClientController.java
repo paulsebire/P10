@@ -60,6 +60,12 @@ public class ClientController {
         List<CopyBean> copies = booksProxy.CopiesDispo(id);
         model.addAttribute("livre", livre);
         model.addAttribute("copies",copies);
+        boolean reservable=false;
+        UtilisateurBean utilisateur = getUserConnected();
+        if (utilisateur!=null){
+            reservable=booksProxy.livreReservable(getUserConnected().getIdUser(),id);
+        }
+        model.addAttribute("reservable",reservable);
         log.trace("Récupération de la fiche d'un livre");
         return "FicheLivre";
     }
@@ -110,13 +116,16 @@ public class ClientController {
      */
     @GetMapping("/emprunt/{id}/prolonger")
     public String prolongerEmprunt(@PathVariable(value = "id")Long id){
-        UtilisateurBean utilisateur = (UtilisateurBean) SecurityContextHolder.getContext().getAuthentication().getPrincipal();
+        UtilisateurBean utilisateur = getUserConnected();
         booksProxy.prolongerEmprunt(id,utilisateur.getIdUser());
         return "redirect:/MonProfile/Emprunts";
     }
 
     private UtilisateurBean getUserConnected(){
-        UtilisateurBean utilisateur=(UtilisateurBean) SecurityContextHolder.getContext().getAuthentication().getPrincipal();
-        return utilisateur;
+
+        if (SecurityContextHolder.getContext().getAuthentication().getPrincipal() instanceof UtilisateurBean){
+           return  (UtilisateurBean) SecurityContextHolder.getContext().getAuthentication().getPrincipal();
+        }
+        return null;
     }
 }

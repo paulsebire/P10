@@ -144,18 +144,20 @@ public class BooksApplication {
 			copiesRepository.save(copy14);
 			empruntRepository.save(emprunt4);
 
-			Emprunt emprunt5 = new Emprunt(copy18, new GregorianCalendar(2020, Calendar.FEBRUARY, 02).getTime());
+			/*Emprunt emprunt5 = new Emprunt(copy18, new GregorianCalendar(2020, Calendar.FEBRUARY, 02).getTime());
 			emprunt5.setDateRetour(bibliService.ajouter4semaines(emprunt5.getDateEmprunt()));
 			emprunt5.setIdUtilisateur(1L);
 			copy18.setDispo(false);
 			copiesRepository.save(copy18);
-			empruntRepository.save(emprunt5);
+			empruntRepository.save(emprunt5);*/
 
 			Reservation reservation1= new Reservation(book6);
 			reservation1.setIdUtilisateur(3L);
-			reservation1.setPosition(1);
 			reservationRepository.save(reservation1);
 
+			Reservation reservation2= new Reservation(book6);
+			reservation2.setIdUtilisateur(2L);
+			reservationRepository.save(reservation2);
 
 
 			Email email = new Email();

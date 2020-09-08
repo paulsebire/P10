@@ -1,10 +1,14 @@
 package com.books.web.controller;
 
 
+import com.books.dao.BookRepository;
 import com.books.dao.CopiesRepository;
 import com.books.dao.EmpruntRepository;
+import com.books.dao.ReservationRepository;
+import com.books.entities.Book;
 import com.books.entities.Copy;
 import com.books.entities.Emprunt;
+import com.books.entities.Reservation;
 import com.books.services.BibliServiceImpl;
 import com.books.web.exceptions.EmpruntNotFoundException;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -25,6 +29,10 @@ public class EmpruntController {
     private BibliServiceImpl bibliService;
     @Autowired
     private CopiesRepository copiesRepository;
+    @Autowired
+    private ReservationRepository reservationRepository;
+    @Autowired
+    private BookRepository bookRepository;
 
     /**
      * find emprunts in Db for a specific user
@@ -107,9 +115,13 @@ public class EmpruntController {
 
     @GetMapping(value = "/utilisateur/{idUser}/livre/{idBook}/reservable")
     boolean livreReservable(@PathVariable(value = "idUser")Long idUser,@PathVariable(value = "idBook")Long idBook){
+        Book book = bookRepository.findById(idBook).get();
         List<Emprunt> emprunts = empruntRepository.livreDejaEmprunteParUtilisateur(idUser,idBook);
+        List<Reservation> reservations = reservationRepository.findAllByBookIdAndEnCoursIsTrueOrderByDateReservationAsc(idBook);
         if (emprunts.isEmpty()){
-            return true;
+            if (reservations.size()<=book.getCopies().size()){
+                return true;
+            } return false;
         } else return false;
     }
 }

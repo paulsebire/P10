@@ -16,6 +16,7 @@ public class Book{
     private String name;
     private String author;
     private String coverUrl;
+    private Integer nbCopy;
 
     @JsonBackReference
     @OneToMany(mappedBy = "book",fetch = FetchType.EAGER, cascade = CascadeType.ALL )
@@ -24,6 +25,7 @@ public class Book{
     public Book() {super();}
 
     public Book(String name, String author, String coverUrl) {
+        this.nbCopy=1;
         this.name = name;
         this.author = author;
         this.coverUrl = coverUrl;
@@ -67,6 +69,14 @@ public class Book{
 
     public void setCopies(List<Copy> copies) {
         this.copies = copies;
+    }
+
+    public Integer getNbCopy() {
+        return nbCopy;
+    }
+
+    public void setNbCopy(Integer nbCopy) {
+        this.nbCopy = nbCopy;
     }
 
     @Override

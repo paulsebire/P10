@@ -35,7 +35,6 @@ layout:decorate="~{layout}">
             <p>Nombre de copie disponibles: <span th:text="${copies.size()}"></span></p>
             <a class="btn btn-primary" th:text="Reserver" th:if="${reservable && #request.userPrincipal != null}"
                th:href="@{|/livre/${livre.id}/reserver|}"></a>
-
             <p>Nombre de copie disponibles: <span th:text="${copies.size()}+'/'+${livre.nbCopy}"></span></p>
 
         </div>

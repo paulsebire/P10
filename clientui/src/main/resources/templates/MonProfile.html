@@ -37,10 +37,10 @@
                 </li>
             </ul>
         </div>
-        <div class="card-body justify-content-center" th:if="${mesEmprunts}==true">
+        <div class="card-body justify-content-center" th:if="${mesEmprunts==true && emprunts.size()>0}">
             <div class="row">
-                <div th:each="emprunt : ${emprunts}" class="col-md-3 my-1">
-                    <a th:href="@{|/fiche-livre/${emprunt.copy.book.id}|}" >
+                <div  th:each="emprunt : ${emprunts}" class="col-md-3 my-1">
+                    <a th:href="@{|/livre/${emprunt.copy.book.id}|}" >
                         <img th:src="${emprunt.copy.book.coverUrl}" class="card-img-top" width="200" height="350" /></a>
                     <p th:text= "${emprunt.copy.book.name}"></p>
                     <p th:text= "${emprunt.copy.book.author}"></p>
@@ -51,10 +51,13 @@
                 </div>
             </div>
         </div>
-        <div class="card-body justify-content-center" th:if="${mesEmprunts}==false">
+        <div class="card-body justify-content-center" th:if="${mesEmprunts==true && emprunts.size()==0}">
+            <p>Vous n'avez pas de reservation en cours</p>
+        </div>
+        <div class="card-body justify-content-center" th:if="${mesEmprunts==false && reservations.size()>0}">
             <div class="row">
                 <div th:each="reservation : ${reservations}" class="col-md-3 my-1">
-                    <a th:href="@{|/fiche-livre/${reservation.book.id}|}" >
+                    <a th:href="@{|/livre/${reservation.book.id}|}" >
                         <img th:src="${reservation.book.coverUrl}" class="card-img-top" width="200" height="350" /></a>
                     <p th:text= "${reservation.book.name}"></p>
                     <p th:text= "${reservation.book.author}"></p>
@@ -63,6 +66,9 @@
                     <p> prochain retour le: <span th:text="${#dates.format(reservation.dateNextRetour, 'dd/MM/yyyy')}"/></p>
                 </div>
             </div>
+        </div>
+        <div class="card-body justify-content-center" th:if="${mesEmprunts==false && reservations.size()==0}">
+            <p>Vous n'avez pas de reservation en cours</p>
         </div>
     </div>
 </div>

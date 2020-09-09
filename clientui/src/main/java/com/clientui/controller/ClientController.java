@@ -29,6 +29,7 @@ public class ClientController {
     @Autowired
     private MicroserviceUtilisateurProxy utilisateurProxy;
 
+    private boolean reservable=false;
 
 
     /**
@@ -53,14 +54,14 @@ public class ClientController {
      * @param model model
      * @return the view fichelivre
      */
-    @GetMapping("/fiche-livre/{id}")
+    @GetMapping("/livre/{id}")
     public String ficheLivre(@PathVariable Long id,  Model model){
 
         BookBean livre = booksProxy.recupererUnLivre(id);
         List<CopyBean> copies = booksProxy.CopiesDispo(id);
         model.addAttribute("livre", livre);
         model.addAttribute("copies",copies);
-        boolean reservable=false;
+
         UtilisateurBean utilisateur = getUserConnected();
         if (utilisateur!=null){
             reservable=booksProxy.livreReservable(getUserConnected().getIdUser(),id);
@@ -127,5 +128,26 @@ public class ClientController {
            return  (UtilisateurBean) SecurityContextHolder.getContext().getAuthentication().getPrincipal();
         }
         return null;
+    }
+
+    @GetMapping("/livre/{id}/reserver")
+    public String reserver(Model model,@PathVariable Long id){
+        reservable=false;
+        UtilisateurBean utilisateur = getUserConnected();
+        if (utilisateur!=null){
+            booksProxy.reserverLivre(utilisateur.getIdUser(),id);
+            Set<ReservationBean> reservations = booksProxy.reservationsByUser(getUserConnected().getIdUser());
+            model.addAttribute("reservations",reservations);
+            boolean mesEmprunts=false;
+            model.addAttribute("mesEmprunts",mesEmprunts);
+            return "redirect:/MonProfile/Reservations";
+        }else{
+            List<BookBean> livres =  booksProxy.bookList("");
+            model.addAttribute("livres", livres);
+            model.addAttribute("mc","");
+            log.info("Récupération de la liste des livres");
+            return "Accueil";
+
+        }
     }
 }

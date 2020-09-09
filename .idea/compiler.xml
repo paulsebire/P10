@@ -8,10 +8,10 @@
         <outputRelativeToContentRoot value="true" />
         <module name="eureka-server" />
         <module name="config-server" />
-        <module name="zuulserver" />
         <module name="utilisateur" />
-        <module name="books" />
+        <module name="zuulserver" />
         <module name="clientui" />
+        <module name="books" />
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel>

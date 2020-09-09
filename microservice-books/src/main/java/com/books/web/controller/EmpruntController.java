@@ -69,14 +69,16 @@ public class EmpruntController {
     /**
      * method to create an emprunt
      * @param idUser id of the borrower
-     * @param idCopy if of the copy borrowed
+     * @param idBook id of the book borrowed
      * @return a response entity depending on the scenario
      */
-    @PostMapping(value = "/utilisateur/{idUser}/copie/{idCopy}/emprunt/ouvrir")
-     ResponseEntity reserverCopy(@PathVariable(value = "idUser")Long idUser,@PathVariable(value = "idCopy")Long idCopy){
+    @GetMapping(value = "/utilisateur/{idUser}/livre/{idBook}/emprunt/ouvrir")
+     ResponseEntity reserverCopy(@PathVariable(value = "idUser")Long idUser,@PathVariable(value = "idBook")Long idBook){
 
-        Optional<Copy> c   = copiesRepository.findById(idCopy);
-
+        Book book=bookRepository.findById(idBook).get();
+        List<Copy> copiesDispos=copiesRepository.ListCopyDispoByBook(idBook);
+        Optional<Copy> c   = copiesRepository.findById(copiesDispos.get(0).getId());
+        Reservation reservation = reservationRepository.findByBookIdAndIdUtilisateurAndEnCoursTrue(idBook,idUser);
         if (c.isPresent()){
              Copy copy=c.get();
             if (copy.isDispo()){
@@ -84,11 +86,13 @@ public class EmpruntController {
                 emprunt.setDateRetour(bibliService.ajouter4semaines(emprunt.getDateEmprunt()));
                 emprunt.setIdUtilisateur(idUser);
                 copy.setDispo(false);
+                reservation.setEnCours(false);
+                reservationRepository.save(reservation);
                 copiesRepository.save(copy);
                 empruntRepository.save(emprunt);
                 return new ResponseEntity<>("emprunt effectué", HttpStatus.OK);
             }
-        }return new ResponseEntity<>("emprunt introuvable", HttpStatus.BAD_REQUEST);
+        }return new ResponseEntity<>("emprunt impossible", HttpStatus.BAD_REQUEST);
     }
 
     /**
@@ -113,15 +117,5 @@ public class EmpruntController {
         }return new ResponseEntity<>("emprunt introuvable", HttpStatus.BAD_REQUEST);
     }
 
-    @GetMapping(value = "/utilisateur/{idUser}/livre/{idBook}/reservable")
-    boolean livreReservable(@PathVariable(value = "idUser")Long idUser,@PathVariable(value = "idBook")Long idBook){
-        Book book = bookRepository.findById(idBook).get();
-        List<Emprunt> emprunts = empruntRepository.livreDejaEmprunteParUtilisateur(idUser,idBook);
-        List<Reservation> reservations = reservationRepository.findAllByBookIdAndEnCoursIsTrueOrderByDateReservationAsc(idBook);
-        if (emprunts.isEmpty()){
-            if (reservations.size()<=book.getCopies().size()){
-                return true;
-            } return false;
-        } else return false;
-    }
+
 }

@@ -29,7 +29,7 @@
         <div class=" container spacer row justify-content-center">
             <div class="card-deck">
                 <div class="card" th:each="livre : ${livres}">
-                    <a class="text-center" th:href="@{|/fiche-livre/${livre.id}|}">
+                    <a class="text-center" th:href="@{|/livre/${livre.id}|}">
                         <img  th:src="${livre.coverUrl}">
                     </a>
                     <div class="card-body">

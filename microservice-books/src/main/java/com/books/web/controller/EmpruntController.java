@@ -14,6 +14,8 @@ import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
 import javax.mail.MessagingException;
+import java.text.DateFormat;
+import java.text.SimpleDateFormat;
 import java.util.Date;
 import java.util.List;
 import java.util.Optional;
@@ -104,12 +106,16 @@ public class EmpruntController {
      * @param idE id of the emprunt
      * @return  a response entity depending on the scenario
      */
-    @PutMapping(value = "/emprunt/{idE}/emprunt/cloturer")
+    @PutMapping(value = "/emprunt/{idE}/cloturer")
     ResponseEntity cloturerEmprunt(@PathVariable(value = "idE")Long idE) throws MessagingException {
         Email email = emailRepository.findByName("notification");
         Emprunt emprunt = empruntRepository.findById(idE).get();
         UtilisateurBean utilisateur=utilisateurProxy.utilisateurById(emprunt.getIdUtilisateur());
-
+        DateFormat shortDateFormat = DateFormat.getDateTimeInstance(
+                DateFormat.SHORT,
+                DateFormat.SHORT);
+        SimpleDateFormat formater = new SimpleDateFormat("'le' dd/MM/yyyy 'à' hh:mm");
+        String dateDuJour = shortDateFormat.format(new Date());
         if (emprunt !=null){
             if (!emprunt.isCloturer()){
                 Copy copy = copiesRepository.findById(emprunt.getCopy().getId()).get();
@@ -117,12 +123,13 @@ public class EmpruntController {
                 copy.setDispo(true);
                 copiesRepository.save(copy);
                 empruntRepository.save(emprunt);
-                List<Reservation> fileAttente = reservationRepository.findAllByBookIdAndEnCoursIsTrueOrderByDateReservationAsc(copy.getBook().getId());
+                List<Reservation> fileAttente = reservationRepository.findAllByBookIdAndEnCoursIsTrueAndNotifiedIsFalseOrderByDateReservationAsc(copy.getBook().getId());
                 if (!fileAttente.isEmpty()){
                     Reservation reservation =fileAttente.get(0);
                     String text = email.getContenu()
+                            .replace("[USERNAME]",utilisateur.getUsername())
                             .replace("[LIVRE_TITRE]", reservation.getBook().getName())
-                            .replace("[DATE_RENDU]", new Date().toString());
+                            .replace("[DATE_RENDU]", dateDuJour);
                     emailService.sendSimpleMessage(utilisateur.getEmail(), email.getObjet(), text);
                     reservation.setNotified(true);
                     reservationRepository.save(reservation);

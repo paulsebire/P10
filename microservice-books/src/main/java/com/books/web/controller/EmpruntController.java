@@ -1,21 +1,19 @@
 package com.books.web.controller;
 
 
-import com.books.dao.BookRepository;
-import com.books.dao.CopiesRepository;
-import com.books.dao.EmpruntRepository;
-import com.books.dao.ReservationRepository;
-import com.books.entities.Book;
-import com.books.entities.Copy;
-import com.books.entities.Emprunt;
-import com.books.entities.Reservation;
+import com.books.beans.UtilisateurBean;
+import com.books.dao.*;
+import com.books.entities.*;
+import com.books.poxies.MicroserviceUtilisateurProxy;
 import com.books.services.BibliServiceImpl;
+import com.books.services.EmailServiceImpl;
 import com.books.web.exceptions.EmpruntNotFoundException;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
+import javax.mail.MessagingException;
 import java.util.Date;
 import java.util.List;
 import java.util.Optional;
@@ -33,6 +31,12 @@ public class EmpruntController {
     private ReservationRepository reservationRepository;
     @Autowired
     private BookRepository bookRepository;
+    @Autowired
+    private EmailRepository emailRepository;
+    @Autowired
+    private EmailServiceImpl emailService;
+    @Autowired
+    private MicroserviceUtilisateurProxy utilisateurProxy;
 
     /**
      * find emprunts in Db for a specific user
@@ -101,9 +105,10 @@ public class EmpruntController {
      * @return  a response entity depending on the scenario
      */
     @PutMapping(value = "/emprunt/{idE}/emprunt/cloturer")
-    ResponseEntity cloturerEmprunt(@PathVariable(value = "idE")Long idE){
-
+    ResponseEntity cloturerEmprunt(@PathVariable(value = "idE")Long idE) throws MessagingException {
+        Email email = emailRepository.findByName("notification");
         Emprunt emprunt = empruntRepository.findById(idE).get();
+        UtilisateurBean utilisateur=utilisateurProxy.utilisateurById(emprunt.getIdUtilisateur());
 
         if (emprunt !=null){
             if (!emprunt.isCloturer()){
@@ -112,6 +117,16 @@ public class EmpruntController {
                 copy.setDispo(true);
                 copiesRepository.save(copy);
                 empruntRepository.save(emprunt);
+                List<Reservation> fileAttente = reservationRepository.findAllByBookIdAndEnCoursIsTrueOrderByDateReservationAsc(copy.getBook().getId());
+                if (!fileAttente.isEmpty()){
+                    Reservation reservation =fileAttente.get(0);
+                    String text = email.getContenu()
+                            .replace("[LIVRE_TITRE]", reservation.getBook().getName())
+                            .replace("[DATE_RENDU]", new Date().toString());
+                    emailService.sendSimpleMessage(utilisateur.getEmail(), email.getObjet(), text);
+                    reservation.setNotified(true);
+                    reservationRepository.save(reservation);
+                }
                 return new ResponseEntity<>("emprunt cloturée", HttpStatus.OK);
             }
         }return new ResponseEntity<>("emprunt introuvable", HttpStatus.BAD_REQUEST);

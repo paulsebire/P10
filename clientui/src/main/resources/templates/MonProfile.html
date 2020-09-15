@@ -52,7 +52,7 @@
             </div>
         </div>
         <div class="card-body justify-content-center" th:if="${mesEmprunts==true && emprunts.size()==0}">
-            <p>Vous n'avez pas de reservation en cours</p>
+            <p>Vous n'avez pas d'emprunt en cours</p>
         </div>
         <div class="card-body justify-content-center" th:if="${mesEmprunts==false && reservations.size()>0}">
             <div class="row">
@@ -64,6 +64,7 @@
                     <p> Réservé le: <span th:text="${#dates.format(reservation.dateReservation, 'dd/MM/yyyy')}"/></p>
                     <p> place dans la file: <span th:text="${reservation.position}"/></p>
                     <p> prochain retour le: <span th:text="${#dates.format(reservation.dateNextRetour, 'dd/MM/yyyy')}"/></p>
+                    <p><a class="btn btn-primary" th:text="Annuler" th:href="@{|/reservation/${reservation.id}/annuler|}"></a></p>
                 </div>
             </div>
         </div>

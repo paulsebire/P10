@@ -43,11 +43,11 @@ public class BookController {
     public Book recupererUnLivre(@PathVariable long id) {
 
         Optional<Book> b = bookRepository.findById(id);
-        List<Copy> copies= copiesRepository.findAllByBookId(id);
+        List<Copy> copies= copiesRepository.findAllByBook_Id(id);
         Book book;
         if(b.isPresent()){
             book=b.get();
-            book.setNbCopy(copies.size());
+            book.setNbTotalCopys(copies.size());
         }else {
             throw new BookNotFoundException("Le livre correspondant à l'id " + id + " n'existe pas");
         }

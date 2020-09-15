@@ -151,19 +151,19 @@ public class BooksApplication {
 			copiesRepository.save(copy18);
 			empruntRepository.save(emprunt5);
 
-			/*Reservation reservation1= new Reservation(book6);
+			Reservation reservation1= new Reservation(book6);
 			reservation1.setIdUtilisateur(3L);
-			reservationRepository.save(reservation1);*/
+			reservationRepository.save(reservation1);
 
 			Reservation reservation2= new Reservation(book6);
 			reservation2.setIdUtilisateur(2L);
 			reservationRepository.save(reservation2);
 
 
-			Email email = new Email();
-			email.setName("relance");
-			email.setObjet("relance pour livre non rendu");
-			email.setContenu("Bonjour [USERNAME], \n "+
+			Email email1 = new Email();
+		email1.setName("relance");
+		email1.setObjet("relance pour livre non rendu");
+		email1.setContenu("Bonjour [USERNAME], \n "+
 					"\n"+
 					"\tVous deviez rendre le livre [LIVRE_TITRE] à la blibliothèque au plus tard à la date : [DATE_FIN].\n" +
 					"à ce jour nous n'avons toujours pas enregistré le retour de ce livre.\n" +
@@ -171,7 +171,19 @@ public class BooksApplication {
 					"\n"+
 					"Cordialement.");
 
-			emailRepository.save(email);
+			emailRepository.save(email1);
+		Email email2 = new Email();
+		email2.setName("notification");
+		email2.setObjet("notification de disponiblité");
+		email2.setContenu("Bonjour [USERNAME], \n "+
+				"\n"+
+				"\tBonjour, le livre [LIVRE_TITRE] que vous avez réservé est de nouveau disponible à la blibliothèque .\n" +
+				"Vous disposez de 48h à partir de [DATE_RENDU] pour venir retirer votre exemplaire, passé ce délai vous sorirez de la liste d'attente.\n" +
+				"Dans l'attente de votre visite.\n" +
+				"\n"+
+				"Cordialement.");
+
+		emailRepository.save(email2);
 	}
 
 

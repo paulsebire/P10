@@ -2,25 +2,35 @@ package com.clientui.beans;
 
 
 import com.fasterxml.jackson.annotation.JsonProperty;
-import lombok.Data;
+
 import lombok.Getter;
 import lombok.Setter;
 
 import java.io.Serializable;
 import java.util.Collection;
+import java.util.Date;
 
 
- public class BookBean {
+public class BookBean {
     private long id;
     private String name;
     private String author;
     private String coverUrl;
     private Collection<CopyBean> copies;
-    private Integer nbCopy;
+    private Date prochainRetour;
+    private Integer nbTotalCopys;
 
      public BookBean() {
 
      }
+
+    public Integer getNbTotalCopys() {
+        return nbTotalCopys;
+    }
+
+    public void setNbTotalCopys(Integer nbTotalCopys) {
+        this.nbTotalCopys = nbTotalCopys;
+    }
 
     public long getId() {
         return id;
@@ -50,15 +60,15 @@ import java.util.Collection;
         return coverUrl;
     }
 
-     public Integer getNbCopy() {
-         return nbCopy;
-     }
+    public Date getProchainRetour() {
+        return prochainRetour;
+    }
 
-     public void setNbCopy(Integer nbCopy) {
-         this.nbCopy = nbCopy;
-     }
+    public void setProchainRetour(Date prochainRetour) {
+        this.prochainRetour = prochainRetour;
+    }
 
-     public void setCoverUrl(String coverUrl) {
+    public void setCoverUrl(String coverUrl) {
         this.coverUrl = coverUrl;
     }
 

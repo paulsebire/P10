@@ -60,7 +60,11 @@ public class ClientController {
         BookBean livre = booksProxy.recupererUnLivre(id);
         List<CopyBean> copies = booksProxy.CopiesDispo(id);
         model.addAttribute("livre", livre);
-        model.addAttribute("copies",copies);
+        model.addAttribute("copiesDispos",copies);
+        List<ReservationBean> reservationsEnCours = booksProxy.reservationsByBook(id);
+        if (reservationsEnCours!=null){
+            model.addAttribute("nbResaEnCours",reservationsEnCours.size());
+        } else model.addAttribute("nbResaEnCours",0);
 
         UtilisateurBean utilisateur = getUserConnected();
         if (utilisateur!=null){
@@ -149,5 +153,16 @@ public class ClientController {
             return "Accueil";
 
         }
+    }
+
+    @GetMapping("reservation/{id}/annuler")
+    public String annulerReservation (Model model,@PathVariable(value = "id")Long id){
+        UtilisateurBean utilisateur=getUserConnected();
+        booksProxy.annulerReservation(utilisateur.getIdUser(),id);
+        Set<ReservationBean> reservations = booksProxy.reservationsByUser(getUserConnected().getIdUser());
+        model.addAttribute("reservations",reservations);
+        boolean mesEmprunts=false;
+        model.addAttribute("mesEmprunts",mesEmprunts);
+        return "redirect:/MonProfile/Reservations";
     }
 }

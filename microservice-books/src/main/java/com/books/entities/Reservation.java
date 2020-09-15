@@ -20,6 +20,7 @@ public class Reservation {
 
     private Integer position;
     private boolean enCours;
+    private boolean notified;
 
     public Reservation() {
         super();
@@ -29,6 +30,15 @@ public class Reservation {
         this.dateReservation=new Date();
         this.enCours=true;
         this.book=book;
+        this.notified=false;
+    }
+
+    public boolean isNotified() {
+        return notified;
+    }
+
+    public void setNotified(boolean notified) {
+        this.notified = notified;
     }
 
     public Long getId() {

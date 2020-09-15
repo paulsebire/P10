@@ -178,7 +178,7 @@ public class BooksApplication {
 		email2.setContenu("Bonjour [USERNAME], \n "+
 				"\n"+
 				"\tBonjour, le livre [LIVRE_TITRE] que vous avez réservé est de nouveau disponible à la blibliothèque .\n" +
-				"Vous disposez de 48h à partir de [DATE_RENDU] pour venir retirer votre exemplaire, passé ce délai vous sorirez de la liste d'attente.\n" +
+				"Vous disposez de 48h à partir du [DATE_RENDU] pour venir retirer votre exemplaire, passé ce délai vous sortirez de la liste d'attente.\n" +
 				"Dans l'attente de votre visite.\n" +
 				"\n"+
 				"Cordialement.");

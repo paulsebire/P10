@@ -39,9 +39,6 @@ public class EmailServiceImpl implements IEmailService {
     @Override
     public void sendSimpleMessage(String email, String objet, String contenu) throws MessagingException {
 
-        System.out.println(sender.getHost());
-        System.out.println(sender.getPort());
-
         MimeMessage message = sender.createMimeMessage();
         MimeMessageHelper helper = new MimeMessageHelper(message);
         helper.setTo(email);

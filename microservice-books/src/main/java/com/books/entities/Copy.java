@@ -14,6 +14,7 @@ public class Copy{
     private Long id;
     private boolean dispo;
     private String serialNumber;
+
     @JsonManagedReference
     @ManyToOne
     @JoinColumn(name ="id" )

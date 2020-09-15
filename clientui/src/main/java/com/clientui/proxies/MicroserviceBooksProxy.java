@@ -82,4 +82,15 @@ public interface MicroserviceBooksProxy {
     @GetMapping(value = "/utilisateur/{idUser}/livre/{idBook}/reserver")
     void reserverLivre(@PathVariable(value = "idUser")Long idUser,@PathVariable(value = "idBook")Long idBook);
 
+
+    /**
+     * annuler une  reservation
+     * @param idUser id de  l'emetteur de la reservation
+     * @param id id de la reservation à annuler
+     */
+    @PutMapping(value = "/utilisateur/{idUser}/reservation/{id}/annuler")
+    void annulerReservation(@PathVariable(value = "idUser")Long idUser,@PathVariable(value = "id")Long id);
+
+    @GetMapping(value = "/livre/{idBook}/reservations")
+    List<ReservationBean> reservationsByBook(@PathVariable(value = "idBook")Long idBook);
 }

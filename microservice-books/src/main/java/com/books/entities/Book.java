@@ -6,6 +6,7 @@ import com.fasterxml.jackson.annotation.JsonManagedReference;
 import javax.persistence.*;
 
 
+import java.util.Date;
 import java.util.List;
 
 @Entity
@@ -16,8 +17,8 @@ public class Book{
     private String name;
     private String author;
     private String coverUrl;
-    private Integer nbCopy;
-
+    private Date prochainRetour;
+    private Integer nbTotalCopys;
     @JsonBackReference
     @OneToMany(mappedBy = "book",fetch = FetchType.EAGER, cascade = CascadeType.ALL )
     private List<Copy> copies;
@@ -25,10 +26,18 @@ public class Book{
     public Book() {super();}
 
     public Book(String name, String author, String coverUrl) {
-        this.nbCopy=1;
+        this.prochainRetour=new Date();
         this.name = name;
         this.author = author;
         this.coverUrl = coverUrl;
+    }
+
+    public Integer getNbTotalCopys() {
+        return nbTotalCopys;
+    }
+
+    public void setNbTotalCopys(Integer nbTotalCopys) {
+        this.nbTotalCopys = nbTotalCopys;
     }
 
     public long getId() {
@@ -71,12 +80,13 @@ public class Book{
         this.copies = copies;
     }
 
-    public Integer getNbCopy() {
-        return nbCopy;
+
+    public Date getProchainRetour() {
+        return prochainRetour;
     }
 
-    public void setNbCopy(Integer nbCopy) {
-        this.nbCopy = nbCopy;
+    public void setProchainRetour(Date prochainRetour) {
+        this.prochainRetour = prochainRetour;
     }
 
     @Override

@@ -15,12 +15,10 @@ import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
+import org.springframework.web.bind.annotation.PutMapping;
 import org.springframework.web.bind.annotation.RestController;
 
-import java.util.Date;
-import java.util.HashSet;
-import java.util.List;
-import java.util.Set;
+import java.util.*;
 
 @RestController
 public class ReservationController {
@@ -86,15 +84,42 @@ public class ReservationController {
         List<Emprunt> emprunts = empruntRepository.livreDejaEmprunteParUtilisateur(idUser,idBook);
         List<Reservation> reservations = reservationRepository.findAllByBookIdAndEnCoursIsTrueOrderByDateReservationAsc(idBook);
         Reservation reservationEncours = reservationRepository.findByBookIdAndIdUtilisateurAndEnCoursTrue(idBook,idUser);
-        if (emprunts.isEmpty()){
-            if (reservations.size()<=book.getCopies().size()*2){
-                if (reservationEncours==null){
-                    Reservation reservation = new Reservation(book);
-                    reservation.setIdUtilisateur(idUser);
-                    reservationRepository.save(reservation);
-                    return new ResponseEntity<>("livre reservé", HttpStatus.OK);
-                } return new ResponseEntity<>("reservation impossible, livre déjà réservé", HttpStatus.BAD_REQUEST);
-            } return new ResponseEntity<>("reservation impossible, file d'attente pleine", HttpStatus.BAD_REQUEST);
-        } else return new ResponseEntity<>("reservation impossible, livre déjà emprunté", HttpStatus.BAD_REQUEST);
+        List<Copy> copiesDispo = copiesRepository.findCopiesByBookIdAndDispoTrue(idBook);
+        if (copiesDispo.size()==0){
+            if (emprunts.isEmpty()){
+                if (reservations.size()<=book.getCopies().size()*2){
+                    if (reservationEncours==null){
+                        Reservation reservation = new Reservation(book);
+                        reservation.setIdUtilisateur(idUser);
+                        reservationRepository.save(reservation);
+                        return new ResponseEntity<>("livre reservé", HttpStatus.OK);
+                    } return new ResponseEntity<>("reservation impossible, livre déjà réservé", HttpStatus.BAD_REQUEST);
+                } return new ResponseEntity<>("reservation impossible, file d'attente pleine", HttpStatus.BAD_REQUEST);
+            } else return new ResponseEntity<>("reservation impossible, livre déjà emprunté", HttpStatus.BAD_REQUEST);
+        } else return new ResponseEntity<>("reservation impossible, des exemplaires sont disponibles", HttpStatus.BAD_REQUEST);
+
     }
+
+    @PutMapping(value = "/utilisateur/{idUser}/reservation/{id}/annuler")
+    ResponseEntity annulerReservation(@PathVariable(value = "idUser")Long idUser,@PathVariable(value = "id")Long id){
+       Optional<Reservation> r = reservationRepository.findById(id);
+       Reservation reservation= null;
+       if (r.isPresent()){
+           reservation=r.get();
+           if (reservation.getIdUtilisateur().equals(idUser)){
+               reservation.setEnCours(false);
+               reservationRepository.save(reservation);
+               return new ResponseEntity<>("reservation annulée", HttpStatus.OK);
+           }return new ResponseEntity<>(" annulation de la reservation impossible, la reservation n'appartient au demandeur", HttpStatus.BAD_REQUEST);
+       }return new ResponseEntity<>("annulation de la reservation impossible, la reservation est introuvable", HttpStatus.BAD_REQUEST);
+    }
+
+    @GetMapping(value = "/livre/{idBook}/reservations")
+    List<Reservation> reservationsByBook(@PathVariable(value = "idBook")Long idBook){
+        List<Reservation> reservations= reservationRepository.findAllByBookIdAndEnCoursIsTrueOrderByDateReservationAsc(idBook);
+        if (!reservations.isEmpty()){
+            return reservations;
+        }else return null;
+    }
+
 }

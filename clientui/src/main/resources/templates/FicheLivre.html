@@ -31,10 +31,12 @@ layout:decorate="~{layout}">
         <div class="col-md-4 mx-auto text-center">
             <img th:src="${livre.coverUrl}" class="card-img-top" width="200" height="350"/>
             <p th:text="${livre.author}" class="font-weight-bold"></p>
-            <a class="btn btn-primary" th:text="Reserver" th:if="${reservable && #request.userPrincipal != null}"
+            <p>Nombre de copie disponibles: <span th:text="${copiesDispos.size()}+'/'+${livre.nbTotalCopys}"></span></p>
+            <p th:if="${copiesDispos.size()==0}"> prochain retour le: <span th:text="${#dates.format(livre.prochainRetour, 'dd/MM/yyyy')}"/></p>
+            <p th:if="${reservable}" >File d'attente: <span th:text="${nbResaEnCours}+'/'+${livre.nbTotalCopys*2}"></span></p>
+            <a class="btn btn-primary" th:text="Reserver"
+               th:if="${reservable && #request.userPrincipal != null && copiesDispos.size()==0}"
                th:href="@{|/livre/${livre.id}/reserver|}"></a>
-            <p>Nombre de copie disponibles: <span th:text="${copies.size()}+'/'+${livre.nbCopy}"></span></p>
-
         </div>
     </div>
 </div>

@@ -7,16 +7,16 @@ import org.springframework.cloud.netflix.ribbon.RibbonClient;
 import org.springframework.cloud.openfeign.FeignClient;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
-
+import org.springframework.web.bind.annotation.RequestMapping;
 
 
 @FeignClient(name = "zuul-server",contextId = "microserviceUtilisateurProxy",
                 configuration= FeignConfig.class)
-@RibbonClient("/microservice-utilisateur")
+@RequestMapping("/microservice-utilisateur")
 public interface MicroserviceUtilisateurProxy {
 
 
-    @GetMapping("/microservice-utilisateur/user/{id}")
+    @GetMapping("/user/{id}")
     UtilisateurBean utilisateurById(@PathVariable(value = "id") Long id);
 
 }

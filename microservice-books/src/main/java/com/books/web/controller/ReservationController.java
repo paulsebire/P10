@@ -62,7 +62,8 @@ public class ReservationController {
         Date dateDujour = new Date();
         if (r.isPresent()){
             Reservation reservation=r.get();
-            if (reservation.getIdUtilisateur()==idUser && reservation.isProlonger()==false){
+            if (reservation.getIdUtilisateur()==idUser && reservation.isProlonger()==false
+                    && reservation.getDateRetour().after(new Date())){
                 reservation.setProlonger(true);
                 reservation.setDateRetour(bibliService.ajouter4semaines(reservation.getDateRetour()));
                 reservationRepository.save(reservation);

@@ -23,6 +23,13 @@ private BookRepository bookRepository;
         cal.add(Calendar.DATE, 28);
         return cal.getTime();
     }
+    @Override
+   public Date ajouter2Jours(Date date){
+        Calendar cal = Calendar.getInstance();
+        cal.setTime(date);
+        cal.add(Calendar.DATE, 2);
+        return cal.getTime();
+    }
 
     @Override
     public Book findBook(Long id) {

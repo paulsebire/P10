@@ -114,7 +114,6 @@ public class EmpruntController {
         DateFormat shortDateFormat = DateFormat.getDateTimeInstance(
                 DateFormat.SHORT,
                 DateFormat.SHORT);
-        SimpleDateFormat formater = new SimpleDateFormat("'le' dd/MM/yyyy 'à' hh:mm");
         String dateDuJour = shortDateFormat.format(new Date());
         if (emprunt !=null){
             if (!emprunt.isCloturer()){
@@ -132,6 +131,7 @@ public class EmpruntController {
                             .replace("[DATE_RENDU]", dateDuJour);
                     emailService.sendSimpleMessage(utilisateur.getEmail(), email.getObjet(), text);
                     reservation.setNotified(true);
+                    reservation.setDateNotification(new Date());
                     reservationRepository.save(reservation);
                 }
                 return new ResponseEntity<>("emprunt cloturée", HttpStatus.OK);

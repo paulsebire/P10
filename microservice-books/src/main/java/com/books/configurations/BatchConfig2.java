@@ -8,6 +8,8 @@ import com.books.dao.EmailRepository;
 import com.books.dao.EmpruntRepository;
 import com.books.dao.ReservationRepository;
 import com.books.poxies.MicroserviceUtilisateurProxy;
+import com.books.services.BibliServiceImpl;
+import com.books.services.EmailServiceImpl;
 import org.springframework.batch.core.Job;
 import org.springframework.batch.core.Step;
 import org.springframework.batch.core.configuration.annotation.EnableBatchProcessing;
@@ -22,7 +24,7 @@ import org.springframework.mail.javamail.JavaMailSenderImpl;
 
 @Configuration
 @EnableBatchProcessing
-public class BatchConfig{
+public class BatchConfig2 {
 
     @Autowired
     private JobBuilderFactory jobs;
@@ -42,21 +44,28 @@ public class BatchConfig{
     private ReservationRepository reservationRepository;
     @Autowired
     private BookRepository bookRepository;
+    @Autowired
+    private BibliServiceImpl bibliService;
+    @Autowired
+    private EmailServiceImpl emailService;
+
 
     @Bean
-    public Step stepOne() {
-        return steps.get("stepOne")
-                .tasklet(new TaskOne(empruntRepository, emailRepository,microserviceUtilisateurProxy, sender))
+    public Step stepTwo(){
+        return steps.get("stepTwo")
+                .tasklet(new TaskTwo( reservationRepository,  emailRepository,
+                         microserviceUtilisateurProxy,
+                         bookRepository, bibliService,  emailService,
+                         sender))
                 .build();
     }
 
 
-
     @Bean
-    public Job demoJob(){
-        return jobs.get("demoJob")
+    public Job demoJob2(){
+        return jobs.get("demoJob2")
                 .incrementer(new RunIdIncrementer())
-                .start(stepOne())
+                .start(stepTwo())
                 .build();
     }
 

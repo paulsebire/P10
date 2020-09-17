@@ -13,7 +13,7 @@ public class Reservation {
     private Long idUtilisateur;
     private Date dateReservation;
     private Date dateNextRetour;
-
+    private Date dateNotification;
     @ManyToOne
     @JoinColumn(name ="ID_BOOK" )
     private Book book;
@@ -31,6 +31,14 @@ public class Reservation {
         this.enCours=true;
         this.book=book;
         this.notified=false;
+    }
+
+    public Date getDateNotification() {
+        return dateNotification;
+    }
+
+    public void setDateNotification(Date dateNotification) {
+        this.dateNotification = dateNotification;
     }
 
     public boolean isNotified() {

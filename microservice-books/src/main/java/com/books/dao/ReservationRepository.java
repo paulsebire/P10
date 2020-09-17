@@ -14,4 +14,6 @@ public interface ReservationRepository extends JpaRepository<Reservation,Long> {
     Reservation findByBookIdAndIdUtilisateurAndEnCoursTrue(long  id, long idUtilisateur);
 
     List<Reservation> findAllByBookIdAndEnCoursIsTrueAndNotifiedIsFalseOrderByDateReservationAsc(long id);
+
+    List<Reservation> findAllByBookIdAndEnCoursIsTrueAndNotifiedIsTrueOrderByDateReservationAsc(long id);
 }

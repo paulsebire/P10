@@ -40,11 +40,6 @@ public class BooksApplication {
 		SpringApplication.run(BooksApplication.class, args);
 	}
 
-	@Bean
-	public CustomErrorDecoder CustomErrorDecoder() {
-		return new CustomErrorDecoder();
-	}
-
 	@PostConstruct
 	private void postConstruct() {
 
@@ -153,6 +148,8 @@ public class BooksApplication {
 
 			Reservation reservation1= new Reservation(book6);
 			reservation1.setIdUtilisateur(3L);
+			reservation1.setNotified(true);
+			reservation1.setDateNotification(new GregorianCalendar(2020, Calendar.SEPTEMBER, 14,15,30,00).getTime());
 			reservationRepository.save(reservation1);
 
 			Reservation reservation2= new Reservation(book6);

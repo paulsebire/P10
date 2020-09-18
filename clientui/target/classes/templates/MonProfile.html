@@ -34,7 +34,7 @@
                 <p th:text= "${resa.copy.book.author}"></p>
                 <p> Emprunté le: <span th:text="${#dates.format(resa.dateEmprunt, 'dd/MM/yyyy')}"/></p>
                 <p> A retourné le: <span th:text="${#dates.format(resa.dateRetour, 'dd/MM/yyyy')}"/></p>
-                <a class="btn btn-primary" th:text="Prolonger" th:if="${resa.prolonger==false}"
+                <a class="btn btn-primary" th:text="Prolonger" th:if="${resa.prolongeable==true}"
                    th:href="@{|/reservation/${resa.id}/prolonger|}"></a>
             </div>
         </div>

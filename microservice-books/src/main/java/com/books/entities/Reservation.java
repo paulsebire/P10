@@ -20,6 +20,7 @@ public class Reservation {
     private Date dateRetour;
     private boolean prolonger=false;
     private boolean cloturer=false;
+    private boolean prolongeable;
     @ManyToOne
     @JoinColumn(name ="ID_COPY" )
     private Copy copy;
@@ -33,6 +34,15 @@ public class Reservation {
         this.prolonger=false;
         this.cloturer=false;
         this.copy=copy;
+        this.prolongeable=true;
+    }
+
+    public boolean isProlongeable() {
+        return prolongeable;
+    }
+
+    public void setProlongeable(boolean prolongeable) {
+        this.prolongeable = prolongeable;
     }
 
     public Long getId() {

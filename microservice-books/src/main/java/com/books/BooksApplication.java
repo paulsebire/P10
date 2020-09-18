@@ -145,7 +145,7 @@ public class BooksApplication {
 			copiesRepository.save(copy8);
 			reservationRepository.save(resa2);
 
-			Reservation resa3 = new Reservation(copy10, new GregorianCalendar(2020, Calendar.MARCH, 16).getTime());
+			Reservation resa3 = new Reservation(copy10, new GregorianCalendar(2020, Calendar.SEPTEMBER, 16).getTime());
 			resa3.setDateRetour(bibliService.ajouter4semaines(resa3.getDateEmprunt()));
 			resa3.setIdUtilisateur(3L);
 			copy10.setDispo(false);

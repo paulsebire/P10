@@ -13,7 +13,10 @@ import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
-import java.util.*;
+import java.util.Calendar;
+import java.util.Date;
+import java.util.List;
+import java.util.Optional;
 
 @RestController
 public class ReservationController {
@@ -30,23 +33,10 @@ public class ReservationController {
      * @param id id of the user
      * @return alist of reservations
      */
-    @GetMapping(value = "/utilisateur/{id}/reservations")
+    @GetMapping(value = "/utilisateur/{id}/reservations/")
     public List<Reservation> reservationList(@PathVariable(value = "id")Long id){
-        List<Reservation> reservations = reservationRepository.findAllByIdUtilisateurAndCloturerFalseOrderByDateEmpruntAsc(id);
-        //Set<Reservation> reservationSet=new HashSet<>();
-        if (reservations.isEmpty()){
-            throw new ReservationNotFoundException("Aucune reservation n'est disponible");
-        }else {
-            for (Reservation r:reservations) {
-                if (r.getDateRetour().after(new Date()) && r.isProlonger()==false){
-                    r.setProlongeable(true);
-                }else r.setProlongeable(false);
-                reservationRepository.save(r);
-               // reservationSet.add(r);
-            }
-
-        }
-        reservations = reservationRepository.findAllByIdUtilisateurAndCloturerFalseOrderByDateEmpruntAsc(id);
+        List<Reservation> reservations = reservationRepository.findAllByIdUtilisateurAndCloturerFalseOrderByIdAsc(id);
+        if (reservations.isEmpty()) throw new ReservationNotFoundException("Aucune reservation n'est disponible");
         return reservations;
     }
 

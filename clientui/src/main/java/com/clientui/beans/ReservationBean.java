@@ -13,7 +13,6 @@ public class ReservationBean {
     private boolean prolonger=false;
     private CopyBean copy;
     private boolean cloturer;
-    private boolean prolongeable;
     public ReservationBean() {
     }
 
@@ -63,14 +62,6 @@ public class ReservationBean {
 
     public void setCopy(CopyBean copy) {
         this.copy = copy;
-    }
-
-    public boolean isProlongeable() {
-        return prolongeable;
-    }
-
-    public void setProlongeable(boolean prolongeable) {
-        this.prolongeable = prolongeable;
     }
 
     @Override

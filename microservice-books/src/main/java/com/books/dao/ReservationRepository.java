@@ -12,7 +12,7 @@ import java.util.Set;
 
 public interface ReservationRepository extends JpaRepository<Reservation, Long> {
 
-public List<Reservation> findAllByIdUtilisateurAndCloturerFalseOrderByDateEmpruntAsc(long idUser);
+public List<Reservation> findAllByIdUtilisateurAndCloturerFalseOrderByIdAsc(long idUser);
 
 Set<Reservation> findByCloturerFalseAndDateRetourBefore(Date date);
 }

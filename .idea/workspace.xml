@@ -173,7 +173,7 @@
       <workItem from="1599741271604" duration="7028000" />
       <workItem from="1600091145910" duration="31531000" />
       <workItem from="1600351617064" duration="6250000" />
-      <workItem from="1600441038559" duration="1355000" />
+      <workItem from="1600441038559" duration="1618000" />
     </task>
     <task id="LOCAL-00001" summary="refactored all reservations in emprunts">
       <created>1597226019835</created>
@@ -259,7 +259,14 @@
       <option name="project" value="LOCAL" />
       <updated>1600354670604</updated>
     </task>
-    <option name="localTasksCounter" value="13" />
+    <task id="LOCAL-00013" summary="back to state0">
+      <created>1600442639266</created>
+      <option name="number" value="00013" />
+      <option name="presentableId" value="LOCAL-00013" />
+      <option name="project" value="LOCAL" />
+      <updated>1600442639266</updated>
+    </task>
+    <option name="localTasksCounter" value="14" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -295,6 +302,7 @@
     <MESSAGE value="added purge of shortlist and notification to next in shortlist" />
     <MESSAGE value="fixed bug about extending borrowing" />
     <MESSAGE value="improved extend borrowing method" />
-    <option name="LAST_COMMIT_MESSAGE" value="improved extend borrowing method" />
+    <MESSAGE value="back to state0" />
+    <option name="LAST_COMMIT_MESSAGE" value="back to state0" />
   </component>
 </project>

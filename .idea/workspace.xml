@@ -1,7 +1,16 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="47ffafc2-d67c-453f-8387-606a68c70022" name="Default Changelist" comment="" />
+    <list default="true" id="47ffafc2-d67c-453f-8387-606a68c70022" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/clientui/src/main/java/com/clientui/beans/ReservationBean.java" beforeDir="false" afterPath="$PROJECT_DIR$/clientui/src/main/java/com/clientui/beans/ReservationBean.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/clientui/src/main/resources/templates/MonProfile.html" beforeDir="false" afterPath="$PROJECT_DIR$/clientui/src/main/resources/templates/MonProfile.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/clientui/target/classes/com/clientui/controller/ConnexionController.class" beforeDir="false" afterPath="$PROJECT_DIR$/clientui/target/classes/com/clientui/controller/ConnexionController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/microservice-books/src/main/java/com/books/dao/ReservationRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/microservice-books/src/main/java/com/books/dao/ReservationRepository.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/microservice-books/src/main/java/com/books/entities/Reservation.java" beforeDir="false" afterPath="$PROJECT_DIR$/microservice-books/src/main/java/com/books/entities/Reservation.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/microservice-books/src/main/java/com/books/web/controller/ReservationController.java" beforeDir="false" afterPath="$PROJECT_DIR$/microservice-books/src/main/java/com/books/web/controller/ReservationController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/microservice-books/target/classes/com/books/services/EmailServiceImpl.class" beforeDir="false" afterPath="$PROJECT_DIR$/microservice-books/target/classes/com/books/services/EmailServiceImpl.class" afterDir="false" />
+    </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -57,6 +66,7 @@
   </component>
   <component name="PropertiesComponent">
     <property name="ASKED_ADD_EXTERNAL_FILES" value="true" />
+    <property name="ExpandSpringBootJavaOptionsPanel" value="true" />
     <property name="RequestMappingsPanelOrder0" value="0" />
     <property name="RequestMappingsPanelOrder1" value="1" />
     <property name="RequestMappingsPanelWidth0" value="75" />
@@ -101,10 +111,11 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Spring Boot.ConfigServerApplication">
+  <component name="RunManager" selected="Spring Boot.BooksApplication">
     <configuration name="BooksApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot">
-      <module name="books" />
+      <module name="microservice-books" />
       <option name="SPRING_BOOT_MAIN_CLASS" value="com.books.BooksApplication" />
+      <option name="ALTERNATIVE_JRE_PATH" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
@@ -132,15 +143,17 @@
       </method>
     </configuration>
     <configuration name="UtilisateurApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot">
-      <module name="utilisateur" />
+      <module name="microservice-utilisateur" />
       <option name="SPRING_BOOT_MAIN_CLASS" value="com.utilisateur.UtilisateurApplication" />
+      <option name="ALTERNATIVE_JRE_PATH" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
     <configuration name="ZuulserverApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot">
-      <module name="zuulserver" />
+      <module name="zuul-server" />
       <option name="SPRING_BOOT_MAIN_CLASS" value="com.zuulserver.ZuulserverApplication" />
+      <option name="ALTERNATIVE_JRE_PATH" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
@@ -173,7 +186,7 @@
       <workItem from="1599741271604" duration="7028000" />
       <workItem from="1600091145910" duration="31531000" />
       <workItem from="1600351617064" duration="6250000" />
-      <workItem from="1600441038559" duration="1618000" />
+      <workItem from="1600441038559" duration="2998000" />
     </task>
     <task id="LOCAL-00001" summary="refactored all reservations in emprunts">
       <created>1597226019835</created>
@@ -266,7 +279,14 @@
       <option name="project" value="LOCAL" />
       <updated>1600442639266</updated>
     </task>
-    <option name="localTasksCounter" value="14" />
+    <task id="LOCAL-00014" summary="back to state0 bis">
+      <created>1600442755287</created>
+      <option name="number" value="00014" />
+      <option name="presentableId" value="LOCAL-00014" />
+      <option name="project" value="LOCAL" />
+      <updated>1600442755287</updated>
+    </task>
+    <option name="localTasksCounter" value="15" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -303,6 +323,7 @@
     <MESSAGE value="fixed bug about extending borrowing" />
     <MESSAGE value="improved extend borrowing method" />
     <MESSAGE value="back to state0" />
-    <option name="LAST_COMMIT_MESSAGE" value="back to state0" />
+    <MESSAGE value="back to state0 bis" />
+    <option name="LAST_COMMIT_MESSAGE" value="back to state0 bis" />
   </component>
 </project>

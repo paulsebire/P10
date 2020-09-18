@@ -33,10 +33,23 @@ public class ReservationController {
      * @param id id of the user
      * @return alist of reservations
      */
-    @GetMapping(value = "/utilisateur/{id}/reservations/")
+    @GetMapping(value = "/utilisateur/{id}/reservations")
     public List<Reservation> reservationList(@PathVariable(value = "id")Long id){
-        List<Reservation> reservations = reservationRepository.findAllByIdUtilisateurAndCloturerFalseOrderByIdAsc(id);
-        if (reservations.isEmpty()) throw new ReservationNotFoundException("Aucune reservation n'est disponible");
+        List<Reservation> reservations = reservationRepository.findAllByIdUtilisateurAndCloturerFalseOrderByDateEmpruntAsc(id);
+        //Set<Reservation> reservationSet=new HashSet<>();
+        if (reservations.isEmpty()){
+            throw new ReservationNotFoundException("Aucune reservation n'est disponible");
+        }else {
+            for (Reservation r:reservations) {
+                if (r.getDateRetour().after(new Date()) && r.isProlonger()==false){
+                    r.setProlongeable(true);
+                }else r.setProlongeable(false);
+                reservationRepository.save(r);
+                // reservationSet.add(r);
+            }
+
+        }
+        reservations = reservationRepository.findAllByIdUtilisateurAndCloturerFalseOrderByDateEmpruntAsc(id);
         return reservations;
     }
 
@@ -52,7 +65,8 @@ public class ReservationController {
         Date dateDujour = new Date();
         if (r.isPresent()){
             Reservation reservation=r.get();
-            if (reservation.getIdUtilisateur()==idUser && reservation.isProlonger()==false){
+            if (reservation.getIdUtilisateur()==idUser && reservation.isProlonger()==false
+                    && reservation.getDateRetour().after(new Date())){
                 reservation.setProlonger(true);
                 reservation.setDateRetour(bibliService.ajouter4semaines(reservation.getDateRetour()));
                 reservationRepository.save(reservation);

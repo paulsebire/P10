@@ -1,0 +1,70 @@
+<component name="libraryTable">
+  <library name="org.springframework.cloud:spring-cloud-starter-netflix-ribbon:2.1.1.RELEASE" type="repository">
+    <properties maven-id="org.springframework.cloud:spring-cloud-starter-netflix-ribbon:2.1.1.RELEASE" />
+    <CLASSES>
+      <root url="jar://$PROJECT_DIR$/lib/spring-cloud-starter-netflix-ribbon-2.1.1.RELEASE.jar!/" />
+      <root url="jar://$PROJECT_DIR$/lib/spring-cloud-starter-2.1.1.RELEASE.jar!/" />
+      <root url="jar://$PROJECT_DIR$/lib/spring-boot-starter-2.1.3.RELEASE.jar!/" />
+      <root url="jar://$PROJECT_DIR$/lib/spring-boot-2.1.3.RELEASE.jar!/" />
+      <root url="jar://$PROJECT_DIR$/lib/spring-context-5.1.5.RELEASE.jar!/" />
+      <root url="jar://$PROJECT_DIR$/lib/spring-aop-5.1.5.RELEASE.jar!/" />
+      <root url="jar://$PROJECT_DIR$/lib/spring-beans-5.1.5.RELEASE.jar!/" />
+      <root url="jar://$PROJECT_DIR$/lib/spring-expression-5.1.5.RELEASE.jar!/" />
+      <root url="jar://$PROJECT_DIR$/lib/spring-boot-autoconfigure-2.1.3.RELEASE.jar!/" />
+      <root url="jar://$PROJECT_DIR$/lib/spring-boot-starter-logging-2.1.3.RELEASE.jar!/" />
+      <root url="jar://$PROJECT_DIR$/lib/logback-classic-1.2.3.jar!/" />
+      <root url="jar://$PROJECT_DIR$/lib/logback-core-1.2.3.jar!/" />
+      <root url="jar://$PROJECT_DIR$/lib/log4j-to-slf4j-2.11.2.jar!/" />
+      <root url="jar://$PROJECT_DIR$/lib/log4j-api-2.11.2.jar!/" />
+      <root url="jar://$PROJECT_DIR$/lib/jul-to-slf4j-1.7.25.jar!/" />
+      <root url="jar://$PROJECT_DIR$/lib/javax.annotation-api-1.3.2.jar!/" />
+      <root url="jar://$PROJECT_DIR$/lib/spring-core-5.1.5.RELEASE.jar!/" />
+      <root url="jar://$PROJECT_DIR$/lib/spring-jcl-5.1.5.RELEASE.jar!/" />
+      <root url="jar://$PROJECT_DIR$/lib/snakeyaml-1.23.jar!/" />
+      <root url="jar://$PROJECT_DIR$/lib/spring-cloud-context-2.1.1.RELEASE.jar!/" />
+      <root url="jar://$PROJECT_DIR$/lib/spring-security-crypto-5.1.4.RELEASE.jar!/" />
+      <root url="jar://$PROJECT_DIR$/lib/spring-cloud-commons-2.1.1.RELEASE.jar!/" />
+      <root url="jar://$PROJECT_DIR$/lib/spring-security-rsa-1.0.7.RELEASE.jar!/" />
+      <root url="jar://$PROJECT_DIR$/lib/bcpkix-jdk15on-1.60.jar!/" />
+      <root url="jar://$PROJECT_DIR$/lib/bcprov-jdk15on-1.60.jar!/" />
+      <root url="jar://$PROJECT_DIR$/lib/spring-cloud-netflix-ribbon-2.1.1.RELEASE.jar!/" />
+      <root url="jar://$PROJECT_DIR$/lib/spring-cloud-netflix-archaius-2.1.1.RELEASE.jar!/" />
+      <root url="jar://$PROJECT_DIR$/lib/spring-cloud-starter-netflix-archaius-2.1.1.RELEASE.jar!/" />
+      <root url="jar://$PROJECT_DIR$/lib/archaius-core-0.7.6.jar!/" />
+      <root url="jar://$PROJECT_DIR$/lib/jsr305-3.0.1.jar!/" />
+      <root url="jar://$PROJECT_DIR$/lib/jackson-annotations-2.4.3.jar!/" />
+      <root url="jar://$PROJECT_DIR$/lib/jackson-core-2.4.3.jar!/" />
+      <root url="jar://$PROJECT_DIR$/lib/jackson-databind-2.4.3.jar!/" />
+      <root url="jar://$PROJECT_DIR$/lib/commons-configuration-1.8.jar!/" />
+      <root url="jar://$PROJECT_DIR$/lib/ribbon-2.3.0.jar!/" />
+      <root url="jar://$PROJECT_DIR$/lib/ribbon-transport-2.3.0.jar!/" />
+      <root url="jar://$PROJECT_DIR$/lib/rxnetty-contexts-0.4.9.jar!/" />
+      <root url="jar://$PROJECT_DIR$/lib/rxnetty-servo-0.4.9.jar!/" />
+      <root url="jar://$PROJECT_DIR$/lib/hystrix-core-1.4.3.jar!/" />
+      <root url="jar://$PROJECT_DIR$/lib/javax.inject-1.jar!/" />
+      <root url="jar://$PROJECT_DIR$/lib/rxnetty-0.4.9.jar!/" />
+      <root url="jar://$PROJECT_DIR$/lib/guava-16.0.1.jar!/" />
+      <root url="jar://$PROJECT_DIR$/lib/ribbon-core-2.3.0.jar!/" />
+      <root url="jar://$PROJECT_DIR$/lib/slf4j-api-1.6.4.jar!/" />
+      <root url="jar://$PROJECT_DIR$/lib/commons-lang-2.6.jar!/" />
+      <root url="jar://$PROJECT_DIR$/lib/ribbon-httpclient-2.3.0.jar!/" />
+      <root url="jar://$PROJECT_DIR$/lib/commons-collections-3.2.2.jar!/" />
+      <root url="jar://$PROJECT_DIR$/lib/httpclient-4.2.1.jar!/" />
+      <root url="jar://$PROJECT_DIR$/lib/httpcore-4.2.1.jar!/" />
+      <root url="jar://$PROJECT_DIR$/lib/commons-logging-1.1.1.jar!/" />
+      <root url="jar://$PROJECT_DIR$/lib/commons-codec-1.6.jar!/" />
+      <root url="jar://$PROJECT_DIR$/lib/jersey-client-1.19.1.jar!/" />
+      <root url="jar://$PROJECT_DIR$/lib/jersey-core-1.19.1.jar!/" />
+      <root url="jar://$PROJECT_DIR$/lib/jsr311-api-1.1.1.jar!/" />
+      <root url="jar://$PROJECT_DIR$/lib/jersey-apache-client4-1.19.1.jar!/" />
+      <root url="jar://$PROJECT_DIR$/lib/servo-core-0.10.1.jar!/" />
+      <root url="jar://$PROJECT_DIR$/lib/servo-internal-0.10.1.jar!/" />
+      <root url="jar://$PROJECT_DIR$/lib/netflix-commons-util-0.1.1.jar!/" />
+      <root url="jar://$PROJECT_DIR$/lib/ribbon-loadbalancer-2.3.0.jar!/" />
+      <root url="jar://$PROJECT_DIR$/lib/netflix-statistics-0.1.1.jar!/" />
+      <root url="jar://$PROJECT_DIR$/lib/rxjava-1.2.0.jar!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES />
+  </library>
+</component>

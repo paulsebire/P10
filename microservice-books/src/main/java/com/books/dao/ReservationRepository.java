@@ -15,4 +15,5 @@ public interface ReservationRepository extends JpaRepository<Reservation, Long> 
 public List<Reservation> findAllByIdUtilisateurAndCloturerFalseOrderByIdAsc(long idUser);
 
 Set<Reservation> findByCloturerFalseAndDateRetourBefore(Date date);
+
 }

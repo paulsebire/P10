@@ -1,0 +1,294 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="47ffafc2-d67c-453f-8387-606a68c70022" name="Default Changelist" comment="" />
+    <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="CodeStyleSettingsInfer">
+    <option name="done" value="true" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Interface" />
+        <option value="Class" />
+      </list>
+    </option>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_BRANCH_BY_REPOSITORY">
+      <map>
+        <entry key="$PROJECT_DIR$" value="temp" />
+      </map>
+    </option>
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="MavenImportPreferences">
+    <option name="importingSettings">
+      <MavenImportingSettings>
+        <option name="importAutomatically" value="true" />
+      </MavenImportingSettings>
+    </option>
+  </component>
+  <component name="ProjectCodeStyleSettingsMigration">
+    <option name="version" value="1" />
+  </component>
+  <component name="ProjectId" id="1fftRsEcbwkvMgXhcDUPGK729do" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true">
+    <ConfirmationsSetting value="2" id="Add" />
+  </component>
+  <component name="PropertiesComponent">
+    <property name="RequestMappingsPanelOrder0" value="0" />
+    <property name="RequestMappingsPanelOrder1" value="1" />
+    <property name="RequestMappingsPanelWidth0" value="75" />
+    <property name="RequestMappingsPanelWidth1" value="75" />
+    <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="aspect.path.notification.shown" value="true" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/zuul-server" />
+    <property name="nodejs_package_manager_path" value="npm" />
+    <property name="project.structure.last.edited" value="Problems" />
+    <property name="project.structure.proportion" value="0.15" />
+    <property name="project.structure.side.proportion" value="0.2" />
+    <property name="settings.editor.selected.configurable" value="project.propVCSSupport.Mappings" />
+    <property name="show.run.dashboard.notification" value="false" />
+  </component>
+  <component name="RecentsManager">
+    <key name="CopyClassDialog.RECENTS_KEY">
+      <recent name="com.books.batch" />
+      <recent name="com.books.configurations" />
+      <recent name="com.books.web.exceptions" />
+      <recent name="com.books.entities" />
+    </key>
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\C86276\Documents\OCR\P10\clientui\src\main\java\com\clientui\exceptions" />
+    </key>
+  </component>
+  <component name="RunAnythingCache">
+    <option name="myCommands">
+      <command value="mvn clean install" />
+      <command value="mvn clean" />
+    </option>
+  </component>
+  <component name="RunDashboard">
+    <option name="ruleStates">
+      <list>
+        <RuleState>
+          <option name="name" value="ConfigurationTypeDashboardGroupingRule" />
+        </RuleState>
+        <RuleState>
+          <option name="name" value="StatusDashboardGroupingRule" />
+        </RuleState>
+      </list>
+    </option>
+  </component>
+  <component name="RunManager" selected="Spring Boot.ClientuiApplication">
+    <configuration name="BooksApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot">
+      <module name="books" />
+      <option name="SPRING_BOOT_MAIN_CLASS" value="com.books.BooksApplication" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="ClientuiApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot">
+      <module name="clientui" />
+      <option name="SPRING_BOOT_MAIN_CLASS" value="com.clientui.ClientuiApplication" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="ConfigServerApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot">
+      <module name="config-server" />
+      <option name="SPRING_BOOT_MAIN_CLASS" value="com.mcommerce.configserver.ConfigServerApplication" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="EurekaServerApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot">
+      <module name="eureka-server" />
+      <option name="SPRING_BOOT_MAIN_CLASS" value="com.eurekaserver.EurekaServerApplication" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="UtilisateurApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot">
+      <module name="utilisateur" />
+      <option name="SPRING_BOOT_MAIN_CLASS" value="com.utilisateur.UtilisateurApplication" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="ZuulserverApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot">
+      <module name="zuulserver" />
+      <option name="SPRING_BOOT_MAIN_CLASS" value="com.zuulserver.ZuulserverApplication" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <list>
+      <item itemvalue="Spring Boot.ConfigServerApplication" />
+      <item itemvalue="Spring Boot.EurekaServerApplication" />
+      <item itemvalue="Spring Boot.ZuulserverApplication" />
+      <item itemvalue="Spring Boot.UtilisateurApplication" />
+      <item itemvalue="Spring Boot.BooksApplication" />
+      <item itemvalue="Spring Boot.ClientuiApplication" />
+    </list>
+  </component>
+  <component name="SvnConfiguration">
+    <configuration />
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="47ffafc2-d67c-453f-8387-606a68c70022" name="Default Changelist" comment="" />
+      <created>1596620969555</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1596620969555</updated>
+      <workItem from="1596620971402" duration="784000" />
+      <workItem from="1597137130358" duration="6325000" />
+      <workItem from="1598880494981" duration="15011000" />
+      <workItem from="1599212315109" duration="9905000" />
+      <workItem from="1599476641633" duration="30213000" />
+      <workItem from="1599661663823" duration="4050000" />
+      <workItem from="1599741271604" duration="7028000" />
+      <workItem from="1600091145910" duration="31531000" />
+      <workItem from="1600351617064" duration="4318000" />
+    </task>
+    <task id="LOCAL-00001" summary="refactored all reservations in emprunts">
+      <created>1597226019835</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1597226019835</updated>
+    </task>
+    <task id="LOCAL-00002" summary="reworked maven and dependencies">
+      <created>1598881546612</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1598881546612</updated>
+    </task>
+    <task id="LOCAL-00003" summary="added reservations on myprofile">
+      <created>1598964294169</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1598964294169</updated>
+    </task>
+    <task id="LOCAL-00004" summary="added next return date to the reservation">
+      <created>1598966869708</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1598966869708</updated>
+    </task>
+    <task id="LOCAL-00005" summary="added zuul properties">
+      <created>1599228287156</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1599228287156</updated>
+    </task>
+    <task id="LOCAL-00006" summary="added reserver button and no reservation if already borrowed">
+      <created>1599494025618</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1599494025618</updated>
+    </task>
+    <task id="LOCAL-00007" summary="fixed number of copy availiable">
+      <created>1599572527503</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1599572527503</updated>
+    </task>
+    <task id="LOCAL-00008" summary="modified cloturerEmprunt to send email to first in fileAttente">
+      <created>1600176441783</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1600176441783</updated>
+    </task>
+    <task id="LOCAL-00009" summary="updated cloturerEmprunt">
+      <created>1600179176756</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1600179176756</updated>
+    </task>
+    <task id="LOCAL-00010" summary="added purge of shortlist and notification to next in shortlist">
+      <created>1600332848310</created>
+      <option name="number" value="00010" />
+      <option name="presentableId" value="LOCAL-00010" />
+      <option name="project" value="LOCAL" />
+      <updated>1600332848310</updated>
+    </task>
+    <task id="LOCAL-00011" summary="fixed bug about extending borrowing">
+      <created>1600354495003</created>
+      <option name="number" value="00011" />
+      <option name="presentableId" value="LOCAL-00011" />
+      <option name="project" value="LOCAL" />
+      <updated>1600354495003</updated>
+    </task>
+    <task id="LOCAL-00012" summary="improved extend borrowing method">
+      <created>1600354670604</created>
+      <option name="number" value="00012" />
+      <option name="presentableId" value="LOCAL-00012" />
+      <option name="project" value="LOCAL" />
+      <updated>1600354670604</updated>
+    </task>
+    <option name="localTasksCounter" value="13" />
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="1" />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State>
+              <option name="COLUMN_ORDER" />
+            </State>
+          </value>
+        </entry>
+      </map>
+    </option>
+  </component>
+  <component name="VcsManagerConfiguration">
+    <ignored-roots>
+      <path value="$PROJECT_DIR$/config-server-repo" />
+    </ignored-roots>
+    <MESSAGE value="refactored all reservations in emprunts" />
+    <MESSAGE value="reworked maven and dependencies" />
+    <MESSAGE value="added reservations on myprofile" />
+    <MESSAGE value="added next return date to the reservation" />
+    <MESSAGE value="added zuul properties" />
+    <MESSAGE value="added reserver button and no reservation if already borrowed" />
+    <MESSAGE value="fixed number of copy availiable" />
+    <MESSAGE value="modified cloturerEmprunt to send email to first in fileAttente" />
+    <MESSAGE value="updated cloturerEmprunt" />
+    <MESSAGE value="added purge of shortlist and notification to next in shortlist" />
+    <MESSAGE value="fixed bug about extending borrowing" />
+    <MESSAGE value="improved extend borrowing method" />
+    <option name="LAST_COMMIT_MESSAGE" value="improved extend borrowing method" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/microservice-books/src/main/java/com/books/web/controller/ReservationController.java</url>
+          <line>34</line>
+          <option name="timeStamp" value="12" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
+  </component>
+</project>

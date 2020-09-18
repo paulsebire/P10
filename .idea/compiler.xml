@@ -8,14 +8,18 @@
         <outputRelativeToContentRoot value="true" />
         <module name="microservice-books" />
         <module name="eureka-server" />
+        <module name="zuulserver" />
         <module name="config-server" />
+        <module name="zuul-server" />
+        <module name="utilisateur" />
         <module name="microservice-utilisateur" />
         <module name="clientui" />
-        <module name="zuul-server" />
+        <module name="books" />
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel>
       <module name="book" target="11" />
+      <module name="books" target="1.8" />
       <module name="clientui" target="1.8" />
       <module name="config-server" target="11" />
       <module name="eureka-server" target="1.8" />
@@ -24,6 +28,7 @@
       <module name="mBooks" target="1.8" />
       <module name="microservice-books" target="1.8" />
       <module name="microservice-utilisateur" target="1.8" />
+      <module name="utilisateur" target="1.8" />
       <module name="zuul-server" target="1.8" />
       <module name="zuulserver" target="1.8" />
     </bytecodeTargetLevel>
@@ -39,6 +44,7 @@
       <module name="mbooks" options="-parameters" />
       <module name="microservice-books" options="-parameters" />
       <module name="microservice-utilisateur" options="-parameters" />
+      <module name="utilisateur" options="-parameters" />
       <module name="zuul-server" options="-parameters" />
       <module name="zuulserver" options="-parameters" />
     </option>

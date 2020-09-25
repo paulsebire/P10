@@ -6,19 +6,15 @@
         <sourceOutputDir name="target/generated-sources/annotations" />
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
+        <module name="microservice-books" />
         <module name="eureka-server" />
-        <module name="zuulserver" />
         <module name="config-server" />
         <module name="zuul-server" />
         <module name="utilisateur" />
-        <module name="microservice-utilisateur" />
-        <module name="microservice-books" />
-        <module name="utilisateur" />
         <module name="zuulserver" />
-        <module name="utilisateur" />
-        <module name="books" />
         <module name="clientui" />
         <module name="books" />
+        <module name="microservice-utilisateur" />
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel>

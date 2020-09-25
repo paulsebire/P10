@@ -10,20 +10,12 @@ public class EmpruntBean {
     private Long id;
     private Date dateEmprunt;
     private Date dateRetour;
-    private boolean prolonger=false;
+    private boolean prolonger = false;
     private CopyBean copy;
     private boolean cloturer;
-    public EmpruntBean() {
     private boolean prolongeable;
-    public ReservationBean() {
-    }
 
-    public boolean isProlongeable() {
-        return prolongeable;
-    }
-
-    public void setProlongeable(boolean prolongeable) {
-        this.prolongeable = prolongeable;
+    public EmpruntBean() {
     }
 
     public Long getId() {
@@ -54,14 +46,6 @@ public class EmpruntBean {
         return prolonger;
     }
 
-    public boolean isCloturer() {
-        return cloturer;
-    }
-
-    public void setCloturer(boolean cloturer) {
-        this.cloturer = cloturer;
-    }
-
     public void setProlonger(boolean prolonger) {
         this.prolonger = prolonger;
     }
@@ -74,6 +58,22 @@ public class EmpruntBean {
         this.copy = copy;
     }
 
+    public boolean isCloturer() {
+        return cloturer;
+    }
+
+    public void setCloturer(boolean cloturer) {
+        this.cloturer = cloturer;
+    }
+
+    public boolean isProlongeable() {
+        return prolongeable;
+    }
+
+    public void setProlongeable(boolean prolongeable) {
+        this.prolongeable = prolongeable;
+    }
+
     @Override
     public String toString() {
         return "EmpruntBean{" +
@@ -81,6 +81,9 @@ public class EmpruntBean {
                 ", dateEmprunt=" + dateEmprunt +
                 ", dateRetour=" + dateRetour +
                 ", prolonger=" + prolonger +
+                ", copy=" + copy +
+                ", cloturer=" + cloturer +
+                ", prolongeable=" + prolongeable +
                 '}';
     }
 }

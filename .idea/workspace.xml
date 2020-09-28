@@ -1,33 +1,25 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
   <component name="ChangeListManager">
-    <list default="true" id="47ffafc2-d67c-453f-8387-606a68c70022" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/config-server-repo/microservice-books.properties" beforeDir="false" afterPath="$PROJECT_DIR$/config-server-repo/microservice-books.properties" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/config-server-repo/microservice-clientui.properties" beforeDir="false" afterPath="$PROJECT_DIR$/config-server-repo/microservice-clientui.properties" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/config-server-repo/zuul-server.properties" beforeDir="false" afterPath="$PROJECT_DIR$/config-server-repo/zuul-server.properties" afterDir="false" />
-    </list>
+    <list default="true" id="de60918f-91cf-4a7b-b7ab-ee9eced42347" name="Default Changelist" comment="" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
   <component name="Git.Settings">
+    <option name="RECENT_BRANCH_BY_REPOSITORY">
+      <map>
+        <entry key="$PROJECT_DIR$" value="feature/reservations" />
+      </map>
+    </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="true">
     <ConfirmationsSetting value="2" id="Add" />
-  </component>
-  <component name="RunDashboard">
-    <option name="ruleStates">
-      <list>
-        <RuleState>
-          <option name="name" value="ConfigurationTypeDashboardGroupingRule" />
-        </RuleState>
-        <RuleState>
-          <option name="name" value="StatusDashboardGroupingRule" />
-        </RuleState>
-      </list>
-    </option>
   </component>
   <component name="RunManager" selected="Spring Boot.EurekaServerApplication">
     <configuration name="BooksApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot">
@@ -81,5 +73,24 @@
         </entry>
       </map>
     </option>
+    <option name="oldMeFiltersMigrated" value="true" />
+  </component>
+  <component name="WindowStateProjectService">
+    <state x="1458" y="92" width="1736" height="856" key="DiffContextDialog" timestamp="1601309152845">
+      <screen x="1366" y="0" width="1920" height="1040" />
+    </state>
+    <state x="1458" y="92" width="1736" height="856" key="DiffContextDialog/0.0.1366.728/1366.0.1920.1040@1366.0.1920.1040" timestamp="1601309152845" />
+    <state x="2113" y="236" key="VCS.ChangeListViewerDialog" timestamp="1601309148112">
+      <screen x="1366" y="0" width="1920" height="1040" />
+    </state>
+    <state x="2113" y="236" key="VCS.ChangeListViewerDialog/0.0.1366.728/1366.0.1920.1040@1366.0.1920.1040" timestamp="1601309148112" />
+    <state x="1918" y="253" key="Vcs.Push.Dialog.v2" timestamp="1601309151785">
+      <screen x="1366" y="0" width="1920" height="1040" />
+    </state>
+    <state x="1918" y="253" key="Vcs.Push.Dialog.v2/0.0.1366.728/1366.0.1920.1040@1366.0.1920.1040" timestamp="1601309151785" />
+    <state x="2143" y="434" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1601309044287">
+      <screen x="1366" y="0" width="1920" height="1040" />
+    </state>
+    <state x="2143" y="434" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2/0.0.1366.728/1366.0.1920.1040@1366.0.1920.1040" timestamp="1601309044287" />
   </component>
 </project>

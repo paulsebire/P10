@@ -16,9 +16,7 @@ import org.springframework.web.bind.annotation.*;
 import javax.mail.MessagingException;
 import java.text.DateFormat;
 import java.text.SimpleDateFormat;
-import java.util.Date;
-import java.util.List;
-import java.util.Optional;
+import java.util.*;
 
 @RestController
 public class EmpruntController {
@@ -45,9 +43,11 @@ public class EmpruntController {
      * @param id id of the user
      * @return alist of emprunts
      */
-    @GetMapping(value = "/utilisateur/{id}/emprunts/")
-    public List<Emprunt> empruntList (@PathVariable(value = "id")Long id){
-        List<Emprunt> emprunts = empruntRepository.findAllByIdUtilisateurAndCloturerFalseOrderByIdAsc(id);
+    @GetMapping(value = "/utilisateur/{id}/emprunts")
+    public Set<Emprunt> empruntList (@PathVariable(value = "id")Long id){
+        Set<Emprunt> emprunts = new HashSet<>();
+        emprunts=empruntRepository.findAllByIdUtilisateurAndCloturerFalseOrderByDateRetourAsc(id);
+        System.out.println("emprunts"+emprunts.toString());
         if (emprunts.isEmpty()) throw new EmpruntNotFoundException("Aucun emprunt n'est disponible");
         return emprunts;
     }

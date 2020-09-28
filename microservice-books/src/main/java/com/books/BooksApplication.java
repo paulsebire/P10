@@ -1,6 +1,7 @@
 package com.books;
 
 import com.books.dao.*;
+
 import com.books.entities.*;
 import com.books.exceptions.CustomErrorDecoder;
 import com.books.services.BibliServiceImpl;
@@ -22,9 +23,6 @@ import java.util.GregorianCalendar;
 @EnableDiscoveryClient
 @EnableScheduling
 public class BooksApplication {
-
-	@Autowired
-	private EmpruntRepository empruntRepository;
 	@Autowired
 	private BibliServiceImpl bibliService;
 	@Autowired
@@ -35,6 +33,8 @@ public class BooksApplication {
 	private EmailRepository emailRepository;
 	@Autowired
 	private ReservationRepository reservationRepository;
+	@Autowired
+	private EmpruntRepository empruntRepository;
 
 	public static void main(String[] args) {
 		SpringApplication.run(BooksApplication.class, args);

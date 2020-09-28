@@ -9,7 +9,6 @@ public class CustomErrorDecoder implements ErrorDecoder{
 
     @Override
     public Exception decode(String invoqueur, Response reponse) {
-
         return defaultErrorDecoder.decode(invoqueur, reponse);
     }
 

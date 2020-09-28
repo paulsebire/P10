@@ -1,35 +1,127 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
   <component name="ChangeListManager">
     <list default="true" id="de60918f-91cf-4a7b-b7ab-ee9eced42347" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/.idea/jarRepositories.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/encodings.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/encodings.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/clientui/clientui.iml" beforeDir="false" afterPath="$PROJECT_DIR$/clientui/clientui.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/clientui/src/main/java/com/clientui/beans/EmpruntBean.java" beforeDir="false" afterPath="$PROJECT_DIR$/clientui/src/main/java/com/clientui/beans/EmpruntBean.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/clientui/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/clientui/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/clientui/src/main/java/com/clientui/controller/ClientController.java" beforeDir="false" afterPath="$PROJECT_DIR$/clientui/src/main/java/com/clientui/controller/ClientController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/clientui/src/main/java/com/clientui/proxies/MicroserviceBooksProxy.java" beforeDir="false" afterPath="$PROJECT_DIR$/clientui/src/main/java/com/clientui/proxies/MicroserviceBooksProxy.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/clientui/target/classes/bootstrap.properties" beforeDir="false" afterPath="$PROJECT_DIR$/clientui/target/classes/bootstrap.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/clientui/target/classes/com/clientui/beans/BookBean.class" beforeDir="false" afterPath="$PROJECT_DIR$/clientui/target/classes/com/clientui/beans/BookBean.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/clientui/target/classes/com/clientui/beans/CopyBean.class" beforeDir="false" afterPath="$PROJECT_DIR$/clientui/target/classes/com/clientui/beans/CopyBean.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/clientui/target/classes/com/clientui/beans/ReservationBean.class" beforeDir="false" afterPath="$PROJECT_DIR$/clientui/target/classes/com/clientui/beans/ReservationBean.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/clientui/target/classes/com/clientui/controller/ClientController.class" beforeDir="false" afterPath="$PROJECT_DIR$/clientui/target/classes/com/clientui/controller/ClientController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/clientui/target/classes/com/clientui/proxies/MicroserviceBooksProxy.class" beforeDir="false" afterPath="$PROJECT_DIR$/clientui/target/classes/com/clientui/proxies/MicroserviceBooksProxy.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/clientui/target/classes/com/clientui/security/SecurityConfig.class" beforeDir="false" afterPath="$PROJECT_DIR$/clientui/target/classes/com/clientui/security/SecurityConfig.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/clientui/target/classes/templates/Accueil.html" beforeDir="false" afterPath="$PROJECT_DIR$/clientui/target/classes/templates/Accueil.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/clientui/target/classes/templates/FicheLivre.html" beforeDir="false" afterPath="$PROJECT_DIR$/clientui/target/classes/templates/FicheLivre.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/clientui/target/classes/templates/MonProfile.html" beforeDir="false" afterPath="$PROJECT_DIR$/clientui/target/classes/templates/MonProfile.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/clientui/target/classes/templates/layout.html" beforeDir="false" afterPath="$PROJECT_DIR$/clientui/target/classes/templates/layout.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/config-server/target/classes/com/mcommerce/configserver/ConfigServerApplication.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/config-server/target/test-classes/com/mcommerce/configserver/ConfigServerApplicationTests.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/eureka-server/target/classes/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/eureka-server/target/classes/application.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/microservice-books/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/microservice-books/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/microservice-books/src/main/java/com/books/BooksApplication.java" beforeDir="false" afterPath="$PROJECT_DIR$/microservice-books/src/main/java/com/books/BooksApplication.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/microservice-books/src/main/java/com/books/dao/EmpruntRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/microservice-books/src/main/java/com/books/dao/EmpruntRepository.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/microservice-books/src/main/java/com/books/exceptions/CustomErrorDecoder.java" beforeDir="false" afterPath="$PROJECT_DIR$/microservice-books/src/main/java/com/books/exceptions/CustomErrorDecoder.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/microservice-books/src/main/java/com/books/web/controller/EmpruntController.java" beforeDir="false" afterPath="$PROJECT_DIR$/microservice-books/src/main/java/com/books/web/controller/EmpruntController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/microservice-books/target/classes/META-INF/books.kotlin_module" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/microservice-books/target/classes/bootstrap.properties" beforeDir="false" afterPath="$PROJECT_DIR$/microservice-books/target/classes/bootstrap.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/microservice-books/target/classes/com/books/BooksApplication.class" beforeDir="false" afterPath="$PROJECT_DIR$/microservice-books/target/classes/com/books/BooksApplication.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/microservice-books/target/classes/com/books/batch/BatchJob.class" beforeDir="false" afterPath="$PROJECT_DIR$/microservice-books/target/classes/com/books/batch/BatchJob.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/microservice-books/target/classes/com/books/batch/TaskOne.class" beforeDir="false" afterPath="$PROJECT_DIR$/microservice-books/target/classes/com/books/batch/TaskOne.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/microservice-books/target/classes/com/books/beans/UtilisateurBean.class" beforeDir="false" afterPath="$PROJECT_DIR$/microservice-books/target/classes/com/books/beans/UtilisateurBean.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/microservice-books/target/classes/com/books/configurations/BatchConfig.class" beforeDir="false" afterPath="$PROJECT_DIR$/microservice-books/target/classes/com/books/configurations/BatchConfig.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/microservice-books/target/classes/com/books/configurations/FeignExceptionConfig.class" beforeDir="false" afterPath="$PROJECT_DIR$/microservice-books/target/classes/com/books/configurations/FeignExceptionConfig.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/microservice-books/target/classes/com/books/dao/CopiesRepository.class" beforeDir="false" afterPath="$PROJECT_DIR$/microservice-books/target/classes/com/books/dao/CopiesRepository.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/microservice-books/target/classes/com/books/dao/ReservationRepository.class" beforeDir="false" afterPath="$PROJECT_DIR$/microservice-books/target/classes/com/books/dao/ReservationRepository.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/microservice-books/target/classes/com/books/entities/Book.class" beforeDir="false" afterPath="$PROJECT_DIR$/microservice-books/target/classes/com/books/entities/Book.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/microservice-books/target/classes/com/books/entities/Copy.class" beforeDir="false" afterPath="$PROJECT_DIR$/microservice-books/target/classes/com/books/entities/Copy.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/microservice-books/target/classes/com/books/entities/Reservation.class" beforeDir="false" afterPath="$PROJECT_DIR$/microservice-books/target/classes/com/books/entities/Reservation.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/microservice-books/target/classes/com/books/exceptions/CustomErrorDecoder.class" beforeDir="false" afterPath="$PROJECT_DIR$/microservice-books/target/classes/com/books/exceptions/CustomErrorDecoder.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/microservice-books/target/classes/com/books/poxies/MicroserviceUtilisateurProxy.class" beforeDir="false" afterPath="$PROJECT_DIR$/microservice-books/target/classes/com/books/poxies/MicroserviceUtilisateurProxy.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/microservice-books/target/classes/com/books/services/BibliServiceImpl.class" beforeDir="false" afterPath="$PROJECT_DIR$/microservice-books/target/classes/com/books/services/BibliServiceImpl.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/microservice-books/target/classes/com/books/services/EmailServiceImpl.class" beforeDir="false" afterPath="$PROJECT_DIR$/microservice-books/target/classes/com/books/services/EmailServiceImpl.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/microservice-books/target/classes/com/books/services/IBibliService.class" beforeDir="false" afterPath="$PROJECT_DIR$/microservice-books/target/classes/com/books/services/IBibliService.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/microservice-books/target/classes/com/books/web/controller/BookController.class" beforeDir="false" afterPath="$PROJECT_DIR$/microservice-books/target/classes/com/books/web/controller/BookController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/microservice-books/target/classes/com/books/web/controller/ReservationController.class" beforeDir="false" afterPath="$PROJECT_DIR$/microservice-books/target/classes/com/books/web/controller/ReservationController.class" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
+  <component name="CodeStyleSettingsInfer">
+    <option name="done" value="true" />
+  </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
+  <component name="MavenImportPreferences">
+    <option name="generalSettings">
+      <MavenGeneralSettings>
+        <option name="mavenHome" value="C:\Program Files\JetBrains\IntelliJ IDEA 2019.2.3\plugins\maven\lib\maven3" />
+      </MavenGeneralSettings>
+    </option>
+  </component>
+  <component name="ProjectCodeStyleSettingsMigration">
+    <option name="version" value="1" />
+  </component>
+  <component name="ProjectId" id="1i8rUHAIms38H9qRDnZoSAH2x0n" />
   <component name="ProjectLevelVcsManager" settingsEditedManually="true">
     <ConfirmationsSetting value="2" id="Add" />
   </component>
-  <component name="RunDashboard">
-    <option name="ruleStates">
-      <list>
-        <RuleState>
-          <option name="name" value="ConfigurationTypeDashboardGroupingRule" />
-        </RuleState>
-        <RuleState>
-          <option name="name" value="StatusDashboardGroupingRule" />
-        </RuleState>
-      </list>
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">
+    <property name="RequestMappingsPanelOrder0" value="0" />
+    <property name="RequestMappingsPanelOrder1" value="1" />
+    <property name="RequestMappingsPanelWidth0" value="75" />
+    <property name="RequestMappingsPanelWidth1" value="75" />
+    <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
+    <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="aspect.path.notification.shown" value="true" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/microservice-books/target/classes/com/books/entities" />
+    <property name="nodejs_package_manager_path" value="npm" />
+    <property name="vue.rearranger.settings.migration" value="true" />
+  </component>
+  <component name="ReactorSettings">
+    <option name="notificationShown" value="true" />
+  </component>
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\C86276\Documents\OCR\P10\microservice-books\target\classes\com\books\entities" />
+    </key>
+  </component>
+  <component name="RunAnythingCache">
+    <option name="myCommands">
+      <command value="mvn clean" />
+      <command value="mvn clean install" />
     </option>
   </component>
-  <component name="RunManager" selected="Spring Boot.EurekaServerApplication">
-    <configuration default="true" type="JetRunConfigurationType" factoryName="Kotlin">
+  <component name="RunManager" selected="Spring Boot.ClientuiApplication">
+    <configuration default="true" type="ArquillianJUnit" factoryName="" nameIsGenerated="true">
+      <option name="arquillianRunConfiguration">
+        <value>
+          <option name="containerStateName" value="" />
+        </value>
+      </option>
+      <option name="TEST_OBJECT" value="class" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration default="true" type="JetRunConfigurationType">
       <module name="config-server" />
       <option name="VM_PARAMETERS" />
       <option name="PROGRAM_PARAMETERS" />
@@ -42,7 +134,7 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration default="true" type="KotlinStandaloneScriptRunConfigurationType" factoryName="Kotlin script">
+    <configuration default="true" type="KotlinStandaloneScriptRunConfigurationType">
       <module name="config-server" />
       <option name="filePath" />
       <option name="vmParameters" />
@@ -90,9 +182,23 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <configuration name="ConfigServerApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot">
+      <module name="config-server" />
+      <option name="SPRING_BOOT_MAIN_CLASS" value="com.configserver.ConfigServerApplication" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <configuration name="EurekaServerApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot">
       <module name="eureka-server" />
       <option name="SPRING_BOOT_MAIN_CLASS" value="com.eurekaserver.EurekaServerApplication" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="UtilisateurApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot">
+      <module name="utilisateur" />
+      <option name="SPRING_BOOT_MAIN_CLASS" value="com.utilisateur.UtilisateurApplication" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
@@ -105,17 +211,32 @@
       </method>
     </configuration>
     <list>
+      <item itemvalue="Spring Boot.ConfigServerApplication" />
       <item itemvalue="Spring Boot.EurekaServerApplication" />
-      <item itemvalue="Spring Boot.ClientuiApplication" />
-      <item itemvalue="Spring Boot.BooksApplication" />
       <item itemvalue="Spring Boot.ZuulserverApplication" />
+      <item itemvalue="Spring Boot.UtilisateurApplication" />
+      <item itemvalue="Spring Boot.BooksApplication" />
+      <item itemvalue="Spring Boot.ClientuiApplication" />
     </list>
   </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="SvnConfiguration">
     <configuration />
   </component>
   <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="de60918f-91cf-4a7b-b7ab-ee9eced42347" name="Default Changelist" comment="" />
+      <created>1601300074542</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1601300074542</updated>
+      <workItem from="1601300079929" duration="53000" />
+      <workItem from="1601300487200" duration="4625000" />
+    </task>
     <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
     <option name="TAB_STATES">
@@ -127,5 +248,89 @@
         </entry>
       </map>
     </option>
+    <option name="oldMeFiltersMigrated" value="true" />
+  </component>
+  <component name="WindowStateProjectService">
+    <state x="1780" y="175" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1601300669986">
+      <screen x="1366" y="0" width="1920" height="1040" />
+    </state>
+    <state x="1780" y="175" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.1366.728/1366.0.1920.1040@1366.0.1920.1040" timestamp="1601300669986" />
+    <state width="1877" height="542" key="GridCell.Tab.0.bottom" timestamp="1601304788336">
+      <screen x="1366" y="0" width="1920" height="1040" />
+    </state>
+    <state width="1877" height="542" key="GridCell.Tab.0.bottom/0.0.1366.728/1366.0.1920.1040@1366.0.1920.1040" timestamp="1601304788336" />
+    <state width="1877" height="542" key="GridCell.Tab.0.center" timestamp="1601304788336">
+      <screen x="1366" y="0" width="1920" height="1040" />
+    </state>
+    <state width="1877" height="542" key="GridCell.Tab.0.center/0.0.1366.728/1366.0.1920.1040@1366.0.1920.1040" timestamp="1601304788336" />
+    <state width="1877" height="542" key="GridCell.Tab.0.left" timestamp="1601304788336">
+      <screen x="1366" y="0" width="1920" height="1040" />
+    </state>
+    <state width="1877" height="542" key="GridCell.Tab.0.left/0.0.1366.728/1366.0.1920.1040@1366.0.1920.1040" timestamp="1601304788336" />
+    <state width="1877" height="542" key="GridCell.Tab.0.right" timestamp="1601304788336">
+      <screen x="1366" y="0" width="1920" height="1040" />
+    </state>
+    <state width="1877" height="542" key="GridCell.Tab.0.right/0.0.1366.728/1366.0.1920.1040@1366.0.1920.1040" timestamp="1601304788336" />
+    <state width="1877" height="542" key="GridCell.Tab.1.bottom" timestamp="1601304788337">
+      <screen x="1366" y="0" width="1920" height="1040" />
+    </state>
+    <state width="1877" height="542" key="GridCell.Tab.1.bottom/0.0.1366.728/1366.0.1920.1040@1366.0.1920.1040" timestamp="1601304788337" />
+    <state width="1877" height="542" key="GridCell.Tab.1.center" timestamp="1601304788337">
+      <screen x="1366" y="0" width="1920" height="1040" />
+    </state>
+    <state width="1877" height="542" key="GridCell.Tab.1.center/0.0.1366.728/1366.0.1920.1040@1366.0.1920.1040" timestamp="1601304788337" />
+    <state width="1877" height="542" key="GridCell.Tab.1.left" timestamp="1601304788336">
+      <screen x="1366" y="0" width="1920" height="1040" />
+    </state>
+    <state width="1877" height="542" key="GridCell.Tab.1.left/0.0.1366.728/1366.0.1920.1040@1366.0.1920.1040" timestamp="1601304788336" />
+    <state width="1877" height="542" key="GridCell.Tab.1.right" timestamp="1601304788337">
+      <screen x="1366" y="0" width="1920" height="1040" />
+    </state>
+    <state width="1877" height="542" key="GridCell.Tab.1.right/0.0.1366.728/1366.0.1920.1040@1366.0.1920.1040" timestamp="1601304788337" />
+    <state width="1877" height="320" key="GridCell.Tab.2.bottom" timestamp="1601302611821">
+      <screen x="1366" y="0" width="1920" height="1040" />
+    </state>
+    <state width="1877" height="320" key="GridCell.Tab.2.bottom/0.0.1366.728/1366.0.1920.1040@1366.0.1920.1040" timestamp="1601302611821" />
+    <state width="1877" height="320" key="GridCell.Tab.2.center" timestamp="1601302611821">
+      <screen x="1366" y="0" width="1920" height="1040" />
+    </state>
+    <state width="1877" height="320" key="GridCell.Tab.2.center/0.0.1366.728/1366.0.1920.1040@1366.0.1920.1040" timestamp="1601302611821" />
+    <state width="1877" height="320" key="GridCell.Tab.2.left" timestamp="1601302611821">
+      <screen x="1366" y="0" width="1920" height="1040" />
+    </state>
+    <state width="1877" height="320" key="GridCell.Tab.2.left/0.0.1366.728/1366.0.1920.1040@1366.0.1920.1040" timestamp="1601302611821" />
+    <state width="1877" height="320" key="GridCell.Tab.2.right" timestamp="1601302611821">
+      <screen x="1366" y="0" width="1920" height="1040" />
+    </state>
+    <state width="1877" height="320" key="GridCell.Tab.2.right/0.0.1366.728/1366.0.1920.1040@1366.0.1920.1040" timestamp="1601302611821" />
+    <state x="2033" y="253" width="585" height="534" key="find.popup" timestamp="1601301326724">
+      <screen x="1366" y="0" width="1920" height="1040" />
+    </state>
+    <state x="2033" y="253" width="585" height="534" key="find.popup/0.0.1366.728/1366.0.1920.1040@1366.0.1920.1040" timestamp="1601301326724" />
+    <state x="1982" y="240" width="672" height="677" key="run.anything.popup" timestamp="1601304564523">
+      <screen x="1366" y="0" width="1920" height="1040" />
+    </state>
+    <state x="1982" y="240" width="672" height="677" key="run.anything.popup/0.0.1366.728/1366.0.1920.1040@1366.0.1920.1040" timestamp="1601304564523" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/clientui/src/main/java/com/clientui/controller/ClientController.java</url>
+          <line>96</line>
+          <option name="timeStamp" value="1" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/microservice-books/src/main/java/com/books/web/controller/EmpruntController.java</url>
+          <line>47</line>
+          <option name="timeStamp" value="2" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/microservice-books/src/main/java/com/books/BooksApplication.java</url>
+          <line>113</line>
+          <option name="timeStamp" value="4" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
   </component>
 </project>

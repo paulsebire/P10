@@ -94,7 +94,7 @@ public class ClientController {
      */
     @GetMapping("/MonProfile/Emprunts")
     public String monProfileMesEmprunts (Model model){
-        List<EmpruntBean> emprunts = booksProxy.empruntList(getUserConnected().getIdUser());
+        Set<EmpruntBean> emprunts = booksProxy.empruntList(getUserConnected().getIdUser());
         model.addAttribute("emprunts",emprunts);
         boolean mesEmprunts=true;
         model.addAttribute("mesEmprunts",mesEmprunts);

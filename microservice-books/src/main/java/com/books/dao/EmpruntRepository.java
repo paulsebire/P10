@@ -13,7 +13,7 @@ import java.util.Set;
 
 
 public interface EmpruntRepository extends JpaRepository<Emprunt, Long> {
-    List<Emprunt> findAllByIdUtilisateurAndCloturerFalseOrderByIdAsc(long idUser);
+    Set<Emprunt> findAllByIdUtilisateurAndCloturerFalseOrderByDateRetourAsc(long idUser);
     List<Emprunt> findAllByCopy_BookIdAndCloturerIsFalseOrderByDateRetourAsc(long id);
     Set<Emprunt> findByCloturerFalseAndDateRetourBefore(Date date);
 

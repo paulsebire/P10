@@ -45,8 +45,8 @@ public interface MicroserviceBooksProxy {
      * @param id idi oof the borrower
      * @return a list of emprunts
      */
-    @GetMapping(value = "/utilisateur/{id}/emprunts/")
-    List<EmpruntBean> empruntList(@PathVariable(value = "id")Long id);
+    @GetMapping(value = "/utilisateur/{id}/emprunts")
+    Set<EmpruntBean> empruntList(@PathVariable(value = "id")Long id);
 
     /**
      * method to give extra time to an emprunt

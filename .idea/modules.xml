@@ -2,13 +2,16 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
+      <module fileurl="file://$PROJECT_DIR$/microservice-books/books.iml" filepath="$PROJECT_DIR$/microservice-books/books.iml" />
       <module fileurl="file://$PROJECT_DIR$/clientui/clientui.iml" filepath="$PROJECT_DIR$/clientui/clientui.iml" />
       <module fileurl="file://$PROJECT_DIR$/config-server/config-server.iml" filepath="$PROJECT_DIR$/config-server/config-server.iml" />
       <module fileurl="file://$PROJECT_DIR$/config-server-repo/config-server-repo.iml" filepath="$PROJECT_DIR$/config-server-repo/config-server-repo.iml" />
       <module fileurl="file://$PROJECT_DIR$/eureka-server/eureka-server.iml" filepath="$PROJECT_DIR$/eureka-server/eureka-server.iml" />
       <module fileurl="file://$PROJECT_DIR$/microservice-books/microservice-books.iml" filepath="$PROJECT_DIR$/microservice-books/microservice-books.iml" />
       <module fileurl="file://$PROJECT_DIR$/microservice-utilisateur/microservice-utilisateur.iml" filepath="$PROJECT_DIR$/microservice-utilisateur/microservice-utilisateur.iml" />
+      <module fileurl="file://$PROJECT_DIR$/microservice-utilisateur/utilisateur.iml" filepath="$PROJECT_DIR$/microservice-utilisateur/utilisateur.iml" />
       <module fileurl="file://$PROJECT_DIR$/zuul-server/zuul-server.iml" filepath="$PROJECT_DIR$/zuul-server/zuul-server.iml" />
+      <module fileurl="file://$PROJECT_DIR$/zuul-server/zuulserver.iml" filepath="$PROJECT_DIR$/zuul-server/zuulserver.iml" />
     </modules>
   </component>
 </project>

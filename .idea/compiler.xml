@@ -6,13 +6,10 @@
         <sourceOutputDir name="target/generated-sources/annotations" />
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
-        <module name="zuul-server" />
         <module name="config-server" />
         <module name="books" />
         <module name="utilisateur" />
         <module name="zuulserver" />
-        <module name="microservice-utilisateur" />
-        <module name="microservice-books" />
         <module name="clientui" />
         <module name="eureka-server" />
       </profile>

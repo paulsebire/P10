@@ -5,53 +5,12 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="de60918f-91cf-4a7b-b7ab-ee9eced42347" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/jarRepositories.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/encodings.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/encodings.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/compiler.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/clientui/clientui.iml" beforeDir="false" afterPath="$PROJECT_DIR$/clientui/clientui.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/clientui/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/clientui/pom.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/clientui/src/main/java/com/clientui/controller/ClientController.java" beforeDir="false" afterPath="$PROJECT_DIR$/clientui/src/main/java/com/clientui/controller/ClientController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/clientui/src/main/java/com/clientui/proxies/MicroserviceBooksProxy.java" beforeDir="false" afterPath="$PROJECT_DIR$/clientui/src/main/java/com/clientui/proxies/MicroserviceBooksProxy.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/clientui/target/classes/bootstrap.properties" beforeDir="false" afterPath="$PROJECT_DIR$/clientui/target/classes/bootstrap.properties" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/clientui/target/classes/com/clientui/beans/BookBean.class" beforeDir="false" afterPath="$PROJECT_DIR$/clientui/target/classes/com/clientui/beans/BookBean.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/clientui/target/classes/com/clientui/beans/CopyBean.class" beforeDir="false" afterPath="$PROJECT_DIR$/clientui/target/classes/com/clientui/beans/CopyBean.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/clientui/target/classes/com/clientui/beans/ReservationBean.class" beforeDir="false" afterPath="$PROJECT_DIR$/clientui/target/classes/com/clientui/beans/ReservationBean.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/clientui/target/classes/com/clientui/controller/ClientController.class" beforeDir="false" afterPath="$PROJECT_DIR$/clientui/target/classes/com/clientui/controller/ClientController.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/clientui/target/classes/com/clientui/proxies/MicroserviceBooksProxy.class" beforeDir="false" afterPath="$PROJECT_DIR$/clientui/target/classes/com/clientui/proxies/MicroserviceBooksProxy.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/clientui/target/classes/com/clientui/security/SecurityConfig.class" beforeDir="false" afterPath="$PROJECT_DIR$/clientui/target/classes/com/clientui/security/SecurityConfig.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/clientui/target/classes/templates/Accueil.html" beforeDir="false" afterPath="$PROJECT_DIR$/clientui/target/classes/templates/Accueil.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/clientui/target/classes/templates/FicheLivre.html" beforeDir="false" afterPath="$PROJECT_DIR$/clientui/target/classes/templates/FicheLivre.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/clientui/target/classes/templates/MonProfile.html" beforeDir="false" afterPath="$PROJECT_DIR$/clientui/target/classes/templates/MonProfile.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/clientui/target/classes/templates/layout.html" beforeDir="false" afterPath="$PROJECT_DIR$/clientui/target/classes/templates/layout.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/config-server/target/classes/com/mcommerce/configserver/ConfigServerApplication.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/config-server/target/test-classes/com/mcommerce/configserver/ConfigServerApplicationTests.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/eureka-server/target/classes/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/eureka-server/target/classes/application.properties" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/microservice-books/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/microservice-books/pom.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/microservice-books/src/main/java/com/books/BooksApplication.java" beforeDir="false" afterPath="$PROJECT_DIR$/microservice-books/src/main/java/com/books/BooksApplication.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/microservice-books/src/main/java/com/books/dao/EmpruntRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/microservice-books/src/main/java/com/books/dao/EmpruntRepository.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/microservice-books/src/main/java/com/books/exceptions/CustomErrorDecoder.java" beforeDir="false" afterPath="$PROJECT_DIR$/microservice-books/src/main/java/com/books/exceptions/CustomErrorDecoder.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/microservice-books/src/main/java/com/books/web/controller/EmpruntController.java" beforeDir="false" afterPath="$PROJECT_DIR$/microservice-books/src/main/java/com/books/web/controller/EmpruntController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/microservice-books/target/classes/META-INF/books.kotlin_module" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/microservice-books/target/classes/bootstrap.properties" beforeDir="false" afterPath="$PROJECT_DIR$/microservice-books/target/classes/bootstrap.properties" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/microservice-books/target/classes/com/books/BooksApplication.class" beforeDir="false" afterPath="$PROJECT_DIR$/microservice-books/target/classes/com/books/BooksApplication.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/microservice-books/target/classes/com/books/batch/BatchJob.class" beforeDir="false" afterPath="$PROJECT_DIR$/microservice-books/target/classes/com/books/batch/BatchJob.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/microservice-books/target/classes/com/books/batch/TaskOne.class" beforeDir="false" afterPath="$PROJECT_DIR$/microservice-books/target/classes/com/books/batch/TaskOne.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/microservice-books/target/classes/com/books/beans/UtilisateurBean.class" beforeDir="false" afterPath="$PROJECT_DIR$/microservice-books/target/classes/com/books/beans/UtilisateurBean.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/microservice-books/target/classes/com/books/configurations/BatchConfig.class" beforeDir="false" afterPath="$PROJECT_DIR$/microservice-books/target/classes/com/books/configurations/BatchConfig.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/microservice-books/target/classes/com/books/configurations/FeignExceptionConfig.class" beforeDir="false" afterPath="$PROJECT_DIR$/microservice-books/target/classes/com/books/configurations/FeignExceptionConfig.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/microservice-books/target/classes/com/books/dao/CopiesRepository.class" beforeDir="false" afterPath="$PROJECT_DIR$/microservice-books/target/classes/com/books/dao/CopiesRepository.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/microservice-books/target/classes/com/books/dao/ReservationRepository.class" beforeDir="false" afterPath="$PROJECT_DIR$/microservice-books/target/classes/com/books/dao/ReservationRepository.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/microservice-books/target/classes/com/books/entities/Book.class" beforeDir="false" afterPath="$PROJECT_DIR$/microservice-books/target/classes/com/books/entities/Book.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/microservice-books/target/classes/com/books/entities/Copy.class" beforeDir="false" afterPath="$PROJECT_DIR$/microservice-books/target/classes/com/books/entities/Copy.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/microservice-books/target/classes/com/books/entities/Reservation.class" beforeDir="false" afterPath="$PROJECT_DIR$/microservice-books/target/classes/com/books/entities/Reservation.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/microservice-books/target/classes/com/books/exceptions/CustomErrorDecoder.class" beforeDir="false" afterPath="$PROJECT_DIR$/microservice-books/target/classes/com/books/exceptions/CustomErrorDecoder.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/microservice-books/target/classes/com/books/poxies/MicroserviceUtilisateurProxy.class" beforeDir="false" afterPath="$PROJECT_DIR$/microservice-books/target/classes/com/books/poxies/MicroserviceUtilisateurProxy.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/microservice-books/target/classes/com/books/services/BibliServiceImpl.class" beforeDir="false" afterPath="$PROJECT_DIR$/microservice-books/target/classes/com/books/services/BibliServiceImpl.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/microservice-books/target/classes/com/books/services/EmailServiceImpl.class" beforeDir="false" afterPath="$PROJECT_DIR$/microservice-books/target/classes/com/books/services/EmailServiceImpl.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/microservice-books/target/classes/com/books/services/IBibliService.class" beforeDir="false" afterPath="$PROJECT_DIR$/microservice-books/target/classes/com/books/services/IBibliService.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/microservice-books/target/classes/com/books/web/controller/BookController.class" beforeDir="false" afterPath="$PROJECT_DIR$/microservice-books/target/classes/com/books/web/controller/BookController.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/microservice-books/target/classes/com/books/web/controller/ReservationController.class" beforeDir="false" afterPath="$PROJECT_DIR$/microservice-books/target/classes/com/books/web/controller/ReservationController.class" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -231,8 +190,16 @@
       <option name="presentableId" value="Default" />
       <updated>1601300074542</updated>
       <workItem from="1601300079929" duration="53000" />
-      <workItem from="1601300487200" duration="4625000" />
+      <workItem from="1601300487200" duration="7531000" />
     </task>
+    <task id="LOCAL-00001" summary="fixed dependency bug on sleuth">
+      <created>1601305177323</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1601305177323</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -250,43 +217,51 @@
     </option>
     <option name="oldMeFiltersMigrated" value="true" />
   </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="fixed dependency bug on sleuth" />
+    <option name="LAST_COMMIT_MESSAGE" value="fixed dependency bug on sleuth" />
+  </component>
   <component name="WindowStateProjectService">
     <state x="1780" y="175" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1601300669986">
       <screen x="1366" y="0" width="1920" height="1040" />
     </state>
     <state x="1780" y="175" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.1366.728/1366.0.1920.1040@1366.0.1920.1040" timestamp="1601300669986" />
-    <state width="1877" height="542" key="GridCell.Tab.0.bottom" timestamp="1601304788336">
+    <state x="1923" y="88" key="CommitChangelistDialog2" timestamp="1601305176386">
       <screen x="1366" y="0" width="1920" height="1040" />
     </state>
-    <state width="1877" height="542" key="GridCell.Tab.0.bottom/0.0.1366.728/1366.0.1920.1040@1366.0.1920.1040" timestamp="1601304788336" />
-    <state width="1877" height="542" key="GridCell.Tab.0.center" timestamp="1601304788336">
+    <state x="1923" y="88" key="CommitChangelistDialog2/0.0.1366.728/1366.0.1920.1040@1366.0.1920.1040" timestamp="1601305176386" />
+    <state width="1877" height="542" key="GridCell.Tab.0.bottom" timestamp="1601308733316">
       <screen x="1366" y="0" width="1920" height="1040" />
     </state>
-    <state width="1877" height="542" key="GridCell.Tab.0.center/0.0.1366.728/1366.0.1920.1040@1366.0.1920.1040" timestamp="1601304788336" />
-    <state width="1877" height="542" key="GridCell.Tab.0.left" timestamp="1601304788336">
+    <state width="1877" height="542" key="GridCell.Tab.0.bottom/0.0.1366.728/1366.0.1920.1040@1366.0.1920.1040" timestamp="1601308733316" />
+    <state width="1877" height="542" key="GridCell.Tab.0.center" timestamp="1601308733316">
       <screen x="1366" y="0" width="1920" height="1040" />
     </state>
-    <state width="1877" height="542" key="GridCell.Tab.0.left/0.0.1366.728/1366.0.1920.1040@1366.0.1920.1040" timestamp="1601304788336" />
-    <state width="1877" height="542" key="GridCell.Tab.0.right" timestamp="1601304788336">
+    <state width="1877" height="542" key="GridCell.Tab.0.center/0.0.1366.728/1366.0.1920.1040@1366.0.1920.1040" timestamp="1601308733316" />
+    <state width="1877" height="542" key="GridCell.Tab.0.left" timestamp="1601308733316">
       <screen x="1366" y="0" width="1920" height="1040" />
     </state>
-    <state width="1877" height="542" key="GridCell.Tab.0.right/0.0.1366.728/1366.0.1920.1040@1366.0.1920.1040" timestamp="1601304788336" />
-    <state width="1877" height="542" key="GridCell.Tab.1.bottom" timestamp="1601304788337">
+    <state width="1877" height="542" key="GridCell.Tab.0.left/0.0.1366.728/1366.0.1920.1040@1366.0.1920.1040" timestamp="1601308733316" />
+    <state width="1877" height="542" key="GridCell.Tab.0.right" timestamp="1601308733316">
       <screen x="1366" y="0" width="1920" height="1040" />
     </state>
-    <state width="1877" height="542" key="GridCell.Tab.1.bottom/0.0.1366.728/1366.0.1920.1040@1366.0.1920.1040" timestamp="1601304788337" />
-    <state width="1877" height="542" key="GridCell.Tab.1.center" timestamp="1601304788337">
+    <state width="1877" height="542" key="GridCell.Tab.0.right/0.0.1366.728/1366.0.1920.1040@1366.0.1920.1040" timestamp="1601308733316" />
+    <state width="1877" height="542" key="GridCell.Tab.1.bottom" timestamp="1601308733316">
       <screen x="1366" y="0" width="1920" height="1040" />
     </state>
-    <state width="1877" height="542" key="GridCell.Tab.1.center/0.0.1366.728/1366.0.1920.1040@1366.0.1920.1040" timestamp="1601304788337" />
-    <state width="1877" height="542" key="GridCell.Tab.1.left" timestamp="1601304788336">
+    <state width="1877" height="542" key="GridCell.Tab.1.bottom/0.0.1366.728/1366.0.1920.1040@1366.0.1920.1040" timestamp="1601308733316" />
+    <state width="1877" height="542" key="GridCell.Tab.1.center" timestamp="1601308733316">
       <screen x="1366" y="0" width="1920" height="1040" />
     </state>
-    <state width="1877" height="542" key="GridCell.Tab.1.left/0.0.1366.728/1366.0.1920.1040@1366.0.1920.1040" timestamp="1601304788336" />
-    <state width="1877" height="542" key="GridCell.Tab.1.right" timestamp="1601304788337">
+    <state width="1877" height="542" key="GridCell.Tab.1.center/0.0.1366.728/1366.0.1920.1040@1366.0.1920.1040" timestamp="1601308733316" />
+    <state width="1877" height="542" key="GridCell.Tab.1.left" timestamp="1601308733316">
       <screen x="1366" y="0" width="1920" height="1040" />
     </state>
-    <state width="1877" height="542" key="GridCell.Tab.1.right/0.0.1366.728/1366.0.1920.1040@1366.0.1920.1040" timestamp="1601304788337" />
+    <state width="1877" height="542" key="GridCell.Tab.1.left/0.0.1366.728/1366.0.1920.1040@1366.0.1920.1040" timestamp="1601308733316" />
+    <state width="1877" height="542" key="GridCell.Tab.1.right" timestamp="1601308733316">
+      <screen x="1366" y="0" width="1920" height="1040" />
+    </state>
+    <state width="1877" height="542" key="GridCell.Tab.1.right/0.0.1366.728/1366.0.1920.1040@1366.0.1920.1040" timestamp="1601308733316" />
     <state width="1877" height="320" key="GridCell.Tab.2.bottom" timestamp="1601302611821">
       <screen x="1366" y="0" width="1920" height="1040" />
     </state>
@@ -303,6 +278,22 @@
       <screen x="1366" y="0" width="1920" height="1040" />
     </state>
     <state width="1877" height="320" key="GridCell.Tab.2.right/0.0.1366.728/1366.0.1920.1040@1366.0.1920.1040" timestamp="1601302611821" />
+    <state x="1555" y="37" width="1598" height="944" key="MergeDialog" timestamp="1601308723579">
+      <screen x="1366" y="0" width="1920" height="1040" />
+    </state>
+    <state x="1555" y="37" width="1598" height="944" key="MergeDialog/0.0.1366.728/1366.0.1920.1040@1366.0.1920.1040" timestamp="1601308723579" />
+    <state x="1964" y="281" key="MultipleFileMergeDialog" timestamp="1601308723586">
+      <screen x="1366" y="0" width="1920" height="1040" />
+    </state>
+    <state x="1964" y="281" key="MultipleFileMergeDialog/0.0.1366.728/1366.0.1920.1040@1366.0.1920.1040" timestamp="1601308723586" />
+    <state x="1918" y="253" key="Vcs.Push.Dialog.v2" timestamp="1601306440260">
+      <screen x="1366" y="0" width="1920" height="1040" />
+    </state>
+    <state x="1918" y="253" key="Vcs.Push.Dialog.v2/0.0.1366.728/1366.0.1920.1040@1366.0.1920.1040" timestamp="1601306440260" />
+    <state x="2143" y="434" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1601306468240">
+      <screen x="1366" y="0" width="1920" height="1040" />
+    </state>
+    <state x="2143" y="434" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2/0.0.1366.728/1366.0.1920.1040@1366.0.1920.1040" timestamp="1601306468240" />
     <state x="2033" y="253" width="585" height="534" key="find.popup" timestamp="1601301326724">
       <screen x="1366" y="0" width="1920" height="1040" />
     </state>
@@ -317,17 +308,12 @@
       <breakpoints>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/clientui/src/main/java/com/clientui/controller/ClientController.java</url>
-          <line>96</line>
+          <line>91</line>
           <option name="timeStamp" value="1" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/microservice-books/src/main/java/com/books/web/controller/EmpruntController.java</url>
-          <line>47</line>
-          <option name="timeStamp" value="2" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/microservice-books/src/main/java/com/books/BooksApplication.java</url>
-          <line>113</line>
+          <line>110</line>
           <option name="timeStamp" value="4" />
         </line-breakpoint>
       </breakpoints>

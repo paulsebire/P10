@@ -4,25 +4,35 @@ import com.books.dao.*;
 
 import com.books.entities.*;
 import com.books.exceptions.CustomErrorDecoder;
+import com.books.poxies.MicroserviceUtilisateurProxy;
 import com.books.services.BibliServiceImpl;
 import com.netflix.discovery.converters.Auto;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.boot.CommandLineRunner;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
+import org.springframework.boot.context.properties.EnableConfigurationProperties;
 import org.springframework.cloud.client.discovery.EnableDiscoveryClient;
 import org.springframework.cloud.openfeign.EnableFeignClients;
 import org.springframework.context.annotation.Bean;
+import org.springframework.mail.javamail.JavaMailSender;
+import org.springframework.mail.javamail.JavaMailSenderImpl;
 import org.springframework.scheduling.annotation.EnableScheduling;
 
 import javax.annotation.PostConstruct;
 import java.util.Calendar;
+import java.util.Date;
 import java.util.GregorianCalendar;
+import java.util.Properties;
 
 @SpringBootApplication
 @EnableFeignClients("com.books")
 @EnableDiscoveryClient
 @EnableScheduling
 public class BooksApplication {
+
+	@Autowired
+	private EmpruntRepository empruntRepository;
 	@Autowired
 	private BibliServiceImpl bibliService;
 	@Autowired
@@ -33,8 +43,6 @@ public class BooksApplication {
 	private EmailRepository emailRepository;
 	@Autowired
 	private ReservationRepository reservationRepository;
-	@Autowired
-	private EmpruntRepository empruntRepository;
 
 	public static void main(String[] args) {
 		SpringApplication.run(BooksApplication.class, args);

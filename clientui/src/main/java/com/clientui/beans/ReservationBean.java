@@ -1,28 +1,18 @@
 package com.clientui.beans;
 
-import com.fasterxml.jackson.annotation.JsonProperty;
-
-import java.util.Collection;
 import java.util.Date;
 
-
 public class ReservationBean {
+
     private Long id;
-    private Date dateEmprunt;
-    private Date dateRetour;
-    private boolean prolonger=false;
-    private CopyBean copy;
-    private boolean cloturer;
-    private boolean prolongeable;
+    private Long idUtilisateur;
+    private Date dateReservation;
+    private Date dateNextRetour;
+    private BookBean book;
+    private Integer position;
+    private boolean enCours;
+
     public ReservationBean() {
-    }
-
-    public boolean isProlongeable() {
-        return prolongeable;
-    }
-
-    public void setProlongeable(boolean prolongeable) {
-        this.prolongeable = prolongeable;
     }
 
     public Long getId() {
@@ -33,53 +23,61 @@ public class ReservationBean {
         this.id = id;
     }
 
-    public Date getDateEmprunt() {
-        return dateEmprunt;
+    public Long getIdUtilisateur() {
+        return idUtilisateur;
     }
 
-    public void setDateEmprunt(Date dateEmprunt) {
-        this.dateEmprunt = dateEmprunt;
+    public void setIdUtilisateur(Long idUtilisateur) {
+        this.idUtilisateur = idUtilisateur;
     }
 
-    public Date getDateRetour() {
-        return dateRetour;
+    public boolean isEnCours() {
+        return enCours;
     }
 
-    public void setDateRetour(Date dateRetour) {
-        this.dateRetour = dateRetour;
+    public void setEnCours(boolean enCours) {
+        this.enCours = enCours;
     }
 
-    public boolean isProlonger() {
-        return prolonger;
+    public Date getDateNextRetour() {
+        return dateNextRetour;
     }
 
-    public boolean isCloturer() {
-        return cloturer;
+    public void setDateNextRetour(Date dateNextRetour) {
+        this.dateNextRetour = dateNextRetour;
     }
 
-    public void setCloturer(boolean cloturer) {
-        this.cloturer = cloturer;
+    public Date getDateReservation() {
+        return dateReservation;
     }
 
-    public void setProlonger(boolean prolonger) {
-        this.prolonger = prolonger;
+    public void setDateReservation(Date dateReservation) {
+        this.dateReservation = dateReservation;
     }
 
-    public CopyBean getCopy() {
-        return copy;
+    public BookBean getBook() {
+        return book;
     }
 
-    public void setCopy(CopyBean copy) {
-        this.copy = copy;
+    public void setBook(BookBean book) {
+        this.book = book;
+    }
+
+    public Integer getPosition() {
+        return position;
+    }
+
+    public void setPosition(Integer position) {
+        this.position = position;
     }
 
     @Override
     public String toString() {
-        return "ReservationBean{" +
+        return "Reservation{" +
                 "id=" + id +
-                ", dateEmprunt=" + dateEmprunt +
-                ", dateRetour=" + dateRetour +
-                ", prolonger=" + prolonger +
+                ", idUtilisateur=" + idUtilisateur +
+                ", dateReservation=" + dateReservation +
+                ", book=" + book +
                 '}';
     }
 }

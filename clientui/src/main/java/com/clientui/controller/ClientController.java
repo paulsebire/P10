@@ -1,9 +1,6 @@
 package com.clientui.controller;
 
-import com.clientui.beans.BookBean;
-import com.clientui.beans.CopyBean;
-import com.clientui.beans.ReservationBean;
-import com.clientui.beans.UtilisateurBean;
+import com.clientui.beans.*;
 import com.clientui.proxies.MicroserviceBooksProxy;
 
 import com.clientui.proxies.MicroserviceUtilisateurProxy;
@@ -34,6 +31,9 @@ public class ClientController {
     @Autowired
     private MicroserviceUtilisateurProxy utilisateurProxy;
 
+    private boolean reservable=false;
+
+
     /**
      * method to generate the home page
      * @param model model
@@ -56,14 +56,23 @@ public class ClientController {
      * @param model model
      * @return the view fichelivre
      */
-    @GetMapping("/fiche-livre/{id}")
+    @GetMapping("/livre/{id}")
     public String ficheLivre(@PathVariable Long id,  Model model){
 
         BookBean livre = booksProxy.recupererUnLivre(id);
         List<CopyBean> copies = booksProxy.CopiesDispo(id);
-        System.out.println("copies"+copies);
         model.addAttribute("livre", livre);
-        model.addAttribute("copies",copies);
+        model.addAttribute("copiesDispos",copies);
+        List<ReservationBean> reservationsEnCours = booksProxy.reservationsByBook(id);
+        if (reservationsEnCours!=null){
+            model.addAttribute("nbResaEnCours",reservationsEnCours.size());
+        } else model.addAttribute("nbResaEnCours",0);
+
+        UtilisateurBean utilisateur = getUserConnected();
+        if (utilisateur!=null){
+            reservable=booksProxy.livreReservable(getUserConnected().getIdUser(),id);
+        }
+        model.addAttribute("reservable",reservable);
         log.trace("Récupération de la fiche d'un livre");
         return "FicheLivre";
     }
@@ -85,24 +94,77 @@ public class ClientController {
      * @param model model
      * @return the view monprofile
      */
-    @GetMapping("/MonProfile")
-    public String monProfile (Model model){
-        UtilisateurBean utilisateur = (UtilisateurBean) SecurityContextHolder.getContext().getAuthentication().getPrincipal();
-        List<ReservationBean> reservations = booksProxy.reservationList(utilisateur.getIdUser());
+    @GetMapping("/MonProfile/Emprunts")
+    public String monProfileMesEmprunts (Model model){
+        Set<EmpruntBean> emprunts = booksProxy.empruntList(getUserConnected().getIdUser());
+        model.addAttribute("emprunts",emprunts);
+        boolean mesEmprunts=true;
+        model.addAttribute("mesEmprunts",mesEmprunts);
+        return "MonProfile";
+    }
+    /**
+     * method to access to personal space
+     * @param model model
+     * @return the view monprofile
+     */
+    @GetMapping("/MonProfile/Reservations")
+    public String monProfileMesReservations (Model model){
+        Set<ReservationBean> reservations = booksProxy.reservationsByUser(getUserConnected().getIdUser());
         model.addAttribute("reservations",reservations);
+        boolean mesEmprunts=false;
+        model.addAttribute("mesEmprunts",mesEmprunts);
         return "MonProfile";
     }
 
     /**
-     * mehtod to give extra time to a reservation
-     * @param id  id of the reservation
+     * mehtod to give extra time to a emprunt
+     * @param id  id of the emprunt
      * @return the view monprofile
      */
-    @GetMapping("/reservation/{id}/prolonger")
-    public String prolongerResa(@PathVariable(value = "id")Long id){
-        UtilisateurBean utilisateur = (UtilisateurBean) SecurityContextHolder.getContext().getAuthentication().getPrincipal();
-        System.out.println("id"+utilisateur.getIdUser());
-        booksProxy.prolongerReservation(id,utilisateur.getIdUser());
-        return "redirect:/MonProfile";
+    @GetMapping("/emprunt/{id}/prolonger")
+    public String prolongerEmprunt(@PathVariable(value = "id")Long id){
+        UtilisateurBean utilisateur = getUserConnected();
+        booksProxy.prolongerEmprunt(id,utilisateur.getIdUser());
+        return "redirect:/MonProfile/Emprunts";
+    }
+
+    private UtilisateurBean getUserConnected(){
+
+        if (SecurityContextHolder.getContext().getAuthentication().getPrincipal() instanceof UtilisateurBean){
+           return  (UtilisateurBean) SecurityContextHolder.getContext().getAuthentication().getPrincipal();
+        }
+        return null;
+    }
+
+    @GetMapping("/livre/{id}/reserver")
+    public String reserver(Model model,@PathVariable Long id){
+        reservable=false;
+        UtilisateurBean utilisateur = getUserConnected();
+        if (utilisateur!=null){
+            booksProxy.reserverLivre(utilisateur.getIdUser(),id);
+            Set<ReservationBean> reservations = booksProxy.reservationsByUser(getUserConnected().getIdUser());
+            model.addAttribute("reservations",reservations);
+            boolean mesEmprunts=false;
+            model.addAttribute("mesEmprunts",mesEmprunts);
+            return "redirect:/MonProfile/Reservations";
+        }else{
+            List<BookBean> livres =  booksProxy.bookList("");
+            model.addAttribute("livres", livres);
+            model.addAttribute("mc","");
+            log.info("Récupération de la liste des livres");
+            return "Accueil";
+
+        }
+    }
+
+    @GetMapping("reservation/{id}/annuler")
+    public String annulerReservation (Model model,@PathVariable(value = "id")Long id){
+        UtilisateurBean utilisateur=getUserConnected();
+        booksProxy.annulerReservation(utilisateur.getIdUser(),id);
+        Set<ReservationBean> reservations = booksProxy.reservationsByUser(getUserConnected().getIdUser());
+        model.addAttribute("reservations",reservations);
+        boolean mesEmprunts=false;
+        model.addAttribute("mesEmprunts",mesEmprunts);
+        return "redirect:/MonProfile/Reservations";
     }
 }

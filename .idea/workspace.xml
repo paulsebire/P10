@@ -1,42 +1,27 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="AutoImportSettings">
-    <option name="autoReloadType" value="ALL" />
+    <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-<<<<<<< HEAD
-    <list default="true" id="de60918f-91cf-4a7b-b7ab-ee9eced42347" name="Default Changelist" comment="" />
-=======
-    <list default="true" id="47ffafc2-d67c-453f-8387-606a68c70022" name="Default Changelist" comment="">
-
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__commons_io_commons_io_2_2.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__nz_net_ultraq_thymeleaf_thymeleaf_expression_processor_1_1_3.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__nz_net_ultraq_thymeleaf_thymeleaf_layout_dialect_2_3_0.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__ognl_ognl_3_1_12.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_attoparser_attoparser_2_0_5_RELEASE.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_codehaus_groovy_groovy_2_5_9.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_hdrhistogram_HdrHistogram_2_1_9.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_javassist_javassist_3_20_0_GA.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_projectlombok_lombok_1_18_12.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_boot_spring_boot_starter_security_2_2_5_RELEASE.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_boot_spring_boot_starter_thymeleaf_2_2_5_RELEASE.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_security_spring_security_config_5_2_2_RELEASE.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_security_spring_security_core_5_2_2_RELEASE.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_security_spring_security_test_5_2_2_RELEASE.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_security_spring_security_web_5_2_2_RELEASE.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_thymeleaf_extras_thymeleaf_extras_java8time_3_0_4_RELEASE.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_thymeleaf_extras_thymeleaf_extras_springsecurity5_3_0_4_RELEASE.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_thymeleaf_thymeleaf_3_0_11_RELEASE.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_thymeleaf_thymeleaf_spring5_3_0_11_RELEASE.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_unbescape_unbescape_1_1_6_RELEASE.xml" afterDir="false" />
-
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+    <list default="true" id="de60918f-91cf-4a7b-b7ab-ee9eced42347" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/compiler.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__commons_io_commons_io_2_2.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__nz_net_ultraq_thymeleaf_thymeleaf_expression_processor_1_1_3.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__nz_net_ultraq_thymeleaf_thymeleaf_layout_dialect_2_3_0.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__ognl_ognl_3_1_12.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_attoparser_attoparser_2_0_5_RELEASE.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_hdrhistogram_HdrHistogram_2_1_9.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_javassist_javassist_3_20_0_GA.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_projectlombok_lombok_1_18_12.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_thymeleaf_extras_thymeleaf_extras_java8time_3_0_4_RELEASE.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_thymeleaf_extras_thymeleaf_extras_springsecurity5_3_0_4_RELEASE.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_thymeleaf_thymeleaf_3_0_11_RELEASE.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_thymeleaf_thymeleaf_spring5_3_0_11_RELEASE.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_unbescape_unbescape_1_1_6_RELEASE.xml" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/clientui/clientui.iml" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/clientui/target/classes/META-INF/clientui.kotlin_module" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/microservice-books/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/microservice-books/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/zuul-server/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/zuul-server/pom.xml" afterDir="false" />
     </list>
->>>>>>> 68e8ba801da0cb95eb0e2a1a7b53b3c2dd8f1152
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -45,72 +30,46 @@
   <component name="CodeStyleSettingsInfer">
     <option name="done" value="true" />
   </component>
-  <component name="DatabaseView">
-    <option name="SHOW_INTERMEDIATE" value="true" />
-    <option name="GROUP_DATA_SOURCES" value="true" />
-    <option name="GROUP_SCHEMA" value="true" />
-    <option name="GROUP_CONTENTS" value="false" />
-    <option name="SORT_POSITIONED" value="false" />
-    <option name="SHOW_EMPTY_GROUPS" value="false" />
-    <option name="AUTO_SCROLL_FROM_SOURCE" value="false" />
-    <option name="HIDDEN_KINDS">
-      <set />
-    </option>
-    <expand />
-    <select />
-  </component>
-  <component name="FileTemplateManagerImpl">
-    <option name="RECENT_TEMPLATES">
-      <list>
-        <option value="Interface" />
-        <option value="Class" />
-      </list>
-    </option>
-  </component>
   <component name="Git.Settings">
-    <option name="RECENT_BRANCH_BY_REPOSITORY">
-      <map>
-        <entry key="$PROJECT_DIR$" value="feature/reservations" />
-      </map>
-    </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
-    <option name="ROOT_SYNC" value="DONT_SYNC" />
+  </component>
+  <component name="MavenImportPreferences">
+    <option name="generalSettings">
+      <MavenGeneralSettings>
+        <option name="mavenHome" value="C:\Program Files\JetBrains\IntelliJ IDEA 2019.2.3\plugins\maven\lib\maven3" />
+      </MavenGeneralSettings>
+    </option>
   </component>
   <component name="ProjectCodeStyleSettingsMigration">
     <option name="version" value="1" />
   </component>
-  <component name="ProjectId" id="1fftRsEcbwkvMgXhcDUPGK729do" />
+  <component name="ProjectId" id="1i8rUHAIms38H9qRDnZoSAH2x0n" />
   <component name="ProjectLevelVcsManager" settingsEditedManually="true">
     <ConfirmationsSetting value="2" id="Add" />
   </component>
-  <component name="RunManager" selected="Spring Boot.EurekaServerApplication">
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
   <component name="PropertiesComponent">
-    <property name="ASKED_ADD_EXTERNAL_FILES" value="true" />
-    <property name="ExpandSpringBootJavaOptionsPanel" value="true" />
     <property name="RequestMappingsPanelOrder0" value="0" />
     <property name="RequestMappingsPanelOrder1" value="1" />
     <property name="RequestMappingsPanelWidth0" value="75" />
     <property name="RequestMappingsPanelWidth1" value="75" />
+    <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/clientui" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/microservice-books/target/classes/com/books/entities" />
     <property name="nodejs_package_manager_path" value="npm" />
-    <property name="project.structure.last.edited" value="Modules" />
-    <property name="project.structure.proportion" value="0.15" />
-    <property name="project.structure.side.proportion" value="0.2" />
-    <property name="settings.editor.selected.configurable" value="project.propVCSSupport.Mappings" />
-    <property name="show.run.dashboard.notification" value="false" />
+    <property name="vue.rearranger.settings.migration" value="true" />
+  </component>
+  <component name="ReactorSettings">
+    <option name="notificationShown" value="true" />
   </component>
   <component name="RecentsManager">
-    <key name="CopyClassDialog.RECENTS_KEY">
-      <recent name="com.books.batch" />
-      <recent name="com.books.configurations" />
-      <recent name="com.books.web.exceptions" />
-      <recent name="com.books.entities" />
-    </key>
     <key name="CopyFile.RECENT_KEYS">
-      <recent name="C:\Users\C86276\Documents\OCR\P10\clientui\src\main\java\com\clientui\exceptions" />
+      <recent name="C:\Users\C86276\Documents\OCR\P10\microservice-books\target\classes\com\books\entities" />
     </key>
   </component>
   <component name="RunAnythingCache">
@@ -119,14 +78,50 @@
       <command value="mvn clean install" />
     </option>
   </component>
-  <component name="RunManager" selected="Spring Boot.BooksApplication">
-    <configuration default="true" type="ArquillianJUnit" factoryName="" nameIsGenerated="true">
-      <option name="arquillianRunConfiguration">
-        <value>
-          <option name="containerStateName" value="" />
-        </value>
-      </option>
-      <option name="TEST_OBJECT" value="class" />
+  <component name="RunManager" selected="Spring Boot.ClientuiApplication">
+    <configuration default="true" type="JetRunConfigurationType">
+      <module name="config-server" />
+      <option name="VM_PARAMETERS" />
+      <option name="PROGRAM_PARAMETERS" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <option name="PASS_PARENT_ENVS" value="true" />
+      <option name="MAIN_CLASS_NAME" />
+      <option name="WORKING_DIRECTORY" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration default="true" type="KotlinStandaloneScriptRunConfigurationType">
+      <module name="config-server" />
+      <option name="filePath" />
+      <option name="vmParameters" />
+      <option name="alternativeJrePath" />
+      <option name="programParameters" />
+      <option name="passParentEnvs" value="true" />
+      <option name="workingDirectory" />
+      <option name="isAlternativeJrePathEnabled" value="false" />
+      <option name="VM_PARAMETERS" />
+      <option name="PROGRAM_PARAMETERS" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <option name="PASS_PARENT_ENVS" value="true" />
+      <option name="MAIN_CLASS_NAME" />
+      <option name="WORKING_DIRECTORY" />
+      <option name="filePath" />
+      <option name="vmParameters" />
+      <option name="alternativeJrePath" />
+      <option name="programParameters" />
+      <option name="passParentEnvs" value="true" />
+      <option name="workingDirectory" />
+      <option name="isAlternativeJrePathEnabled" value="false" />
+      <option name="VM_PARAMETERS" />
+      <option name="PROGRAM_PARAMETERS" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <option name="PASS_PARENT_ENVS" value="true" />
+      <option name="MAIN_CLASS_NAME" />
+      <option name="WORKING_DIRECTORY" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
@@ -134,7 +129,6 @@
     <configuration name="BooksApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot">
       <module name="books" />
       <option name="SPRING_BOOT_MAIN_CLASS" value="com.books.BooksApplication" />
-      <option name="ALTERNATIVE_JRE_PATH" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
@@ -148,8 +142,7 @@
     </configuration>
     <configuration name="ConfigServerApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot">
       <module name="config-server" />
-      <option name="SPRING_BOOT_MAIN_CLASS" value="com.mcommerce.configserver.ConfigServerApplication" />
-      <option name="ALTERNATIVE_JRE_PATH" />
+      <option name="SPRING_BOOT_MAIN_CLASS" value="com.configserver.ConfigServerApplication" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
@@ -164,7 +157,6 @@
     <configuration name="UtilisateurApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot">
       <module name="utilisateur" />
       <option name="SPRING_BOOT_MAIN_CLASS" value="com.utilisateur.UtilisateurApplication" />
-      <option name="ALTERNATIVE_JRE_PATH" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
@@ -172,7 +164,6 @@
     <configuration name="ZuulserverApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot">
       <module name="zuulserver" />
       <option name="SPRING_BOOT_MAIN_CLASS" value="com.zuulserver.ZuulserverApplication" />
-      <option name="ALTERNATIVE_JRE_PATH" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
@@ -186,144 +177,33 @@
       <item itemvalue="Spring Boot.ClientuiApplication" />
     </list>
   </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="SvnConfiguration">
     <configuration />
   </component>
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
-      <changelist id="47ffafc2-d67c-453f-8387-606a68c70022" name="Default Changelist" comment="" />
-      <created>1596620969555</created>
+      <changelist id="de60918f-91cf-4a7b-b7ab-ee9eced42347" name="Default Changelist" comment="" />
+      <created>1601300074542</created>
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
-      <updated>1596620969555</updated>
-      <workItem from="1596620971402" duration="784000" />
-      <workItem from="1597137130358" duration="6325000" />
-      <workItem from="1598880494981" duration="15011000" />
-      <workItem from="1599212315109" duration="9905000" />
-      <workItem from="1599476641633" duration="30213000" />
-      <workItem from="1599661663823" duration="4050000" />
-      <workItem from="1599741271604" duration="7028000" />
-      <workItem from="1600091145910" duration="31531000" />
-      <workItem from="1600351617064" duration="6250000" />
-      <workItem from="1600441038559" duration="3527000" />
+      <updated>1601300074542</updated>
+      <workItem from="1601300079929" duration="53000" />
+      <workItem from="1601300487200" duration="7531000" />
+      <workItem from="1601365555875" duration="2302000" />
     </task>
-    <task id="LOCAL-00001" summary="refactored all reservations in emprunts">
-      <created>1597226019835</created>
+    <task id="LOCAL-00001" summary="fixed dependency bug on sleuth">
+      <created>1601305177323</created>
       <option name="number" value="00001" />
       <option name="presentableId" value="LOCAL-00001" />
       <option name="project" value="LOCAL" />
-      <updated>1597226019835</updated>
+      <updated>1601305177323</updated>
     </task>
-    <task id="LOCAL-00002" summary="reworked maven and dependencies">
-      <created>1598881546612</created>
-      <option name="number" value="00002" />
-      <option name="presentableId" value="LOCAL-00002" />
-      <option name="project" value="LOCAL" />
-      <updated>1598881546612</updated>
-    </task>
-    <task id="LOCAL-00003" summary="added reservations on myprofile">
-      <created>1598964294169</created>
-      <option name="number" value="00003" />
-      <option name="presentableId" value="LOCAL-00003" />
-      <option name="project" value="LOCAL" />
-      <updated>1598964294169</updated>
-    </task>
-    <task id="LOCAL-00004" summary="added next return date to the reservation">
-      <created>1598966869708</created>
-      <option name="number" value="00004" />
-      <option name="presentableId" value="LOCAL-00004" />
-      <option name="project" value="LOCAL" />
-      <updated>1598966869708</updated>
-    </task>
-    <task id="LOCAL-00005" summary="added zuul properties">
-      <created>1599228287156</created>
-      <option name="number" value="00005" />
-      <option name="presentableId" value="LOCAL-00005" />
-      <option name="project" value="LOCAL" />
-      <updated>1599228287156</updated>
-    </task>
-    <task id="LOCAL-00006" summary="added reserver button and no reservation if already borrowed">
-      <created>1599494025618</created>
-      <option name="number" value="00006" />
-      <option name="presentableId" value="LOCAL-00006" />
-      <option name="project" value="LOCAL" />
-      <updated>1599494025618</updated>
-    </task>
-    <task id="LOCAL-00007" summary="fixed number of copy availiable">
-      <created>1599572527503</created>
-      <option name="number" value="00007" />
-      <option name="presentableId" value="LOCAL-00007" />
-      <option name="project" value="LOCAL" />
-      <updated>1599572527503</updated>
-    </task>
-    <task id="LOCAL-00008" summary="modified cloturerEmprunt to send email to first in fileAttente">
-      <created>1600176441783</created>
-      <option name="number" value="00008" />
-      <option name="presentableId" value="LOCAL-00008" />
-      <option name="project" value="LOCAL" />
-      <updated>1600176441783</updated>
-    </task>
-    <task id="LOCAL-00009" summary="updated cloturerEmprunt">
-      <created>1600179176756</created>
-      <option name="number" value="00009" />
-      <option name="presentableId" value="LOCAL-00009" />
-      <option name="project" value="LOCAL" />
-      <updated>1600179176756</updated>
-    </task>
-    <task id="LOCAL-00010" summary="added purge of shortlist and notification to next in shortlist">
-      <created>1600332848310</created>
-      <option name="number" value="00010" />
-      <option name="presentableId" value="LOCAL-00010" />
-      <option name="project" value="LOCAL" />
-      <updated>1600332848310</updated>
-    </task>
-    <task id="LOCAL-00011" summary="fixed bug about extending borrowing">
-      <created>1600354495003</created>
-      <option name="number" value="00011" />
-      <option name="presentableId" value="LOCAL-00011" />
-      <option name="project" value="LOCAL" />
-      <updated>1600354495003</updated>
-    </task>
-    <task id="LOCAL-00012" summary="improved extend borrowing method">
-      <created>1600354670604</created>
-      <option name="number" value="00012" />
-      <option name="presentableId" value="LOCAL-00012" />
-      <option name="project" value="LOCAL" />
-      <updated>1600354670604</updated>
-    </task>
-    <task id="LOCAL-00013" summary="back to state0">
-      <created>1600442639266</created>
-      <option name="number" value="00013" />
-      <option name="presentableId" value="LOCAL-00013" />
-      <option name="project" value="LOCAL" />
-      <updated>1600442639266</updated>
-    </task>
-    <task id="LOCAL-00014" summary="back to state0 bis">
-      <created>1600442755287</created>
-      <option name="number" value="00014" />
-      <option name="presentableId" value="LOCAL-00014" />
-      <option name="project" value="LOCAL" />
-      <updated>1600442755287</updated>
-    </task>
-    <task id="LOCAL-00015" summary="improved prolonger emprunt">
-      <created>1600444266166</created>
-      <option name="number" value="00015" />
-      <option name="presentableId" value="LOCAL-00015" />
-      <option name="project" value="LOCAL" />
-      <updated>1600444266166</updated>
-    </task>
-    <task id="LOCAL-00016" summary="fixed conflicts">
-      <created>1601307774731</created>
-      <option name="number" value="00016" />
-      <option name="presentableId" value="LOCAL-00016" />
-      <option name="project" value="LOCAL" />
-      <updated>1601307774731</updated>
-    </task>
-    <option name="localTasksCounter" value="17" />
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
-    <option name="version" value="1" />
+    <option name="version" value="3" />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
     <option name="TAB_STATES">
@@ -337,107 +217,119 @@
     </option>
     <option name="oldMeFiltersMigrated" value="true" />
   </component>
-<<<<<<< HEAD
-=======
   <component name="VcsManagerConfiguration">
-    <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
-    <ignored-roots>
-      <path value="$PROJECT_DIR$/config-server-repo" />
-    </ignored-roots>
-    <MESSAGE value="refactored all reservations in emprunts" />
-    <MESSAGE value="reworked maven and dependencies" />
-    <MESSAGE value="added reservations on myprofile" />
-    <MESSAGE value="added next return date to the reservation" />
-    <MESSAGE value="added zuul properties" />
-    <MESSAGE value="added reserver button and no reservation if already borrowed" />
-    <MESSAGE value="fixed number of copy availiable" />
-    <MESSAGE value="modified cloturerEmprunt to send email to first in fileAttente" />
-    <MESSAGE value="updated cloturerEmprunt" />
-    <MESSAGE value="added purge of shortlist and notification to next in shortlist" />
-    <MESSAGE value="fixed bug about extending borrowing" />
-    <MESSAGE value="improved extend borrowing method" />
-    <MESSAGE value="back to state0" />
-    <MESSAGE value="back to state0 bis" />
-    <MESSAGE value="improved prolonger emprunt" />
-    <MESSAGE value="fixed conflicts" />
-    <option name="LAST_COMMIT_MESSAGE" value="fixed conflicts" />
+    <MESSAGE value="fixed dependency bug on sleuth" />
+    <option name="LAST_COMMIT_MESSAGE" value="fixed dependency bug on sleuth" />
   </component>
   <component name="WindowStateProjectService">
-    <state x="1780" y="175" width="1092" height="762" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1601307674629">
+    <state x="1780" y="175" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1601300669986">
       <screen x="1366" y="0" width="1920" height="1040" />
     </state>
-    <state x="1780" y="175" width="1092" height="762" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.1366.728/1366.0.1920.1040@1366.0.1920.1040" timestamp="1601307674629" />
-    <state x="1812" y="88" key="CommitChangelistDialog2" timestamp="1601307773937">
+    <state x="1780" y="175" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.1366.728/1366.0.1920.1040@1366.0.1920.1040" timestamp="1601300669986" />
+    <state x="1923" y="88" key="CommitChangelistDialog2" timestamp="1601305176386">
       <screen x="1366" y="0" width="1920" height="1040" />
     </state>
-    <state x="1812" y="88" key="CommitChangelistDialog2/0.0.1366.728/1366.0.1920.1040@1366.0.1920.1040" timestamp="1601307773937" />
-    <state x="2106" y="229" key="FileChooserDialogImpl" timestamp="1601307587538">
+    <state x="1923" y="88" key="CommitChangelistDialog2/0.0.1366.728/1366.0.1920.1040@1366.0.1920.1040" timestamp="1601305176386" />
+    <state width="559" height="442" key="Diff.GoToChangePopup" timestamp="1601385208299">
+      <screen x="1366" y="0" width="1680" height="1010" />
+    </state>
+    <state width="559" height="442" key="Diff.GoToChangePopup/0.0.1366.728/1366.0.1680.1010@1366.0.1680.1010" timestamp="1601385208299" />
+    <state x="1458" y="92" width="1496" height="826" key="DiffContextDialog" timestamp="1601385288611">
+      <screen x="1366" y="0" width="1680" height="1010" />
+    </state>
+    <state x="1458" y="92" width="1496" height="826" key="DiffContextDialog/0.0.1366.728/1366.0.1680.1010@1366.0.1680.1010" timestamp="1601385288611" />
+    <state width="1877" height="542" key="GridCell.Tab.0.bottom" timestamp="1601308733316">
       <screen x="1366" y="0" width="1920" height="1040" />
     </state>
-    <state x="2106" y="229" key="FileChooserDialogImpl/0.0.1366.728/1366.0.1920.1040@1366.0.1920.1040" timestamp="1601307587538" />
-    <state width="1877" height="259" key="GridCell.Tab.0.bottom" timestamp="1601307685093">
+    <state width="1877" height="542" key="GridCell.Tab.0.bottom/0.0.1366.728/1366.0.1920.1040@1366.0.1920.1040" timestamp="1601308733316" />
+    <state width="1877" height="542" key="GridCell.Tab.0.center" timestamp="1601308733316">
       <screen x="1366" y="0" width="1920" height="1040" />
     </state>
-    <state width="1877" height="259" key="GridCell.Tab.0.bottom/0.0.1366.728/1366.0.1920.1040@1366.0.1920.1040" timestamp="1601307685093" />
-    <state width="1877" height="259" key="GridCell.Tab.0.center" timestamp="1601307685093">
+    <state width="1877" height="542" key="GridCell.Tab.0.center/0.0.1366.728/1366.0.1920.1040@1366.0.1920.1040" timestamp="1601308733316" />
+    <state width="1877" height="542" key="GridCell.Tab.0.left" timestamp="1601308733316">
       <screen x="1366" y="0" width="1920" height="1040" />
     </state>
-    <state width="1877" height="259" key="GridCell.Tab.0.center/0.0.1366.728/1366.0.1920.1040@1366.0.1920.1040" timestamp="1601307685093" />
-    <state width="1877" height="259" key="GridCell.Tab.0.left" timestamp="1601307685093">
+    <state width="1877" height="542" key="GridCell.Tab.0.left/0.0.1366.728/1366.0.1920.1040@1366.0.1920.1040" timestamp="1601308733316" />
+    <state width="1877" height="542" key="GridCell.Tab.0.right" timestamp="1601308733316">
       <screen x="1366" y="0" width="1920" height="1040" />
     </state>
-    <state width="1877" height="259" key="GridCell.Tab.0.left/0.0.1366.728/1366.0.1920.1040@1366.0.1920.1040" timestamp="1601307685093" />
-    <state width="1877" height="259" key="GridCell.Tab.0.right" timestamp="1601307685093">
+    <state width="1877" height="542" key="GridCell.Tab.0.right/0.0.1366.728/1366.0.1920.1040@1366.0.1920.1040" timestamp="1601308733316" />
+    <state width="1877" height="542" key="GridCell.Tab.1.bottom" timestamp="1601308733316">
       <screen x="1366" y="0" width="1920" height="1040" />
     </state>
-    <state width="1877" height="259" key="GridCell.Tab.0.right/0.0.1366.728/1366.0.1920.1040@1366.0.1920.1040" timestamp="1601307685093" />
-    <state x="1964" y="281" key="MultipleFileMergeDialog" timestamp="1601307299196">
+    <state width="1877" height="542" key="GridCell.Tab.1.bottom/0.0.1366.728/1366.0.1920.1040@1366.0.1920.1040" timestamp="1601308733316" />
+    <state width="1877" height="542" key="GridCell.Tab.1.center" timestamp="1601308733316">
       <screen x="1366" y="0" width="1920" height="1040" />
     </state>
-    <state x="1964" y="281" key="MultipleFileMergeDialog/0.0.1366.728/1366.0.1920.1040@1366.0.1920.1040" timestamp="1601307299196" />
-    <state x="1991" y="224" key="NewModule_or_Project.wizard" timestamp="1601307589239">
+    <state width="1877" height="542" key="GridCell.Tab.1.center/0.0.1366.728/1366.0.1920.1040@1366.0.1920.1040" timestamp="1601308733316" />
+    <state width="1877" height="542" key="GridCell.Tab.1.left" timestamp="1601308733316">
       <screen x="1366" y="0" width="1920" height="1040" />
     </state>
-    <state x="1991" y="224" key="NewModule_or_Project.wizard/0.0.1366.728/1366.0.1920.1040@1366.0.1920.1040" timestamp="1601307589239" />
-    <state x="1806" y="94" key="SettingsEditor" timestamp="1601307604655">
+    <state width="1877" height="542" key="GridCell.Tab.1.left/0.0.1366.728/1366.0.1920.1040@1366.0.1920.1040" timestamp="1601308733316" />
+    <state width="1877" height="542" key="GridCell.Tab.1.right" timestamp="1601308733316">
       <screen x="1366" y="0" width="1920" height="1040" />
     </state>
-    <state x="1806" y="94" key="SettingsEditor/0.0.1366.728/1366.0.1920.1040@1366.0.1920.1040" timestamp="1601307604655" />
-    <state x="1918" y="253" key="Vcs.Push.Dialog.v2" timestamp="1601307780950">
+    <state width="1877" height="542" key="GridCell.Tab.1.right/0.0.1366.728/1366.0.1920.1040@1366.0.1920.1040" timestamp="1601308733316" />
+    <state width="1877" height="320" key="GridCell.Tab.2.bottom" timestamp="1601302611821">
       <screen x="1366" y="0" width="1920" height="1040" />
     </state>
-    <state x="1918" y="253" key="Vcs.Push.Dialog.v2/0.0.1366.728/1366.0.1920.1040@1366.0.1920.1040" timestamp="1601307780950" />
-    <state x="2143" y="434" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1601307738511">
+    <state width="1877" height="320" key="GridCell.Tab.2.bottom/0.0.1366.728/1366.0.1920.1040@1366.0.1920.1040" timestamp="1601302611821" />
+    <state width="1877" height="320" key="GridCell.Tab.2.center" timestamp="1601302611821">
       <screen x="1366" y="0" width="1920" height="1040" />
     </state>
-    <state x="2143" y="434" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2/0.0.1366.728/1366.0.1920.1040@1366.0.1920.1040" timestamp="1601307738511" />
-    <state x="1709" y="140" key="new project wizard" timestamp="1601307583441">
+    <state width="1877" height="320" key="GridCell.Tab.2.center/0.0.1366.728/1366.0.1920.1040@1366.0.1920.1040" timestamp="1601302611821" />
+    <state width="1877" height="320" key="GridCell.Tab.2.left" timestamp="1601302611821">
       <screen x="1366" y="0" width="1920" height="1040" />
     </state>
-    <state x="1709" y="140" key="new project wizard/0.0.1366.728/1366.0.1920.1040@1366.0.1920.1040" timestamp="1601307583441" />
-    <state x="1982" y="240" width="672" height="677" key="run.anything.popup" timestamp="1601307685058">
+    <state width="1877" height="320" key="GridCell.Tab.2.left/0.0.1366.728/1366.0.1920.1040@1366.0.1920.1040" timestamp="1601302611821" />
+    <state width="1877" height="320" key="GridCell.Tab.2.right" timestamp="1601302611821">
       <screen x="1366" y="0" width="1920" height="1040" />
     </state>
-    <state x="1982" y="240" width="672" height="677" key="run.anything.popup/0.0.1366.728/1366.0.1920.1040@1366.0.1920.1040" timestamp="1601307685058" />
-    <option name="LAST_COMMIT_MESSAGE" value="improved prolonger emprunt" />
+    <state width="1877" height="320" key="GridCell.Tab.2.right/0.0.1366.728/1366.0.1920.1040@1366.0.1920.1040" timestamp="1601302611821" />
+    <state x="1555" y="37" width="1598" height="944" key="MergeDialog" timestamp="1601308723579">
+      <screen x="1366" y="0" width="1920" height="1040" />
+    </state>
+    <state x="1555" y="37" width="1598" height="944" key="MergeDialog/0.0.1366.728/1366.0.1920.1040@1366.0.1920.1040" timestamp="1601308723579" />
+    <state x="1964" y="281" key="MultipleFileMergeDialog" timestamp="1601308723586">
+      <screen x="1366" y="0" width="1920" height="1040" />
+    </state>
+    <state x="1964" y="281" key="MultipleFileMergeDialog/0.0.1366.728/1366.0.1920.1040@1366.0.1920.1040" timestamp="1601308723586" />
+    <state x="2092" y="419" key="VCS.EditChangelistDialog" timestamp="1601385274628">
+      <screen x="1366" y="0" width="1680" height="1010" />
+    </state>
+    <state x="2092" y="419" key="VCS.EditChangelistDialog/0.0.1366.728/1366.0.1680.1010@1366.0.1680.1010" timestamp="1601385274628" />
+    <state x="1849" y="246" key="Vcs.Push.Dialog.v2" timestamp="1601383286819">
+      <screen x="1366" y="0" width="1680" height="1010" />
+    </state>
+    <state x="1849" y="246" key="Vcs.Push.Dialog.v2/0.0.1366.728/1366.0.1680.1010@1366.0.1680.1010" timestamp="1601383286819" />
+    <state x="1918" y="253" key="Vcs.Push.Dialog.v2/0.0.1366.728/1366.0.1920.1040@1366.0.1920.1040" timestamp="1601306440260" />
+    <state x="2143" y="434" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1601306468240">
+      <screen x="1366" y="0" width="1920" height="1040" />
+    </state>
+    <state x="2143" y="434" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2/0.0.1366.728/1366.0.1920.1040@1366.0.1920.1040" timestamp="1601306468240" />
+    <state x="2033" y="253" width="585" height="534" key="find.popup" timestamp="1601301326724">
+      <screen x="1366" y="0" width="1920" height="1040" />
+    </state>
+    <state x="2033" y="253" width="585" height="534" key="find.popup/0.0.1366.728/1366.0.1920.1040@1366.0.1920.1040" timestamp="1601301326724" />
+    <state x="1982" y="240" width="672" height="677" key="run.anything.popup" timestamp="1601304564523">
+      <screen x="1366" y="0" width="1920" height="1040" />
+    </state>
+    <state x="1982" y="240" width="672" height="677" key="run.anything.popup/0.0.1366.728/1366.0.1920.1040@1366.0.1920.1040" timestamp="1601304564523" />
   </component>
->>>>>>> 68e8ba801da0cb95eb0e2a1a7b53b3c2dd8f1152
-  <component name="WindowStateProjectService">
-    <state x="1458" y="92" width="1736" height="856" key="DiffContextDialog" timestamp="1601309152845">
-      <screen x="1366" y="0" width="1920" height="1040" />
-    </state>
-    <state x="1458" y="92" width="1736" height="856" key="DiffContextDialog/0.0.1366.728/1366.0.1920.1040@1366.0.1920.1040" timestamp="1601309152845" />
-    <state x="2113" y="236" key="VCS.ChangeListViewerDialog" timestamp="1601309148112">
-      <screen x="1366" y="0" width="1920" height="1040" />
-    </state>
-    <state x="2113" y="236" key="VCS.ChangeListViewerDialog/0.0.1366.728/1366.0.1920.1040@1366.0.1920.1040" timestamp="1601309148112" />
-    <state x="1918" y="253" key="Vcs.Push.Dialog.v2" timestamp="1601309151785">
-      <screen x="1366" y="0" width="1920" height="1040" />
-    </state>
-    <state x="1918" y="253" key="Vcs.Push.Dialog.v2/0.0.1366.728/1366.0.1920.1040@1366.0.1920.1040" timestamp="1601309151785" />
-    <state x="2143" y="434" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1601309044287">
-      <screen x="1366" y="0" width="1920" height="1040" />
-    </state>
-    <state x="2143" y="434" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2/0.0.1366.728/1366.0.1920.1040@1366.0.1920.1040" timestamp="1601309044287" />
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/clientui/src/main/java/com/clientui/controller/ClientController.java</url>
+          <line>91</line>
+          <option name="timeStamp" value="1" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/microservice-books/src/main/java/com/books/BooksApplication.java</url>
+          <line>110</line>
+          <option name="timeStamp" value="4" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
   </component>
 </project>

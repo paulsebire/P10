@@ -7,7 +7,7 @@ public class CopyBean {
     private Long id;
     private String serialNumber;
     private BookBean book;
-    private Set<ReservationBean> reservations;
+    private Set<EmpruntBean> emprunts;
     private boolean dispo;
     public CopyBean() {
     }
@@ -40,12 +40,12 @@ public class CopyBean {
         this.dispo = dispo;
     }
 
-    public Set<ReservationBean> getReservations() {
-        return reservations;
+    public Set<EmpruntBean> getEmprunts() {
+        return emprunts;
     }
 
-    public void setReservations(Set<ReservationBean> reservations) {
-        this.reservations = reservations;
+    public void setEmprunts(Set<EmpruntBean> emprunts) {
+        this.emprunts = emprunts;
     }
 
     public void setBook(BookBean book) {

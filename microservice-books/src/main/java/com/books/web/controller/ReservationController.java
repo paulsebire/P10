@@ -1,32 +1,40 @@
 package com.books.web.controller;
 
-
+import com.books.dao.BookRepository;
 import com.books.dao.CopiesRepository;
+import com.books.dao.EmpruntRepository;
 import com.books.dao.ReservationRepository;
+import com.books.entities.Book;
 import com.books.entities.Copy;
+import com.books.entities.Emprunt;
 import com.books.entities.Reservation;
-import com.books.poxies.MicroserviceUtilisateurProxy;
 import com.books.services.BibliServiceImpl;
 import com.books.web.exceptions.ReservationNotFoundException;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
-import org.springframework.web.bind.annotation.*;
+import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.PathVariable;
+import org.springframework.web.bind.annotation.PutMapping;
+import org.springframework.web.bind.annotation.RestController;
 
-import java.util.Calendar;
-import java.util.Date;
-import java.util.List;
-import java.util.Optional;
+import java.util.*;
 
 @RestController
 public class ReservationController {
 
+
     @Autowired
     private ReservationRepository reservationRepository;
+    @Autowired
+    private EmpruntRepository empruntRepository;
+    @Autowired
+    private BookRepository bookRepository;
     @Autowired
     private BibliServiceImpl bibliService;
     @Autowired
     private CopiesRepository copiesRepository;
+
 
     /**
      * find reservations in Db for a specific user
@@ -34,90 +42,84 @@ public class ReservationController {
      * @return alist of reservations
      */
     @GetMapping(value = "/utilisateur/{id}/reservations")
-    public List<Reservation> reservationList(@PathVariable(value = "id")Long id){
-        List<Reservation> reservations = reservationRepository.findAllByIdUtilisateurAndCloturerFalseOrderByDateEmpruntAsc(id);
-        //Set<Reservation> reservationSet=new HashSet<>();
-        if (reservations.isEmpty()){
-            throw new ReservationNotFoundException("Aucune reservation n'est disponible");
-        }else {
-            for (Reservation r:reservations) {
-                if (r.getDateRetour().after(new Date()) && r.isProlonger()==false){
-                    r.setProlongeable(true);
-                }else r.setProlongeable(false);
-                reservationRepository.save(r);
-                // reservationSet.add(r);
-            }
-
-        }
-        reservations = reservationRepository.findAllByIdUtilisateurAndCloturerFalseOrderByDateEmpruntAsc(id);
-        return reservations;
-    }
-
-    /**
-     * method to give credit time to a reservation
-     * @param idResa id of the reservation
-     * @param idUser id of the borrower
-     * @return a response entity depending on the scenario
-     */
-    @PostMapping(value = "/utilisateur/{idUser}/reservations/{idResa}/prolonger")
-    void prolongerReservation(@PathVariable(value = "idResa")Long idResa,@PathVariable(value = "idUser") Long idUser){
-        Optional<Reservation> r= reservationRepository.findById(idResa);
-        Date dateDujour = new Date();
-        if (r.isPresent()){
-            Reservation reservation=r.get();
-            if (reservation.getIdUtilisateur()==idUser && reservation.isProlonger()==false
-                    && reservation.getDateRetour().after(new Date())){
-                reservation.setProlonger(true);
-                reservation.setDateRetour(bibliService.ajouter4semaines(reservation.getDateRetour()));
-                reservationRepository.save(reservation);
+    public Set<Reservation> reservervationByUser (@PathVariable(value = "id")Long id){
+        List<Reservation> reservationsByUser = reservationRepository.findAllByIdUtilisateurAndEnCoursIsTrueOrderByDateReservationAsc(id);
+        Set<Reservation> reservationSet=new HashSet<>();
+        if (!reservationsByUser.isEmpty()){
+            for (int i=0;i<reservationsByUser.size();i++){
+                Reservation reservation =reservationsByUser.get(i);
+                List<Reservation> reservationsByBook=reservationRepository.findAllByBookIdAndEnCoursIsTrueOrderByDateReservationAsc(reservation.getBook().getId());
+                List<Emprunt> empruntsByBook=empruntRepository.findAllByCopy_BookIdAndCloturerIsFalseOrderByDateRetourAsc(reservation.getBook().getId());
+                for (int j=0;j<reservationsByBook.size();j++){
+                    if (reservationsByBook.get(j).getIdUtilisateur().equals(id)){
+                        reservation.setPosition(j+1);
+                        if (empruntsByBook.size()>0){
+                            reservation.setDateNextRetour(empruntsByBook.get(0).getDateRetour());
+                        } else reservation.setDateNextRetour(new Date());
+                        reservationSet.add(reservation);
+                    }
+                }
             }
         }
+        return reservationSet;
     }
 
-    /**
-     * method to create a reservation
-     * @param idUser id of the borrower
-     * @param idCopy if of the copy borrowed
-     * @return a response entity depending on the scenario
-     */
-    @PostMapping(value = "/utilisateur/{idUser}/copie/{idCopy}/reserver")
-     ResponseEntity reserverCopy(@PathVariable(value = "idUser")Long idUser,@PathVariable(value = "idCopy")Long idCopy){
+    @GetMapping(value = "/utilisateur/{idUser}/livre/{idBook}/reservable")
+    boolean livreReservable(@PathVariable(value = "idUser")Long idUser,@PathVariable(value = "idBook")Long idBook){
+        Book book = bibliService.findBook(idBook);
+        List<Emprunt> emprunts = empruntRepository.livreDejaEmprunteParUtilisateur(idUser,idBook);
+        List<Reservation> reservations = reservationRepository.findAllByBookIdAndEnCoursIsTrueOrderByDateReservationAsc(idBook);
+        Reservation reservationEncours = reservationRepository.findByBookIdAndIdUtilisateurAndEnCoursTrue(idBook,idUser);
+        List<Copy> copiesdispo = copiesRepository.ListCopyDispoByBook(idBook);
+        if (emprunts.isEmpty() && reservations.size()<=book.getCopies().size()*2
+                && reservationEncours==null && copiesdispo.size()==0 ){
+                return true;
+            }else return false;
 
-        Optional<Copy> c   = copiesRepository.findById(idCopy);
-
-        if (c.isPresent()){
-             Copy copy=c.get();
-            if (copy.isDispo()){
-                Reservation reservation=new Reservation(copy,new Date());
-                reservation.setDateRetour(bibliService.ajouter4semaines(reservation.getDateEmprunt()));
-                reservation.setIdUtilisateur(idUser);
-                copy.setDispo(false);
-                copiesRepository.save(copy);
-                reservationRepository.save(reservation);
-                return new ResponseEntity<>("reservation effectué", HttpStatus.OK);
-            }
-        }return new ResponseEntity<>("reservation introuvable", HttpStatus.BAD_REQUEST);
     }
 
-    /**
-     * method to close a reservation
-     * @param idResa id of the reservation
-     * @return  a response entity depending on the scenario
-     */
-    @PutMapping(value = "/reservation/{idResa}/cloturer")
-    ResponseEntity cloturerReservation(@PathVariable(value = "idResa")Long idResa){
+    @GetMapping(value = "/utilisateur/{idUser}/livre/{idBook}/reserver")
+    ResponseEntity reserverLivre(@PathVariable(value = "idUser")Long idUser, @PathVariable(value = "idBook")Long idBook){
+        Book book =bibliService.findBook(idBook);
+        List<Emprunt> emprunts = empruntRepository.livreDejaEmprunteParUtilisateur(idUser,idBook);
+        List<Reservation> reservations = reservationRepository.findAllByBookIdAndEnCoursIsTrueOrderByDateReservationAsc(idBook);
+        Reservation reservationEncours = reservationRepository.findByBookIdAndIdUtilisateurAndEnCoursTrue(idBook,idUser);
+        List<Copy> copiesDispo = copiesRepository.findCopiesByBookIdAndDispoTrue(idBook);
+        if (copiesDispo.size()==0){
+            if (emprunts.isEmpty()){
+                if (reservations.size()<=book.getCopies().size()*2){
+                    if (reservationEncours==null){
+                        Reservation reservation = new Reservation(book);
+                        reservation.setIdUtilisateur(idUser);
+                        reservationRepository.save(reservation);
+                        return new ResponseEntity<>("livre reservé", HttpStatus.OK);
+                    } return new ResponseEntity<>("reservation impossible, livre déjà réservé", HttpStatus.BAD_REQUEST);
+                } return new ResponseEntity<>("reservation impossible, file d'attente pleine", HttpStatus.BAD_REQUEST);
+            } else return new ResponseEntity<>("reservation impossible, livre déjà emprunté", HttpStatus.BAD_REQUEST);
+        } else return new ResponseEntity<>("reservation impossible, des exemplaires sont disponibles", HttpStatus.BAD_REQUEST);
 
-        Reservation reservation= reservationRepository.findById(idResa).get();
-
-        if (reservation!=null){
-            if (!reservation.isCloturer()){
-                Copy copy = copiesRepository.findById(reservation.getCopy().getId()).get();
-                reservation.setCloturer(true);
-                copy.setDispo(true);
-                copiesRepository.save(copy);
-                reservationRepository.save(reservation);
-                return new ResponseEntity<>("reservation cloturer", HttpStatus.OK);
-            }
-        }return new ResponseEntity<>("reservation introuvable", HttpStatus.BAD_REQUEST);
     }
+
+    @PutMapping(value = "/utilisateur/{idUser}/reservation/{id}/annuler")
+    ResponseEntity annulerReservation(@PathVariable(value = "idUser")Long idUser,@PathVariable(value = "id")Long id){
+       Optional<Reservation> r = reservationRepository.findById(id);
+       Reservation reservation= null;
+       if (r.isPresent()){
+           reservation=r.get();
+           if (reservation.getIdUtilisateur().equals(idUser)){
+               reservation.setEnCours(false);
+               reservationRepository.save(reservation);
+               return new ResponseEntity<>("reservation annulée", HttpStatus.OK);
+           }return new ResponseEntity<>(" annulation de la reservation impossible, la reservation n'appartient au demandeur", HttpStatus.BAD_REQUEST);
+       }return new ResponseEntity<>("annulation de la reservation impossible, la reservation est introuvable", HttpStatus.BAD_REQUEST);
+    }
+
+    @GetMapping(value = "/livre/{idBook}/reservations")
+    List<Reservation> reservationsByBook(@PathVariable(value = "idBook")Long idBook){
+        List<Reservation> reservations= reservationRepository.findAllByBookIdAndEnCoursIsTrueOrderByDateReservationAsc(idBook);
+        if (!reservations.isEmpty()){
+            return reservations;
+        }else return null;
+    }
+
 }

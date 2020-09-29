@@ -5,14 +5,14 @@
 	<parent>
 		<groupId>org.springframework.boot</groupId>
 		<artifactId>spring-boot-starter-parent</artifactId>
-		<version>2.2.5.RELEASE</version>
+		<version>2.3.1.RELEASE</version>
 		<relativePath/> <!-- lookup parent from repository -->
 	</parent>
 	<groupId>com.books</groupId>
 	<artifactId>books</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
 	<name>books</name>
-	<description>module de gestion des livres et reservations</description>
+	<description>module de gestion des livres et emprunts</description>
 
 	<properties>
 		<java.version>1.8</java.version>
@@ -68,6 +68,11 @@
 			<groupId>org.springframework</groupId>
 			<artifactId>spring-context-support</artifactId>
 			<version>5.2.5.RELEASE</version>
+		</dependency>
+		<dependency>
+			<groupId>org.apache.httpcomponents</groupId>
+			<artifactId>httpclient</artifactId>
+			<version>4.5</version>
 		</dependency>
 		<dependency>
 			<groupId>org.postgresql</groupId>

@@ -1,48 +1,52 @@
 package com.books.entities;
 
-import com.books.beans.UtilisateurBean;
-import com.fasterxml.jackson.annotation.JsonBackReference;
-import com.fasterxml.jackson.annotation.JsonManagedReference;
-
 import javax.persistence.*;
-import java.io.Serializable;
-import java.util.Collection;
 import java.util.Date;
 
 @Entity
 public class Reservation {
+
     @Id@GeneratedValue
-    @Column(name = "id_reservation")
+    @Column(name = "id_emprunt")
     private Long id;
 
     private Long idUtilisateur;
-    private Date dateEmprunt;
-    private Date dateRetour;
-    private boolean prolonger=false;
-    private boolean cloturer=false;
-    private boolean prolongeable;
+    private Date dateReservation;
+    private Date dateNextRetour;
+    private Date dateNotification;
     @ManyToOne
-    @JoinColumn(name ="ID_COPY" )
-    private Copy copy;
+    @JoinColumn(name ="ID_BOOK" )
+    private Book book;
+
+    private Integer position;
+    private boolean enCours;
+    private boolean notified;
 
     public Reservation() {
         super();
     }
 
-    public Reservation(Copy copy, Date dateEmprunt) {
-        this.dateEmprunt=dateEmprunt;
-        this.prolonger=false;
-        this.cloturer=false;
-        this.copy=copy;
-        this.prolongeable=true;
+    public Reservation(Book book) {
+        this.dateReservation=new Date();
+        this.enCours=true;
+        this.book=book;
+        this.notified=false;
     }
 
-    public boolean isProlongeable() {
-        return prolongeable;
+    public Date getDateNotification() {
+        return dateNotification;
     }
 
-    public void setProlongeable(boolean prolongeable) {
-        this.prolongeable = prolongeable;
+    public void setDateNotification(Date dateNotification) {
+        this.dateNotification = dateNotification;
+    }
+
+    public boolean isNotified() {
+        return notified;
+    }
+
+    public void setNotified(boolean notified) {
+        this.notified = notified;
     }
 
     public Long getId() {
@@ -61,54 +65,53 @@ public class Reservation {
         this.idUtilisateur = idUtilisateur;
     }
 
-    public Date getDateEmprunt() {
-        return dateEmprunt;
+    public Integer getPosition() {
+        return position;
     }
 
-    public boolean isCloturer() {
-        return cloturer;
+    public void setPosition(Integer position) {
+        this.position = position;
     }
 
-    public void setCloturer(boolean cloturer) {
-        this.cloturer = cloturer;
+    public Date getDateReservation() {
+        return dateReservation;
     }
 
-    public void setDateEmprunt(Date dateEmprunt) {
-        this.dateEmprunt = dateEmprunt;
+    public void setDateReservation(Date dateReservation) {
+        this.dateReservation = dateReservation;
     }
 
-    public boolean isProlonger() {
-        return prolonger;
+    public Date getDateNextRetour() {
+        return dateNextRetour;
     }
 
-    public void setProlonger(boolean prolonger) {
-        this.prolonger = prolonger;
+    public void setDateNextRetour(Date dateNextRetour) {
+        this.dateNextRetour = dateNextRetour;
     }
 
-    public Copy getCopy() {
-        return copy;
+    public Book getBook() {
+        return book;
     }
 
-    public void setCopy(Copy copy) {
-        this.copy = copy;
+    public void setBook(Book book) {
+        this.book = book;
     }
 
-    public Date getDateRetour() {
-        return dateRetour;
+    public boolean isEnCours() {
+        return enCours;
     }
 
-    public void setDateRetour(Date dateRetour) {
-        this.dateRetour = dateRetour;
+    public void setEnCours(boolean enCours) {
+        this.enCours = enCours;
     }
 
     @Override
     public String toString() {
         return "Reservation{" +
                 "id=" + id +
-                ", dateEmprunt=" + dateEmprunt +
-                ", dateRetour=" + dateRetour +
-                ", prolonger=" + prolonger +
-                ", copy=" + copy +
+                ", idUtilisateur=" + idUtilisateur +
+                ", dateReservation=" + dateReservation +
+                ", book=" + book +
                 '}';
     }
 }

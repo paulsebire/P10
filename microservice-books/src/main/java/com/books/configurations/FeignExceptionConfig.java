@@ -7,5 +7,8 @@ import org.springframework.context.annotation.Configuration;
 
 @Configuration
 public class FeignExceptionConfig {
-
+    @Bean
+    public CustomErrorDecoder custumErrorDecoder(){
+        return new CustomErrorDecoder();
+    }
 }

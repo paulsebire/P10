@@ -47,6 +47,7 @@ public class BookController {
         Book book;
         if(b.isPresent()){
             book=b.get();
+            book.setCopies(copies);
             book.setNbTotalCopys(copies.size());
         }else {
             throw new BookNotFoundException("Le livre correspondant à l'id " + id + " n'existe pas");

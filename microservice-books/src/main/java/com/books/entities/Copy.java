@@ -17,7 +17,7 @@ public class Copy{
 
     @JsonManagedReference
     @ManyToOne
-    @JoinColumn(name ="id" )
+    @JoinColumn(name ="id_book" )
     private Book book;
 
     @JsonIgnore

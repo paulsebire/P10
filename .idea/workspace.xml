@@ -5,12 +5,8 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="de60918f-91cf-4a7b-b7ab-ee9eced42347" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/compiler.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/git" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/clientui/src/main/java/com/clientui/controller/ClientController.java" beforeDir="false" afterPath="$PROJECT_DIR$/clientui/src/main/java/com/clientui/controller/ClientController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/clientui/src/main/java/com/clientui/proxies/MicroserviceBooksProxy.java" beforeDir="false" afterPath="$PROJECT_DIR$/clientui/src/main/java/com/clientui/proxies/MicroserviceBooksProxy.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/microservice-books/src/main/java/com/books/BooksApplication.java" beforeDir="false" afterPath="$PROJECT_DIR$/microservice-books/src/main/java/com/books/BooksApplication.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -69,17 +65,6 @@
     </option>
   </component>
   <component name="RunManager" selected="Spring Boot.ClientuiApplication">
-    <configuration default="true" type="ArquillianJUnit" factoryName="" nameIsGenerated="true">
-      <option name="arquillianRunConfiguration">
-        <value>
-          <option name="containerStateName" value="" />
-        </value>
-      </option>
-      <option name="TEST_OBJECT" value="class" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
     <configuration default="true" type="JetRunConfigurationType">
       <module name="config-server" />
       <option name="VM_PARAMETERS" />
@@ -191,6 +176,7 @@
       <updated>1601300074542</updated>
       <workItem from="1601300079929" duration="53000" />
       <workItem from="1601300487200" duration="7531000" />
+      <workItem from="1601365555875" duration="2302000" />
     </task>
     <task id="LOCAL-00001" summary="fixed dependency bug on sleuth">
       <created>1601305177323</created>
@@ -286,9 +272,10 @@
       <screen x="1366" y="0" width="1920" height="1040" />
     </state>
     <state x="1964" y="281" key="MultipleFileMergeDialog/0.0.1366.728/1366.0.1920.1040@1366.0.1920.1040" timestamp="1601308723586" />
-    <state x="1918" y="253" key="Vcs.Push.Dialog.v2" timestamp="1601306440260">
-      <screen x="1366" y="0" width="1920" height="1040" />
+    <state x="1849" y="246" key="Vcs.Push.Dialog.v2" timestamp="1601383286819">
+      <screen x="1366" y="0" width="1680" height="1010" />
     </state>
+    <state x="1849" y="246" key="Vcs.Push.Dialog.v2/0.0.1366.728/1366.0.1680.1010@1366.0.1680.1010" timestamp="1601383286819" />
     <state x="1918" y="253" key="Vcs.Push.Dialog.v2/0.0.1366.728/1366.0.1920.1040@1366.0.1920.1040" timestamp="1601306440260" />
     <state x="2143" y="434" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1601306468240">
       <screen x="1366" y="0" width="1920" height="1040" />

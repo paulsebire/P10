@@ -5,7 +5,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="de60918f-91cf-4a7b-b7ab-ee9eced42347" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/clientui/target/classes/templates/FicheLivre.html" beforeDir="false" afterPath="$PROJECT_DIR$/clientui/target/classes/templates/FicheLivre.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -200,7 +200,14 @@
       <option name="project" value="LOCAL" />
       <updated>1601305177323</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="fixed dependency bug on sleuth and uncommited chaneges due to merging">
+      <created>1601458331521</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1601458331521</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -220,7 +227,8 @@
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="fixed dependency bug on sleuth" />
-    <option name="LAST_COMMIT_MESSAGE" value="fixed dependency bug on sleuth" />
+    <MESSAGE value="fixed dependency bug on sleuth and uncommited chaneges due to merging" />
+    <option name="LAST_COMMIT_MESSAGE" value="fixed dependency bug on sleuth and uncommited chaneges due to merging" />
   </component>
   <component name="WindowStateProjectService">
     <state x="1728" y="170" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1601389380202">
@@ -228,9 +236,10 @@
     </state>
     <state x="1728" y="170" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.1366.728/1366.0.1680.1010@1366.0.1680.1010" timestamp="1601389380202" />
     <state x="1780" y="175" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.1366.728/1366.0.1920.1040@1366.0.1920.1040" timestamp="1601300669986" />
-    <state x="1923" y="88" key="CommitChangelistDialog2" timestamp="1601305176386">
-      <screen x="1366" y="0" width="1920" height="1040" />
+    <state x="396" y="0" key="CommitChangelistDialog2" timestamp="1601458330872">
+      <screen x="0" y="0" width="1366" height="728" />
     </state>
+    <state x="396" y="0" key="CommitChangelistDialog2/0.0.1366.728/1366.0.1680.1010@0.0.1366.728" timestamp="1601458330872" />
     <state x="1923" y="88" key="CommitChangelistDialog2/0.0.1366.728/1366.0.1920.1040@1366.0.1920.1040" timestamp="1601305176386" />
     <state width="559" height="442" key="Diff.GoToChangePopup" timestamp="1601385208299">
       <screen x="1366" y="0" width="1680" height="1010" />
@@ -316,9 +325,10 @@
       <screen x="1366" y="0" width="1680" height="1010" />
     </state>
     <state x="2092" y="419" key="VCS.EditChangelistDialog/0.0.1366.728/1366.0.1680.1010@1366.0.1680.1010" timestamp="1601385274628" />
-    <state x="1849" y="246" key="Vcs.Push.Dialog.v2" timestamp="1601383286819">
-      <screen x="1366" y="0" width="1680" height="1010" />
+    <state x="393" y="177" key="Vcs.Push.Dialog.v2" timestamp="1601458341181">
+      <screen x="0" y="0" width="1366" height="728" />
     </state>
+    <state x="393" y="177" key="Vcs.Push.Dialog.v2/0.0.1366.728/1366.0.1680.1010@0.0.1366.728" timestamp="1601458341181" />
     <state x="1849" y="246" key="Vcs.Push.Dialog.v2/0.0.1366.728/1366.0.1680.1010@1366.0.1680.1010" timestamp="1601383286819" />
     <state x="1918" y="253" key="Vcs.Push.Dialog.v2/0.0.1366.728/1366.0.1920.1040@1366.0.1920.1040" timestamp="1601306440260" />
     <state x="2143" y="434" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1601306468240">

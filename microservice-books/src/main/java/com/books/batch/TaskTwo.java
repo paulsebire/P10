@@ -3,25 +3,20 @@ package com.books.batch;
 import com.books.beans.UtilisateurBean;
 import com.books.dao.BookRepository;
 import com.books.dao.EmailRepository;
-import com.books.dao.EmpruntRepository;
 import com.books.dao.ReservationRepository;
 import com.books.entities.Book;
 import com.books.entities.Email;
-import com.books.entities.Emprunt;
 import com.books.entities.Reservation;
 import com.books.poxies.MicroserviceUtilisateurProxy;
-import com.books.services.BibliServiceImpl;
-import com.books.services.EmailServiceImpl;
-import com.books.tools.EmailType;
+import com.books.services.implementations.OutilServiceImpl;
+import com.books.services.implementations.EmailServiceImpl;
 import org.springframework.batch.core.StepContribution;
 import org.springframework.batch.core.scope.context.ChunkContext;
 import org.springframework.batch.core.step.tasklet.Tasklet;
 import org.springframework.batch.repeat.RepeatStatus;
-import org.springframework.mail.SimpleMailMessage;
 import org.springframework.mail.javamail.JavaMailSenderImpl;
 
 import java.text.DateFormat;
-import java.text.SimpleDateFormat;
 import java.util.*;
 
 
@@ -32,14 +27,14 @@ public class TaskTwo implements Tasklet {
     private final MicroserviceUtilisateurProxy microserviceUtilisateurProxy;
     private final JavaMailSenderImpl sender;
     private final BookRepository bookRepository;
-    private final BibliServiceImpl bibliService;
+    private final OutilServiceImpl bibliService;
     private final EmailServiceImpl emailService;
     /**
      * Tache par batch permettant de relancer les utilisateurs qui n'ont pas rendu leurs livres
      */
     public TaskTwo(ReservationRepository reservationRepository, EmailRepository emailRepository,
                    MicroserviceUtilisateurProxy microserviceUtilisateurProxy,
-                   BookRepository bookRepository,BibliServiceImpl bibliService, EmailServiceImpl emailService,
+                   BookRepository bookRepository, OutilServiceImpl bibliService, EmailServiceImpl emailService,
                    JavaMailSenderImpl sender) {
         this.reservationRepository = reservationRepository;
         this.emailRepository = emailRepository;

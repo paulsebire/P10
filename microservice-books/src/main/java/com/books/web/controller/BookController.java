@@ -9,7 +9,6 @@ import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
 
 import java.util.List;
-import java.util.Optional;
 
 @RestController
 public class BookController {
@@ -34,7 +33,7 @@ public class BookController {
      */
     @GetMapping( value = "/livre/{id}")
     public Book recupererUnLivre(@PathVariable Long id) {
-        return bookService.find1Book(id);
+        return bookService.findBookByID(id);
     }
 
 }

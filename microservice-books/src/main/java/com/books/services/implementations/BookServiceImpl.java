@@ -30,7 +30,7 @@ public class BookServiceImpl implements BookService {
     }
 
     @Override
-    public Book find1Book(Long id) {
+    public Book findBookByID(Long id) {
         Optional<Book> b = bookRepository.findById(id);
         List<Copy> copies= copiesRepository.findAllByBook_Id(id);
         Book book;

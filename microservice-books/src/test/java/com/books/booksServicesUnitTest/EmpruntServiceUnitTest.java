@@ -107,7 +107,7 @@ public class EmpruntServiceUnitTest {
         emprunt2.setIdUtilisateur(2L);
         copy3.setDispo(false);
 
-        Reservation reservation = new Reservation(book1);
+        Reservation reservation = new Reservation(book2);
         reservation.setIdUtilisateur(1L);
         reservation.setId(1L);
         reservation.setPosition(0);

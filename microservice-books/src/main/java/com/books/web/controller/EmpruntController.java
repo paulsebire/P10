@@ -23,7 +23,7 @@ public class EmpruntController {
      */
     @GetMapping(value = "/utilisateur/{id}/emprunts")
     public Set<Emprunt> empruntList (@PathVariable(value = "id")Long id){
-       return empruntService.listEmpruntByUSer(id);
+       return empruntService.empruntByUSer(id);
     }
 
     /**

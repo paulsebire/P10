@@ -10,7 +10,7 @@ import java.util.Set;
 
 public interface EmpruntService {
 
-    Set<Emprunt> listEmpruntByUSer(Long id);
+    Set<Emprunt> empruntByUSer(Long id);
     ResponseEntity prolongerEmprunt(Long idE, Long idUser);
     ResponseEntity ouvrirEmprunt(Long idUser,Long idBook);
     ResponseEntity cloturerEmprunt(Long idE) throws MessagingException;

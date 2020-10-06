@@ -31,8 +31,6 @@ public class EmpruntServiceImpl implements EmpruntService {
     @Autowired
     private ReservationRepository reservationRepository;
     @Autowired
-    private BookRepository bookRepository;
-    @Autowired
     private EmailRepository emailRepository;
     @Autowired
     private EmailServiceImpl emailService;
@@ -40,10 +38,9 @@ public class EmpruntServiceImpl implements EmpruntService {
     private MicroserviceUtilisateurProxy utilisateurProxy;
 
     @Override
-    public Set<Emprunt> listEmpruntByUSer(Long id) {
+    public Set<Emprunt> empruntByUSer(Long id) {
         Set<Emprunt> emprunts = new HashSet<>();
         emprunts=empruntRepository.findAllByIdUtilisateurAndCloturerFalseOrderByDateRetourAsc(id);
-        System.out.println("emprunts"+emprunts.toString());
         if (emprunts.isEmpty()) throw new EmpruntNotFoundException("Aucun emprunt n'est disponible");
         return emprunts;
     }
@@ -53,7 +50,7 @@ public class EmpruntServiceImpl implements EmpruntService {
         Optional<Emprunt> r= empruntRepository.findById(idE);
         if (r.isPresent()){
             Emprunt emprunt =r.get();
-            if (emprunt.getIdUtilisateur()==idUser && emprunt.isProlonger()==false){
+            if (emprunt.getIdUtilisateur()==idUser && emprunt.isProlonger()==false && emprunt.getDateRetour().after(new Date())){
                 emprunt.setProlonger(true);
                 emprunt.setDateRetour(bibliService.ajouter4semaines(emprunt.getDateRetour()));
                 empruntRepository.save(emprunt);
@@ -64,21 +61,23 @@ public class EmpruntServiceImpl implements EmpruntService {
 
     @Override
     public ResponseEntity ouvrirEmprunt(Long idUser, Long idBook) {
-        Book book=bookRepository.findById(idBook).get();
         List<Copy> copiesDispos=copiesRepository.ListCopyDispoByBook(idBook);
         Optional<Copy> c   = copiesRepository.findById(copiesDispos.get(0).getId());
         Reservation reservation = reservationRepository.findByBookIdAndIdUtilisateurAndEnCoursTrue(idBook,idUser);
+        List<Emprunt> emprunts = empruntRepository.livreDejaEmprunteParUtilisateur(idUser,idBook);
         if (c.isPresent()){
             Copy copy=c.get();
-            if (copy.isDispo()){
+            if (copy.isDispo() && emprunts.isEmpty()){
                 Emprunt emprunt =new Emprunt(copy,new Date());
                 emprunt.setDateRetour(bibliService.ajouter4semaines(emprunt.getDateEmprunt()));
                 emprunt.setIdUtilisateur(idUser);
                 copy.setDispo(false);
-                reservation.setEnCours(false);
-                reservationRepository.save(reservation);
                 copiesRepository.save(copy);
                 empruntRepository.save(emprunt);
+                if (reservation!=null){
+                    reservation.setEnCours(false);
+                    reservationRepository.save(reservation);
+                }
                 return new ResponseEntity<>("emprunt effectué", HttpStatus.OK);
             }
         }return new ResponseEntity<>("emprunt impossible", HttpStatus.BAD_REQUEST);

@@ -123,7 +123,7 @@ public class BooksApplication {
 			copiesRepository.save(copy8);
 			empruntRepository.save(emprunt2);
 
-			Emprunt emprunt3 = new Emprunt(copy10, new GregorianCalendar(2020, Calendar.MARCH, 16).getTime());
+			Emprunt emprunt3 = new Emprunt(copy10, new GregorianCalendar(2020, Calendar.SEPTEMBER, 16).getTime());
 			emprunt3.setDateRetour(bibliService.ajouter4semaines(emprunt3.getDateEmprunt()));
 			emprunt3.setIdUtilisateur(3L);
 			copy10.setDispo(false);
@@ -137,7 +137,7 @@ public class BooksApplication {
 			copiesRepository.save(copy14);
 			empruntRepository.save(emprunt4);
 
-			Emprunt emprunt5 = new Emprunt(copy18, new GregorianCalendar(2020, Calendar.FEBRUARY, 02).getTime());
+			Emprunt emprunt5 = new Emprunt(copy18, new GregorianCalendar(2020, Calendar.SEPTEMBER, 25).getTime());
 			emprunt5.setDateRetour(bibliService.ajouter4semaines(emprunt5.getDateEmprunt()));
 			emprunt5.setIdUtilisateur(1L);
 			copy18.setDispo(false);

@@ -40,9 +40,21 @@ public class EmpruntServiceImpl implements EmpruntService {
     @Override
     public Set<Emprunt> empruntByUSer(Long id) {
         Set<Emprunt> emprunts = new HashSet<>();
+        Set<Emprunt> empruntAjour = new HashSet<>();
+
         emprunts=empruntRepository.findAllByIdUtilisateurAndCloturerFalseOrderByDateRetourAsc(id);
-        if (emprunts.isEmpty()) throw new EmpruntNotFoundException("Aucun emprunt n'est disponible");
-        return emprunts;
+        if (emprunts.isEmpty()){
+            throw new EmpruntNotFoundException("Aucun emprunt n'est disponible");
+        }else {
+            for (Emprunt e:emprunts) {
+                if (e.getDateRetour().before(new Date())){
+                    e.setProlongeable(false);
+                }
+                empruntAjour.add(e);
+                empruntRepository.save(e);
+            }
+        }
+        return empruntAjour;
     }
 
     @Override
@@ -50,7 +62,7 @@ public class EmpruntServiceImpl implements EmpruntService {
         Optional<Emprunt> r= empruntRepository.findById(idE);
         if (r.isPresent()){
             Emprunt emprunt =r.get();
-            if (emprunt.getIdUtilisateur()==idUser && emprunt.isProlonger()==false && emprunt.getDateRetour().after(new Date())){
+            if (emprunt.getIdUtilisateur()==idUser&& emprunt.isProlongeable() && emprunt.isProlonger()==false && emprunt.getDateRetour().after(new Date())){
                 emprunt.setProlonger(true);
                 emprunt.setDateRetour(bibliService.ajouter4semaines(emprunt.getDateRetour()));
                 empruntRepository.save(emprunt);
@@ -111,7 +123,7 @@ public class EmpruntServiceImpl implements EmpruntService {
                     reservation.setDateNotification(new Date());
                     reservationRepository.save(reservation);
                 }
-                return new ResponseEntity<>("emprunt cloturée", HttpStatus.OK);
+                return new ResponseEntity<>("emprunt cloturé", HttpStatus.OK);
             }
         }return new ResponseEntity<>("emprunt introuvable", HttpStatus.BAD_REQUEST);
     }

@@ -48,6 +48,7 @@
     <option name="showLibraryContents" value="true" />
   </component>
   <component name="PropertiesComponent">
+    <property name="ASKED_ADD_EXTERNAL_FILES" value="true" />
     <property name="RequestMappingsPanelOrder0" value="0" />
     <property name="RequestMappingsPanelOrder1" value="1" />
     <property name="RequestMappingsPanelWidth0" value="75" />
@@ -279,7 +280,7 @@
       <workItem from="1601300079929" duration="53000" />
       <workItem from="1601300487200" duration="7531000" />
       <workItem from="1601365555875" duration="2302000" />
-      <workItem from="1601894322324" duration="39646000" />
+      <workItem from="1601894322324" duration="40155000" />
     </task>
     <task id="LOCAL-00001" summary="fixed dependency bug on sleuth">
       <created>1601305177323</created>
@@ -337,7 +338,14 @@
       <option name="project" value="LOCAL" />
       <updated>1602171177767</updated>
     </task>
-    <option name="localTasksCounter" value="9" />
+    <task id="LOCAL-00009" summary="added postman collection">
+      <created>1602171282348</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1602171282348</updated>
+    </task>
+    <option name="localTasksCounter" value="10" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -356,6 +364,7 @@
     <option name="oldMeFiltersMigrated" value="true" />
   </component>
   <component name="VcsManagerConfiguration">
+    <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
     <MESSAGE value="fixed dependency bug on sleuth" />
     <MESSAGE value="fixed dependency bug on sleuth and uncommited chaneges due to merging" />
     <MESSAGE value="create new branch testing" />
@@ -364,7 +373,8 @@
     <MESSAGE value="added unit test on EmpruntService" />
     <MESSAGE value="added unit test on ReservationService" />
     <MESSAGE value="fixed a bug on prolongation" />
-    <option name="LAST_COMMIT_MESSAGE" value="fixed a bug on prolongation" />
+    <MESSAGE value="added postman collection" />
+    <option name="LAST_COMMIT_MESSAGE" value="added postman collection" />
   </component>
   <component name="WindowStateProjectService">
     <state x="1780" y="175" width="1092" height="714" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1602161031544">
@@ -376,11 +386,11 @@
       <screen x="0" y="0" width="1366" height="728" />
     </state>
     <state x="488" y="70" key="#com.intellij.ide.util.MemberChooser/0.0.1366.728/1366.0.1680.1010@0.0.1366.728" timestamp="1601478833412" />
-    <state x="1923" y="88" key="CommitChangelistDialog2" timestamp="1602171177000">
+    <state x="1923" y="88" key="CommitChangelistDialog2" timestamp="1602171281795">
       <screen x="1366" y="0" width="1920" height="1040" />
     </state>
     <state x="396" y="0" key="CommitChangelistDialog2/0.0.1366.728/1366.0.1680.1010@0.0.1366.728" timestamp="1601479939473" />
-    <state x="1923" y="88" key="CommitChangelistDialog2/0.0.1366.728/1366.0.1920.1040@1366.0.1920.1040" timestamp="1602171177000" />
+    <state x="1923" y="88" key="CommitChangelistDialog2/0.0.1366.728/1366.0.1920.1040@1366.0.1920.1040" timestamp="1602171281795" />
     <state width="559" height="442" key="Diff.GoToChangePopup" timestamp="1601385208299">
       <screen x="1366" y="0" width="1680" height="1010" />
     </state>
@@ -477,12 +487,12 @@
       <screen x="1366" y="0" width="1680" height="1010" />
     </state>
     <state x="2092" y="419" key="VCS.EditChangelistDialog/0.0.1366.728/1366.0.1680.1010@1366.0.1680.1010" timestamp="1601385274628" />
-    <state x="1918" y="253" key="Vcs.Push.Dialog.v2" timestamp="1602171182999">
+    <state x="1918" y="253" key="Vcs.Push.Dialog.v2" timestamp="1602171286755">
       <screen x="1366" y="0" width="1920" height="1040" />
     </state>
     <state x="393" y="177" key="Vcs.Push.Dialog.v2/0.0.1366.728/1366.0.1680.1010@0.0.1366.728" timestamp="1601479946815" />
     <state x="1849" y="246" key="Vcs.Push.Dialog.v2/0.0.1366.728/1366.0.1680.1010@1366.0.1680.1010" timestamp="1601383286819" />
-    <state x="1918" y="253" key="Vcs.Push.Dialog.v2/0.0.1366.728/1366.0.1920.1040@1366.0.1920.1040" timestamp="1602171182999" />
+    <state x="1918" y="253" key="Vcs.Push.Dialog.v2/0.0.1366.728/1366.0.1920.1040@1366.0.1920.1040" timestamp="1602171286755" />
     <state x="2143" y="434" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1601306468240">
       <screen x="1366" y="0" width="1920" height="1040" />
     </state>

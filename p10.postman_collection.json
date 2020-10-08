@@ -298,7 +298,7 @@
 									"script": {
 										"id": "c1e1857f-4c50-49a1-8f49-bf86e47d115a",
 										"exec": [
-											"pm.test(\"find all books\",function(){\r",
+											"pm.test(\"find a book by ID\",function(){\r",
 											"    pm.response.to.be.ok;\r",
 											"    pm.response.to.be.json;\r",
 											"    var jsonData = pm.response.json();\r",
@@ -473,7 +473,7 @@
 									"script": {
 										"id": "c1e1857f-4c50-49a1-8f49-bf86e47d115a",
 										"exec": [
-											"pm.test(\"find all reservations from user(id:3)\",function(){\r",
+											"pm.test(\"annuler reservation from admin\",function(){\r",
 											"   pm.response.to.have.status(200);\r",
 											"    var jsonData = pm.response.text();\r",
 											"    pm.expect(jsonData).to.contain(\"reservation annulée\");\r",
@@ -527,7 +527,7 @@
 									"script": {
 										"id": "c1e1857f-4c50-49a1-8f49-bf86e47d115a",
 										"exec": [
-											"pm.test(\"find all reservations from user(id:3)\",function(){\r",
+											"pm.test(\"livre 6 reservable by admin\",function(){\r",
 											"   pm.response.to.have.status(200);\r",
 											"    var jsonData = pm.response.json();\r",
 											"    pm.expect(jsonData).to.be.true;\r",
@@ -581,7 +581,7 @@
 									"script": {
 										"id": "c1e1857f-4c50-49a1-8f49-bf86e47d115a",
 										"exec": [
-											"pm.test(\"find all reservations from user(id:3)\",function(){\r",
+											"pm.test(\"livre 6 reserver by admin\",function(){\r",
 											"   pm.response.to.have.status(200);\r",
 											"    var jsonData = pm.response.text();\r",
 											"    pm.expect(jsonData).to.eql(\"livre reservé\");\r",
@@ -635,7 +635,7 @@
 									"script": {
 										"id": "c1e1857f-4c50-49a1-8f49-bf86e47d115a",
 										"exec": [
-											"pm.test(\"find all reservations from user(id:3)\",function(){\r",
+											"pm.test(\"find all reservations from book(id:6)\",function(){\r",
 											"    pm.response.to.be.ok;\r",
 											"    pm.response.to.be.json;\r",
 											"    var jsonData = pm.response.json();\r",
@@ -754,7 +754,7 @@
 									"script": {
 										"id": "c1e1857f-4c50-49a1-8f49-bf86e47d115a",
 										"exec": [
-											"pm.test(\"find all emprunt from user(id:1)\",function(){\r",
+											"pm.test(\"prolonger emprunt \",function(){\r",
 											"    pm.response.to.have.status(200);\r",
 											"    var jsonData = pm.response.text();\r",
 											"    pm.expect(jsonData).to.contain(\"emprunt prolongé\");\r",
@@ -809,7 +809,7 @@
 									"script": {
 										"id": "c1e1857f-4c50-49a1-8f49-bf86e47d115a",
 										"exec": [
-											"pm.test(\"find all emprunt from user(id:1)\",function(){\r",
+											"pm.test(\"user emprunte livre 1\",function(){\r",
 											"    pm.response.to.have.status(200);\r",
 											"    var jsonData = pm.response.text();\r",
 											"    pm.expect(jsonData).to.contain(\"emprunt effectué\");\r",

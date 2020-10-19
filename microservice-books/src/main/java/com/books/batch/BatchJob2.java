@@ -21,10 +21,10 @@ public class BatchJob2 {
 
 
     /**
-     * Programmation de la relance par mail tous les jours, heure réglable dans le bootstap.properties du microservice
+     * Programmation de la purge de la file d'attente, toutes les heure
      * @throws Exception
      */
-    @Scheduled(cron = "*/5 * * * * *" )
+    @Scheduled(cron = "* * */60 * * *" )
     public void lendingRevival() throws Exception
     {
         JobParameters params = new JobParametersBuilder()

@@ -4,9 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="de60918f-91cf-4a7b-b7ab-ee9eced42347" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/clientui/target/classes/templates/FicheLivre.html" beforeDir="false" afterPath="$PROJECT_DIR$/clientui/target/classes/templates/FicheLivre.html" afterDir="false" />
-    </list>
+    <list default="true" id="de60918f-91cf-4a7b-b7ab-ee9eced42347" name="Default Changelist" comment="" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -14,6 +12,14 @@
   </component>
   <component name="CodeStyleSettingsInfer">
     <option name="done" value="true" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Interface" />
+        <option value="Class" />
+      </list>
+    </option>
   </component>
   <component name="Git.Settings">
     <option name="RECENT_BRANCH_BY_REPOSITORY">
@@ -42,6 +48,7 @@
     <option name="showLibraryContents" value="true" />
   </component>
   <component name="PropertiesComponent">
+    <property name="ASKED_ADD_EXTERNAL_FILES" value="true" />
     <property name="RequestMappingsPanelOrder0" value="0" />
     <property name="RequestMappingsPanelOrder1" value="1" />
     <property name="RequestMappingsPanelWidth0" value="75" />
@@ -50,7 +57,7 @@
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/microservice-books/target/classes/com/books/entities" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../P6" />
     <property name="nodejs_package_manager_path" value="npm" />
     <property name="vue.rearranger.settings.migration" value="true" />
   </component>
@@ -58,6 +65,10 @@
     <option name="notificationShown" value="true" />
   </component>
   <component name="RecentsManager">
+    <key name="CopyClassDialog.RECENTS_KEY">
+      <recent name="com.books.booksUnitTesrt" />
+      <recent name="com.books.services.implementations" />
+    </key>
     <key name="CopyFile.RECENT_KEYS">
       <recent name="C:\Users\C86276\Documents\OCR\P10\microservice-books\target\classes\com\books\entities" />
     </key>
@@ -68,14 +79,79 @@
       <command value="mvn clean install" />
     </option>
   </component>
-  <component name="RunManager" selected="Spring Boot.ClientuiApplication">
-    <configuration default="true" type="ArquillianJUnit" factoryName="" nameIsGenerated="true">
+  <component name="RunManager" selected="Spring Boot.BooksApplication">
+    <configuration default="true" type="ArquillianTestNG" factoryName="" nameIsGenerated="true">
       <option name="arquillianRunConfiguration">
         <value>
           <option name="containerStateName" value="" />
         </value>
       </option>
+      <option name="TEST_OBJECT" value="CLASS" />
+      <properties />
+      <listeners />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="ReservationServiceUnitTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="books" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.books.booksServicesUnitTest.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="com.books.booksServicesUnitTest" />
+      <option name="MAIN_CLASS_NAME" value="com.books.booksServicesUnitTest.ReservationServiceUnitTest" />
       <option name="TEST_OBJECT" value="class" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="ReservationServiceUnitTest.annulerReservation_test" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="books" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.books.booksServicesUnitTest.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="com.books.booksServicesUnitTest" />
+      <option name="MAIN_CLASS_NAME" value="com.books.booksServicesUnitTest.ReservationServiceUnitTest" />
+      <option name="METHOD_NAME" value="annulerReservation_test" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="ReservationServiceUnitTest.reservationsByBook_test" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="books" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.books.booksServicesUnitTest.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="com.books.booksServicesUnitTest" />
+      <option name="MAIN_CLASS_NAME" value="com.books.booksServicesUnitTest.ReservationServiceUnitTest" />
+      <option name="METHOD_NAME" value="reservationsByBook_test" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="ReservationServiceUnitTest.reserverLivre_test" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="books" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.books.booksServicesUnitTest.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="com.books.booksServicesUnitTest" />
+      <option name="MAIN_CLASS_NAME" value="com.books.booksServicesUnitTest.ReservationServiceUnitTest" />
+      <option name="METHOD_NAME" value="reserverLivre_test" />
+      <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
@@ -170,6 +246,10 @@
       </method>
     </configuration>
     <list>
+      <item itemvalue="JUnit.ReservationServiceUnitTest.annulerReservation_test" />
+      <item itemvalue="JUnit.ReservationServiceUnitTest.reservationsByBook_test" />
+      <item itemvalue="JUnit.ReservationServiceUnitTest" />
+      <item itemvalue="JUnit.ReservationServiceUnitTest.reserverLivre_test" />
       <item itemvalue="Spring Boot.ConfigServerApplication" />
       <item itemvalue="Spring Boot.EurekaServerApplication" />
       <item itemvalue="Spring Boot.ZuulserverApplication" />
@@ -177,6 +257,14 @@
       <item itemvalue="Spring Boot.BooksApplication" />
       <item itemvalue="Spring Boot.ClientuiApplication" />
     </list>
+    <recent_temporary>
+      <list>
+        <item itemvalue="JUnit.ReservationServiceUnitTest.reserverLivre_test" />
+        <item itemvalue="JUnit.ReservationServiceUnitTest" />
+        <item itemvalue="JUnit.ReservationServiceUnitTest.reservationsByBook_test" />
+        <item itemvalue="JUnit.ReservationServiceUnitTest.annulerReservation_test" />
+      </list>
+    </recent_temporary>
   </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="SvnConfiguration">
@@ -192,6 +280,7 @@
       <workItem from="1601300079929" duration="53000" />
       <workItem from="1601300487200" duration="7531000" />
       <workItem from="1601365555875" duration="2302000" />
+      <workItem from="1601894322324" duration="40155000" />
     </task>
     <task id="LOCAL-00001" summary="fixed dependency bug on sleuth">
       <created>1601305177323</created>
@@ -200,7 +289,63 @@
       <option name="project" value="LOCAL" />
       <updated>1601305177323</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="fixed dependency bug on sleuth and uncommited chaneges due to merging">
+      <created>1601458331521</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1601458331521</updated>
+    </task>
+    <task id="LOCAL-00003" summary="create new branch testing">
+      <created>1601459747258</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1601459747258</updated>
+    </task>
+    <task id="LOCAL-00004" summary="added service and implementation layer for each entities">
+      <created>1601479940412</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1601479940412</updated>
+    </task>
+    <task id="LOCAL-00005" summary="added unit test on BookService and CopyService">
+      <created>1601909606686</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1601909606686</updated>
+    </task>
+    <task id="LOCAL-00006" summary="added unit test on EmpruntService">
+      <created>1602006741820</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1602006741820</updated>
+    </task>
+    <task id="LOCAL-00007" summary="added unit test on ReservationService">
+      <created>1602013949106</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1602013949106</updated>
+    </task>
+    <task id="LOCAL-00008" summary="fixed a bug on prolongation">
+      <created>1602171177767</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1602171177767</updated>
+    </task>
+    <task id="LOCAL-00009" summary="added postman collection">
+      <created>1602171282348</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1602171282348</updated>
+    </task>
+    <option name="localTasksCounter" value="10" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -219,19 +364,33 @@
     <option name="oldMeFiltersMigrated" value="true" />
   </component>
   <component name="VcsManagerConfiguration">
+    <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
     <MESSAGE value="fixed dependency bug on sleuth" />
-    <option name="LAST_COMMIT_MESSAGE" value="fixed dependency bug on sleuth" />
+    <MESSAGE value="fixed dependency bug on sleuth and uncommited chaneges due to merging" />
+    <MESSAGE value="create new branch testing" />
+    <MESSAGE value="added service and implementation layer for each entities" />
+    <MESSAGE value="added unit test on BookService and CopyService" />
+    <MESSAGE value="added unit test on EmpruntService" />
+    <MESSAGE value="added unit test on ReservationService" />
+    <MESSAGE value="fixed a bug on prolongation" />
+    <MESSAGE value="added postman collection" />
+    <option name="LAST_COMMIT_MESSAGE" value="added postman collection" />
   </component>
   <component name="WindowStateProjectService">
-    <state x="1728" y="170" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1601389380202">
-      <screen x="1366" y="0" width="1680" height="1010" />
-    </state>
-    <state x="1728" y="170" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.1366.728/1366.0.1680.1010@1366.0.1680.1010" timestamp="1601389380202" />
-    <state x="1780" y="175" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.1366.728/1366.0.1920.1040@1366.0.1920.1040" timestamp="1601300669986" />
-    <state x="1923" y="88" key="CommitChangelistDialog2" timestamp="1601305176386">
+    <state x="1780" y="175" width="1092" height="714" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1602161031544">
       <screen x="1366" y="0" width="1920" height="1040" />
     </state>
-    <state x="1923" y="88" key="CommitChangelistDialog2/0.0.1366.728/1366.0.1920.1040@1366.0.1920.1040" timestamp="1601305176386" />
+    <state x="1728" y="170" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.1366.728/1366.0.1680.1010@1366.0.1680.1010" timestamp="1601389380202" />
+    <state x="1780" y="175" width="1092" height="714" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.1366.728/1366.0.1920.1040@1366.0.1920.1040" timestamp="1602161031544" />
+    <state x="488" y="70" key="#com.intellij.ide.util.MemberChooser" timestamp="1601478833412">
+      <screen x="0" y="0" width="1366" height="728" />
+    </state>
+    <state x="488" y="70" key="#com.intellij.ide.util.MemberChooser/0.0.1366.728/1366.0.1680.1010@0.0.1366.728" timestamp="1601478833412" />
+    <state x="1923" y="88" key="CommitChangelistDialog2" timestamp="1602171281795">
+      <screen x="1366" y="0" width="1920" height="1040" />
+    </state>
+    <state x="396" y="0" key="CommitChangelistDialog2/0.0.1366.728/1366.0.1680.1010@0.0.1366.728" timestamp="1601479939473" />
+    <state x="1923" y="88" key="CommitChangelistDialog2/0.0.1366.728/1366.0.1920.1040@1366.0.1920.1040" timestamp="1602171281795" />
     <state width="559" height="442" key="Diff.GoToChangePopup" timestamp="1601385208299">
       <screen x="1366" y="0" width="1680" height="1010" />
     </state>
@@ -240,46 +399,58 @@
       <screen x="1366" y="0" width="1680" height="1010" />
     </state>
     <state x="1458" y="92" width="1496" height="826" key="DiffContextDialog/0.0.1366.728/1366.0.1680.1010@1366.0.1680.1010" timestamp="1601385288611" />
-    <state width="1637" height="349" key="GridCell.Tab.0.bottom" timestamp="1601391411331">
-      <screen x="1366" y="0" width="1680" height="1010" />
+    <state x="463" y="119" key="FileChooserDialogImpl" timestamp="1601471179420">
+      <screen x="0" y="0" width="1366" height="728" />
     </state>
+    <state x="463" y="119" key="FileChooserDialogImpl/0.0.1366.728/1366.0.1680.1010@0.0.1366.728" timestamp="1601471179420" />
+    <state width="1877" height="360" key="GridCell.Tab.0.bottom" timestamp="1602170976986">
+      <screen x="1366" y="0" width="1920" height="1040" />
+    </state>
+    <state width="1323" height="84" key="GridCell.Tab.0.bottom/0.0.1366.728/1366.0.1680.1010@0.0.1366.728" timestamp="1601479837676" />
     <state width="1637" height="349" key="GridCell.Tab.0.bottom/0.0.1366.728/1366.0.1680.1010@1366.0.1680.1010" timestamp="1601391411331" />
-    <state width="1877" height="542" key="GridCell.Tab.0.bottom/0.0.1366.728/1366.0.1920.1040@1366.0.1920.1040" timestamp="1601308733316" />
-    <state width="1637" height="349" key="GridCell.Tab.0.center" timestamp="1601391411331">
-      <screen x="1366" y="0" width="1680" height="1010" />
+    <state width="1877" height="360" key="GridCell.Tab.0.bottom/0.0.1366.728/1366.0.1920.1040@1366.0.1920.1040" timestamp="1602170976986" />
+    <state width="1877" height="360" key="GridCell.Tab.0.center" timestamp="1602170976986">
+      <screen x="1366" y="0" width="1920" height="1040" />
     </state>
+    <state width="1323" height="84" key="GridCell.Tab.0.center/0.0.1366.728/1366.0.1680.1010@0.0.1366.728" timestamp="1601479837676" />
     <state width="1637" height="349" key="GridCell.Tab.0.center/0.0.1366.728/1366.0.1680.1010@1366.0.1680.1010" timestamp="1601391411331" />
-    <state width="1877" height="542" key="GridCell.Tab.0.center/0.0.1366.728/1366.0.1920.1040@1366.0.1920.1040" timestamp="1601308733316" />
-    <state width="1637" height="349" key="GridCell.Tab.0.left" timestamp="1601391411331">
-      <screen x="1366" y="0" width="1680" height="1010" />
+    <state width="1877" height="360" key="GridCell.Tab.0.center/0.0.1366.728/1366.0.1920.1040@1366.0.1920.1040" timestamp="1602170976986" />
+    <state width="1877" height="360" key="GridCell.Tab.0.left" timestamp="1602170976986">
+      <screen x="1366" y="0" width="1920" height="1040" />
     </state>
+    <state width="1323" height="84" key="GridCell.Tab.0.left/0.0.1366.728/1366.0.1680.1010@0.0.1366.728" timestamp="1601479837676" />
     <state width="1637" height="349" key="GridCell.Tab.0.left/0.0.1366.728/1366.0.1680.1010@1366.0.1680.1010" timestamp="1601391411331" />
-    <state width="1877" height="542" key="GridCell.Tab.0.left/0.0.1366.728/1366.0.1920.1040@1366.0.1920.1040" timestamp="1601308733316" />
-    <state width="1637" height="349" key="GridCell.Tab.0.right" timestamp="1601391411331">
-      <screen x="1366" y="0" width="1680" height="1010" />
+    <state width="1877" height="360" key="GridCell.Tab.0.left/0.0.1366.728/1366.0.1920.1040@1366.0.1920.1040" timestamp="1602170976986" />
+    <state width="1877" height="360" key="GridCell.Tab.0.right" timestamp="1602170976986">
+      <screen x="1366" y="0" width="1920" height="1040" />
     </state>
+    <state width="1323" height="84" key="GridCell.Tab.0.right/0.0.1366.728/1366.0.1680.1010@0.0.1366.728" timestamp="1601479837676" />
     <state width="1637" height="349" key="GridCell.Tab.0.right/0.0.1366.728/1366.0.1680.1010@1366.0.1680.1010" timestamp="1601391411331" />
-    <state width="1877" height="542" key="GridCell.Tab.0.right/0.0.1366.728/1366.0.1920.1040@1366.0.1920.1040" timestamp="1601308733316" />
-    <state width="1637" height="349" key="GridCell.Tab.1.bottom" timestamp="1601391411331">
-      <screen x="1366" y="0" width="1680" height="1010" />
+    <state width="1877" height="360" key="GridCell.Tab.0.right/0.0.1366.728/1366.0.1920.1040@1366.0.1920.1040" timestamp="1602170976986" />
+    <state width="1877" height="360" key="GridCell.Tab.1.bottom" timestamp="1602170976986">
+      <screen x="1366" y="0" width="1920" height="1040" />
     </state>
+    <state width="1323" height="84" key="GridCell.Tab.1.bottom/0.0.1366.728/1366.0.1680.1010@0.0.1366.728" timestamp="1601479837676" />
     <state width="1637" height="349" key="GridCell.Tab.1.bottom/0.0.1366.728/1366.0.1680.1010@1366.0.1680.1010" timestamp="1601391411331" />
-    <state width="1877" height="542" key="GridCell.Tab.1.bottom/0.0.1366.728/1366.0.1920.1040@1366.0.1920.1040" timestamp="1601308733316" />
-    <state width="1637" height="349" key="GridCell.Tab.1.center" timestamp="1601391411331">
-      <screen x="1366" y="0" width="1680" height="1010" />
+    <state width="1877" height="360" key="GridCell.Tab.1.bottom/0.0.1366.728/1366.0.1920.1040@1366.0.1920.1040" timestamp="1602170976986" />
+    <state width="1877" height="360" key="GridCell.Tab.1.center" timestamp="1602170976986">
+      <screen x="1366" y="0" width="1920" height="1040" />
     </state>
+    <state width="1323" height="84" key="GridCell.Tab.1.center/0.0.1366.728/1366.0.1680.1010@0.0.1366.728" timestamp="1601479837676" />
     <state width="1637" height="349" key="GridCell.Tab.1.center/0.0.1366.728/1366.0.1680.1010@1366.0.1680.1010" timestamp="1601391411331" />
-    <state width="1877" height="542" key="GridCell.Tab.1.center/0.0.1366.728/1366.0.1920.1040@1366.0.1920.1040" timestamp="1601308733316" />
-    <state width="1637" height="349" key="GridCell.Tab.1.left" timestamp="1601391411331">
-      <screen x="1366" y="0" width="1680" height="1010" />
+    <state width="1877" height="360" key="GridCell.Tab.1.center/0.0.1366.728/1366.0.1920.1040@1366.0.1920.1040" timestamp="1602170976986" />
+    <state width="1877" height="360" key="GridCell.Tab.1.left" timestamp="1602170976986">
+      <screen x="1366" y="0" width="1920" height="1040" />
     </state>
+    <state width="1323" height="84" key="GridCell.Tab.1.left/0.0.1366.728/1366.0.1680.1010@0.0.1366.728" timestamp="1601479837676" />
     <state width="1637" height="349" key="GridCell.Tab.1.left/0.0.1366.728/1366.0.1680.1010@1366.0.1680.1010" timestamp="1601391411331" />
-    <state width="1877" height="542" key="GridCell.Tab.1.left/0.0.1366.728/1366.0.1920.1040@1366.0.1920.1040" timestamp="1601308733316" />
-    <state width="1637" height="349" key="GridCell.Tab.1.right" timestamp="1601391411331">
-      <screen x="1366" y="0" width="1680" height="1010" />
+    <state width="1877" height="360" key="GridCell.Tab.1.left/0.0.1366.728/1366.0.1920.1040@1366.0.1920.1040" timestamp="1602170976986" />
+    <state width="1877" height="360" key="GridCell.Tab.1.right" timestamp="1602170976986">
+      <screen x="1366" y="0" width="1920" height="1040" />
     </state>
+    <state width="1323" height="84" key="GridCell.Tab.1.right/0.0.1366.728/1366.0.1680.1010@0.0.1366.728" timestamp="1601479837676" />
     <state width="1637" height="349" key="GridCell.Tab.1.right/0.0.1366.728/1366.0.1680.1010@1366.0.1680.1010" timestamp="1601391411331" />
-    <state width="1877" height="542" key="GridCell.Tab.1.right/0.0.1366.728/1366.0.1920.1040@1366.0.1920.1040" timestamp="1601308733316" />
+    <state width="1877" height="360" key="GridCell.Tab.1.right/0.0.1366.728/1366.0.1920.1040@1366.0.1920.1040" timestamp="1602170976986" />
     <state width="1637" height="131" key="GridCell.Tab.2.bottom" timestamp="1601390977879">
       <screen x="1366" y="0" width="1680" height="1010" />
     </state>
@@ -316,11 +487,12 @@
       <screen x="1366" y="0" width="1680" height="1010" />
     </state>
     <state x="2092" y="419" key="VCS.EditChangelistDialog/0.0.1366.728/1366.0.1680.1010@1366.0.1680.1010" timestamp="1601385274628" />
-    <state x="1849" y="246" key="Vcs.Push.Dialog.v2" timestamp="1601383286819">
-      <screen x="1366" y="0" width="1680" height="1010" />
+    <state x="1918" y="253" key="Vcs.Push.Dialog.v2" timestamp="1602171286755">
+      <screen x="1366" y="0" width="1920" height="1040" />
     </state>
+    <state x="393" y="177" key="Vcs.Push.Dialog.v2/0.0.1366.728/1366.0.1680.1010@0.0.1366.728" timestamp="1601479946815" />
     <state x="1849" y="246" key="Vcs.Push.Dialog.v2/0.0.1366.728/1366.0.1680.1010@1366.0.1680.1010" timestamp="1601383286819" />
-    <state x="1918" y="253" key="Vcs.Push.Dialog.v2/0.0.1366.728/1366.0.1920.1040@1366.0.1920.1040" timestamp="1601306440260" />
+    <state x="1918" y="253" key="Vcs.Push.Dialog.v2/0.0.1366.728/1366.0.1920.1040@1366.0.1920.1040" timestamp="1602171286755" />
     <state x="2143" y="434" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1601306468240">
       <screen x="1366" y="0" width="1920" height="1040" />
     </state>
@@ -329,24 +501,29 @@
       <screen x="1366" y="0" width="1920" height="1040" />
     </state>
     <state x="2033" y="253" width="585" height="534" key="find.popup/0.0.1366.728/1366.0.1920.1040@1366.0.1920.1040" timestamp="1601301326724" />
-    <state x="1905" y="233" width="672" height="658" key="run.anything.popup" timestamp="1601389821385">
-      <screen x="1366" y="0" width="1680" height="1010" />
+    <state x="1982" y="240" width="672" height="677" key="run.anything.popup" timestamp="1601998650484">
+      <screen x="1366" y="0" width="1920" height="1040" />
     </state>
     <state x="1905" y="233" width="672" height="658" key="run.anything.popup/0.0.1366.728/1366.0.1680.1010@1366.0.1680.1010" timestamp="1601389821385" />
-    <state x="1982" y="240" width="672" height="677" key="run.anything.popup/0.0.1366.728/1366.0.1920.1040@1366.0.1920.1040" timestamp="1601304564523" />
+    <state x="1982" y="240" width="672" height="677" key="run.anything.popup/0.0.1366.728/1366.0.1920.1040@1366.0.1920.1040" timestamp="1601998650484" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
       <breakpoints>
         <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/clientui/src/main/java/com/clientui/controller/ClientController.java</url>
-          <line>91</line>
-          <option name="timeStamp" value="1" />
+          <url>file://$PROJECT_DIR$/microservice-books/src/main/java/com/books/services/implementations/BookServiceImpl.java</url>
+          <line>33</line>
+          <option name="timeStamp" value="7" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/clientui/src/main/java/com/clientui/controller/ClientController.java</url>
-          <line>61</line>
-          <option name="timeStamp" value="5" />
+          <url>file://$PROJECT_DIR$/microservice-books/src/main/java/com/books/services/implementations/CopyServiceImpl.java</url>
+          <line>22</line>
+          <option name="timeStamp" value="12" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/microservice-books/src/main/java/com/books/services/implementations/ReservationServiceImpl.java</url>
+          <line>60</line>
+          <option name="timeStamp" value="27" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>

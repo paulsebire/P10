@@ -1,4 +1,4 @@
-package com.books.services;
+package com.books.services.interfaces;
 
 
 
@@ -6,7 +6,7 @@ import com.books.entities.Book;
 
 import java.util.Date;
 
-public interface IBibliService {
+public interface OutilService {
 
     public Date ajouter4semaines(Date date);
 

@@ -46,7 +46,7 @@
                     <p th:text= "${emprunt.copy.book.author}"></p>
                     <p> Emprunté le: <span th:text="${#dates.format(emprunt.dateEmprunt, 'dd/MM/yyyy')}"/></p>
                     <p> A retourné le: <span th:text="${#dates.format(emprunt.dateRetour, 'dd/MM/yyyy')}"/></p>
-                    <a class="btn btn-primary" th:text="Prolonger" th:if="${emprunt.prolongeable==false}"
+                    <a class="btn btn-primary" th:text="Prolonger" th:if="${emprunt.prolongeable==true}"
                        th:href="@{|/emprunt/${emprunt.id}/prolonger|}"></a>
                 </div>
             </div>

@@ -1,15 +1,14 @@
 package com.books.configurations;
 
 
-import com.books.batch.TaskOne;
 import com.books.batch.TaskTwo;
 import com.books.dao.BookRepository;
 import com.books.dao.EmailRepository;
 import com.books.dao.EmpruntRepository;
 import com.books.dao.ReservationRepository;
 import com.books.poxies.MicroserviceUtilisateurProxy;
-import com.books.services.BibliServiceImpl;
-import com.books.services.EmailServiceImpl;
+import com.books.services.implementations.OutilServiceImpl;
+import com.books.services.implementations.EmailServiceImpl;
 import org.springframework.batch.core.Job;
 import org.springframework.batch.core.Step;
 import org.springframework.batch.core.configuration.annotation.EnableBatchProcessing;
@@ -45,7 +44,7 @@ public class BatchConfig2 {
     @Autowired
     private BookRepository bookRepository;
     @Autowired
-    private BibliServiceImpl bibliService;
+    private OutilServiceImpl bibliService;
     @Autowired
     private EmailServiceImpl emailService;
 

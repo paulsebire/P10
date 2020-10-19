@@ -1,8 +1,9 @@
-package com.books.services;
+package com.books.services.implementations;
 
 
 import com.books.dao.EmailRepository;
 import com.books.entities.Email;
+import com.books.services.interfaces.EmailService;
 import com.books.tools.EmailType;
 import org.springframework.beans.factory.annotation.Autowired;
 
@@ -15,10 +16,9 @@ import org.slf4j.LoggerFactory;
 import javax.mail.MessagingException;
 import javax.mail.internet.MimeMessage;
 import java.util.List;
-import java.util.Properties;
 
 @Service
-public class EmailServiceImpl implements IEmailService {
+public class EmailServiceImpl implements EmailService {
 
     Logger logger = LoggerFactory.getLogger(this.getClass());
 

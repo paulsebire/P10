@@ -1,27 +1,20 @@
 package com.books.web.controller;
 
-import com.books.dao.BookRepository;
-import com.books.dao.CopiesRepository;
 import com.books.entities.Book;
-import com.books.entities.Copy;
-import com.books.web.exceptions.BookNotFoundException;
+import com.books.services.implementations.BookServiceImpl;
 import org.springframework.beans.factory.annotation.Autowired;
-
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
 
 import java.util.List;
-import java.util.Optional;
 
 @RestController
 public class BookController {
 
     @Autowired
-    private BookRepository bookRepository;
-    @Autowired
-    private CopiesRepository copiesRepository;
+    private BookServiceImpl bookService;
 
     /**
      * resume all books in the database
@@ -30,8 +23,7 @@ public class BookController {
      */
     @GetMapping(value = "/livres")
     public List<Book> bookList(@RequestParam(name = "mc", defaultValue = "")String mc){
-        List<Book> books = bookRepository.chercherParTitre("%"+mc+"%");
-        return books;
+        return bookService.findBook(mc);
     }
 
     /**
@@ -40,20 +32,8 @@ public class BookController {
      * @return an object book
      */
     @GetMapping( value = "/livre/{id}")
-    public Book recupererUnLivre(@PathVariable long id) {
-
-        Optional<Book> b = bookRepository.findById(id);
-        List<Copy> copies= copiesRepository.findAllByBook_Id(id);
-        Book book;
-        if(b.isPresent()){
-            book=b.get();
-            book.setCopies(copies);
-            book.setNbTotalCopys(copies.size());
-        }else {
-            throw new BookNotFoundException("Le livre correspondant à l'id " + id + " n'existe pas");
-        }
-
-        return book;
+    public Book recupererUnLivre(@PathVariable Long id) {
+        return bookService.findBookByID(id);
     }
 
 }

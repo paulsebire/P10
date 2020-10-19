@@ -1,4 +1,4 @@
-package com.books.services;
+package com.books.services.interfaces;
 
 import com.books.entities.Email;
 import com.books.tools.EmailType;
@@ -6,7 +6,7 @@ import com.books.tools.EmailType;
 import javax.mail.MessagingException;
 import java.util.List;
 
-public interface IEmailService {
+public interface EmailService {
 
     void sendSimpleMessage(String email, String objet, String contenu) throws MessagingException;
 

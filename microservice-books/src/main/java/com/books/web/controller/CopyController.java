@@ -1,9 +1,7 @@
 package com.books.web.controller;
 
-import com.books.dao.CopiesRepository;
-import com.books.entities.Book;
-import com.books.entities.Copy;
-import com.books.web.exceptions.CopyNotFoundException;
+
+import com.books.services.implementations.CopyServiceImpl;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
@@ -15,7 +13,7 @@ import java.util.List;
 public class CopyController {
 
     @Autowired
-    private CopiesRepository copiesRepository;
+    private CopyServiceImpl copyService;
 
     /**
      * resume the copies available for a books
@@ -24,7 +22,6 @@ public class CopyController {
      */
     @GetMapping(value = "/livre/{id}/copies")
     public List CopiesDispo(@PathVariable(value = "id")Long id){
-        List<Copy> copies = copiesRepository.ListCopyDispoByBook(id);
-        return copies;
+        return copyService.listCopyDispoByBookID(id);
     }
 }

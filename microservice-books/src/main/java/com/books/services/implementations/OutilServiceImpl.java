@@ -1,8 +1,9 @@
-package com.books.services;
+package com.books.services.implementations;
 
 
 import com.books.dao.BookRepository;
 import com.books.entities.Book;
+import com.books.services.interfaces.OutilService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
@@ -11,7 +12,7 @@ import java.util.Date;
 
 
 @Service
-public class BibliServiceImpl implements IBibliService {
+public class OutilServiceImpl implements OutilService {
 
 @Autowired
 private BookRepository bookRepository;

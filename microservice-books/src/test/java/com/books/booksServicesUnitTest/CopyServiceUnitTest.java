@@ -73,6 +73,13 @@ public class CopyServiceUnitTest {
 
     }
 
+    /**
+     * test de la fonction list copyDispoByBook_ID
+     * la dao est mocké
+     * entrant: unh long, id du livre
+     * sortant: une liste de copies
+     * attendu: on recupère une liste pour chaque id de tailles différentes
+     */
     @Test
     public void listCopyDispoByBookID_test(){
         List<Copy> copiesDispo_book1 = copyService.listCopyDispoByBookID(1L);

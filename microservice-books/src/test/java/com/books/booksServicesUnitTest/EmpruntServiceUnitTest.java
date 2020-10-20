@@ -189,6 +189,12 @@ public class EmpruntServiceUnitTest {
 
     }
 
+    /**
+     * test de la fonction empruntByUser
+     * entrant: un long (id de l'utilisateur)
+     * sortant: un set d'emprunts
+     * attendu: les utilisateur ont un emprunt chacun
+     */
     @Test
     public void empruntByUSer_test(){
         Set<Emprunt> emprunts_user = empruntService.empruntByUSer(1L);
@@ -198,6 +204,13 @@ public class EmpruntServiceUnitTest {
 
     }
 
+    /**
+     * test de la méthode prolongerEmprunt
+     * entrant:  deux long, l'id de l'emprunt, l'id de l'utilisateur
+     * sortant: une responseEntity (statut 200 ou 400)
+     * attendu: l'utilisateur1 ne peut pas prolonger son emprunt (février)
+     * attendu: l'utilisateur2 peut prolonger son emprunt (octobre)
+     */
     @Test
     public void prolongerEmprunt_test(){
         ResponseEntity response1 = empruntService.prolongerEmprunt(1L,1L);
@@ -206,6 +219,13 @@ public class EmpruntServiceUnitTest {
         assertThat(response2.getStatusCodeValue()).isEqualTo(200);
     }
 
+    /**
+     * test de la méthode ouvrirEmprunt
+     * entrant: deux long, l'id du futur emprunteur, l'id du livre a emprunter
+     * sortant: une responseEntity (statut 200 ou 400)
+     * attendu:l'utilisateur 1 peut emprunter le livre 2 mais pas le 1
+     * attendu:l'utilisateur 2 peut emprunter le livre 1 mais pas le 2
+     */
     @Test
     public void ouvrirEmprunt_test(){
         ResponseEntity response1 = empruntService.ouvrirEmprunt(1L,1L);
@@ -218,6 +238,13 @@ public class EmpruntServiceUnitTest {
         assertThat(response4.getStatusCode()).isEqualTo(HttpStatus.BAD_REQUEST);
     }
 
+    /**
+     * test de la méthode cloturerEmprunt
+     * entrant: un long (id de l'emprunt)
+     * sortant: une responseEntity (statut 200  ou 400)
+     * attendu: les emprunts 1 et 2 peuvent etre cloturer et le sont
+     * @throws MessagingException
+     */
     @Test
     public void cloturerEmprunt_test() throws MessagingException {
         ResponseEntity response1 = empruntService.cloturerEmprunt(1L);
@@ -227,7 +254,11 @@ public class EmpruntServiceUnitTest {
     }
 
 
-
+    /**
+     * méthode permettant d'ajouter 4 semaines à une date
+     * @param date
+     * @return
+     */
     public Date ajouter4semaines(Date date) {
         Calendar cal = Calendar.getInstance();
         cal.setTime(date);

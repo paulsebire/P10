@@ -188,8 +188,14 @@ public class ReservationServiceUnitTest {
         Mockito.when(bibliService.findBook(3L)).thenReturn(book3);
     }
 
+    /**
+     * test de la méthode reservationsByUSer
+     * entrant: un long, id de l'utilisateur
+     * sortant: un Set de reservations
+     * attendu: les utilisateurs 1 et 2 ont chacun une réservation
+     */
     @Test
-    public void empruntByUser_test(){
+    public void reservationByUser_test(){
         Set<Reservation> reservations_user = reservationService.reservervationByUser(1L);
         assertThat(reservations_user.size()).isEqualTo(1);
         Set<Reservation> reservations_admin = reservationService.reservervationByUser(2L);
@@ -197,6 +203,10 @@ public class ReservationServiceUnitTest {
     }
 
     /**
+     * test de la méthode livreReservable
+     * entrant: 2 long, l'id de l'utilisateur, l'id du livre
+     * sortant: un booléen indiquant si le livre est réservable
+     * attendu: aucun livre empruntable car:
      * user a une reservation sur le livre2 et a un emprunt sur le livre1
      * admin a une reservation sur le livre1 et a un emprunt sur le livre2
      */
@@ -212,7 +222,13 @@ public class ReservationServiceUnitTest {
         assertThat(reservable5).isEqualTo(false);
 
     }
-
+    /**
+     * test de la méthode reserverLivre
+     * entrant: deux long, l'id de l'utilisateur, l'id du livre
+     * sortant: une responseEntity (statut 200 ou 400)
+     * attendu: aucun des deux utilisateur ne peut reserver le livre 1 ou 2
+     * l'utilisateur 1 peut reserver le livre 3
+     */
     @Test
     public  void reserverLivre_test(){
         ResponseEntity response1 = reservationService.reserverLivre(1L,1L);
@@ -236,6 +252,13 @@ public class ReservationServiceUnitTest {
         System.out.println("reserverLivre_test_response5: "+response5.getBody());
     }
 
+    /**
+     * test de la méthode annuler une réservation
+     * entrant:deux long, l'id de l'utilisateur, l'id de la reservation
+     * sortant: une responseEntity (statut 200 ou 400)
+     * attendu: les utilisateurs peuvent annuler leur reservation,
+     * mais ne peuvent pas annuler la reservation de l'autre
+     */
     @Test
     public void annulerReservation_test(){
         ResponseEntity response1 = reservationService.annulerReservation(1L,2L);
@@ -256,6 +279,12 @@ public class ReservationServiceUnitTest {
 
     }
 
+    /**
+     * test de la méthode reservationsByBook
+     * entrant: un long, l'id du livre
+     * sortant: une liste de reservation
+     * attendu: chaque livre possède une reservation
+     */
     @Test
     public void reservationsByBook_test(){
         List<Reservation> reservations1 = reservationService.reservationsByBook(1L);
@@ -264,7 +293,11 @@ public class ReservationServiceUnitTest {
         assertThat(reservations2.size()).isEqualTo(1);
     }
 
-
+    /**
+     * méthode permettant d'ajouter 4 semaines à une date
+     * @param date
+     * @return
+     */
     public Date ajouter4semaines(Date date) {
         Calendar cal = Calendar.getInstance();
         cal.setTime(date);

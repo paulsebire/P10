@@ -77,7 +77,13 @@ public class BookServiceUnitTest {
 
     }
 
-
+    /**
+     * test de la fonction findBookbyID
+     * la dao est mocké
+     * entrant:un long (id)
+     * sortant: on récupère les caractéristique du livre cherché
+     * attendu: on recupere bien le livre
+     */
     @Test
     public void findBookByID_test(){
         Book book1_test = bookService.findBookByID(1L);
@@ -96,6 +102,13 @@ public class BookServiceUnitTest {
 
     }
 
+    /**
+     * test de la fonction findBookbyID
+     * la dao est mocké
+     * entrant:un long (id)
+     * sortant: on récupère les caractéristique du livre cherché
+     * attendu: le livre est introuvable (id inconnu)
+     */
     @Test(expected = BookNotFoundException.class)
     public void findBookById_test_unknownID(){
         Book book = bookService.findBookByID(3L);

@@ -38,9 +38,11 @@ public class UtilisateurApplication {
 			Utilisateur user = new Utilisateur("user", "user", "User", "USER","user@email.com", userRole);
 			Utilisateur test = new Utilisateur("test", "test", "Test", "TEST","test@email.com", userRole);
 			Utilisateur admin = new Utilisateur("admin", "admin", "Admin", "ADMIN","admin@email.com", adminRole);
+			Utilisateur test2 = new Utilisateur("test2", "test2", "Test2", "TEST2","test2@email.com", userRole);
 			utilisateurRepository.save(user);
 			utilisateurRepository.save(test);
 			utilisateurRepository.save(admin);
+			utilisateurRepository.save(test2);
 		}
 	}
 

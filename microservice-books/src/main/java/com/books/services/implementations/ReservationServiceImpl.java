@@ -63,7 +63,7 @@ public class ReservationServiceImpl implements ReservationService {
         List<Reservation> reservations = reservationRepository.findAllByBookIdAndEnCoursIsTrueOrderByDateReservationAsc(idBook);
         Reservation reservationEncours = reservationRepository.findByBookIdAndIdUtilisateurAndEnCoursTrue(idBook,idUser);
         List<Copy> copiesdispo = copiesRepository.ListCopyDispoByBook(idBook);
-        if (emprunts.isEmpty() && reservations.size()<=book.getCopies().size()*2
+        if (emprunts.isEmpty() && reservations.size()<book.getCopies().size()*2
                 && reservationEncours==null && copiesdispo.size()==0 ){
             return true;
         }else return false;

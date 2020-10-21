@@ -43,9 +43,7 @@ public class EmpruntServiceImpl implements EmpruntService {
         Set<Emprunt> empruntAjour = new HashSet<>();
 
         emprunts=empruntRepository.findAllByIdUtilisateurAndCloturerFalseOrderByDateRetourAsc(id);
-        if (emprunts.isEmpty()){
-            throw new EmpruntNotFoundException("Aucun emprunt n'est disponible");
-        }else {
+        if (!emprunts.isEmpty()){
             for (Emprunt e:emprunts) {
                 if (e.getDateRetour().before(new Date())){
                     e.setProlongeable(false);

@@ -362,8 +362,8 @@
 											"    pm.response.to.be.ok;\r",
 											"    pm.response.to.be.json;\r",
 											"    var jsonData = pm.response.json();\r",
-											"    pm.expect(jsonData[0].id).to.eql(19);\r",
-											"    pm.expect(jsonData[1].id).to.eql(21);\r",
+											"    pm.expect(jsonData[0].id).to.eql(17);\r",
+											"    pm.expect(jsonData[1].id).to.eql(19);\r",
 											"   \r",
 											"})"
 										],
@@ -502,7 +502,7 @@
 								"method": "PUT",
 								"header": [],
 								"url": {
-									"raw": "http://localhost:9009/utilisateur/3/reservation/28/annuler",
+									"raw": "http://localhost:9009/utilisateur/3/reservation/26/annuler",
 									"protocol": "http",
 									"host": [
 										"localhost"
@@ -512,7 +512,7 @@
 										"utilisateur",
 										"3",
 										"reservation",
-										"28",
+										"26",
 										"annuler"
 									]
 								}
@@ -783,7 +783,7 @@
 								"method": "POST",
 								"header": [],
 								"url": {
-									"raw": "http://localhost:9009/utilisateur/1/emprunt/27/prolonger",
+									"raw": "http://localhost:9009/utilisateur/3/emprunt/21/prolonger",
 									"protocol": "http",
 									"host": [
 										"localhost"
@@ -791,9 +791,9 @@
 									"port": "9009",
 									"path": [
 										"utilisateur",
-										"1",
+										"3",
 										"emprunt",
-										"27",
+										"21",
 										"prolonger"
 									]
 								},
@@ -838,7 +838,7 @@
 								"method": "GET",
 								"header": [],
 								"url": {
-									"raw": "http://localhost:9009/utilisateur/1/livre/1/emprunt/ouvrir",
+									"raw": "http://localhost:9009/utilisateur/1/livre/2/emprunt/ouvrir",
 									"protocol": "http",
 									"host": [
 										"localhost"
@@ -848,7 +848,7 @@
 										"utilisateur",
 										"1",
 										"livre",
-										"1",
+										"2",
 										"emprunt",
 										"ouvrir"
 									]
@@ -862,9 +862,9 @@
 								{
 									"listen": "test",
 									"script": {
-										"id": "c1e1857f-4c50-49a1-8f49-bf86e47d115a",
+										"id": "f8716a93-f67e-4ecc-97d2-f216abe97d46",
 										"exec": [
-											"pm.test(\"find all emprunt from user(id:1)\",function(){\r",
+											"pm.test(\"cloturer l'emprunt du precedent test\",function(){\r",
 											"    pm.response.to.have.status(200);\r",
 											"    var jsonData = pm.response.text();\r",
 											"    pm.expect(jsonData).to.contain(\"emprunt cloturé\");\r",
@@ -893,7 +893,7 @@
 								"method": "PUT",
 								"header": [],
 								"url": {
-									"raw": "http://localhost:9009/emprunt/33/cloturer",
+									"raw": "http://localhost:9009/emprunt/31/cloturer",
 									"protocol": "http",
 									"host": [
 										"localhost"
@@ -901,7 +901,7 @@
 									"port": "9009",
 									"path": [
 										"emprunt",
-										"33",
+										"31",
 										"cloturer"
 									]
 								}

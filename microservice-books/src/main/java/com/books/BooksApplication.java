@@ -68,10 +68,10 @@ public class BooksApplication {
 
 			Copy copy1 = new Copy("SN001", book1);
 			copiesRepository.save(copy1);
-			Copy copy2 = new Copy("SN002", book1);
+			/*Copy copy2 = new Copy("SN002", book1);
 			copiesRepository.save(copy2);
 			Copy copy3 = new Copy("SN003", book1);
-			copiesRepository.save(copy3);
+			copiesRepository.save(copy3);*/
 
 			Copy copy4 = new Copy("SN001", book2);
 			copiesRepository.save(copy4);
@@ -109,7 +109,7 @@ public class BooksApplication {
 			copiesRepository.save(copy18);
 
 			
-			Emprunt emprunt1 = new Emprunt(copy1, new GregorianCalendar(2020, Calendar.FEBRUARY, 24).getTime());
+			Emprunt emprunt1 = new Emprunt(copy1, new GregorianCalendar(2020, Calendar.OCTOBER, 14).getTime());
 			emprunt1.setDateRetour(bibliService.ajouter4semaines(emprunt1.getDateEmprunt()));
 			emprunt1.setIdUtilisateur(3L);
 			copy1.setDispo(false);

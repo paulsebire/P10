@@ -62,6 +62,7 @@ public class EmpruntServiceImpl implements EmpruntService {
             Emprunt emprunt =r.get();
             if (emprunt.getIdUtilisateur()==idUser&& emprunt.isProlongeable() && emprunt.isProlonger()==false && emprunt.getDateRetour().after(new Date())){
                 emprunt.setProlonger(true);
+                emprunt.setProlongeable(false);
                 emprunt.setDateRetour(bibliService.ajouter4semaines(emprunt.getDateRetour()));
                 empruntRepository.save(emprunt);
                 return new ResponseEntity<>("emprunt prolongé", HttpStatus.OK);

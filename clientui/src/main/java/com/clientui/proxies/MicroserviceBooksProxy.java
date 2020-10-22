@@ -54,7 +54,7 @@ public interface MicroserviceBooksProxy {
      * @param idE id of the emprunt
      * @param idUser id of the borrower
      */
-    @GetMapping(value = "/utilisateur/{idUser}/emprunt/{idE}/prolonger")
+    @PostMapping(value = "/utilisateur/{idUser}/emprunt/{idE}/prolonger")
     void prolongerEmprunt(@PathVariable(value = "idE")Long idE, @PathVariable(value = "idUser") Long idUser);
 
     /**

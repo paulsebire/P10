@@ -24,7 +24,7 @@ public class BatchJob2 {
      * Programmation de la purge de la file d'attente, toutes les heure
      * @throws Exception
      */
-    @Scheduled(cron = "*/60 * * * * *" )
+    @Scheduled(cron = "* * */10 * * *" )
     public void lendingRevival() throws Exception
     {
         JobParameters params = new JobParametersBuilder()

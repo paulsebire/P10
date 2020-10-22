@@ -122,10 +122,14 @@ public class ClientController {
      * @return the view monprofile
      */
     @GetMapping("/emprunt/{id}/prolonger")
-    public String prolongerEmprunt(@PathVariable(value = "id")Long id){
+    public String prolongerEmprunt(@PathVariable(value = "id")Long id,Model model){
         UtilisateurBean utilisateur = getUserConnected();
         booksProxy.prolongerEmprunt(id,utilisateur.getIdUser());
-        return "redirect:/MonProfile/Emprunts";
+        Set<EmpruntBean> emprunts = booksProxy.empruntList(getUserConnected().getIdUser());
+        model.addAttribute("emprunts",emprunts);
+        boolean mesEmprunts=true;
+        model.addAttribute("mesEmprunts",mesEmprunts);
+        return "MonProfile";
     }
 
     private UtilisateurBean getUserConnected(){

@@ -6,9 +6,10 @@
   <component name="ChangeListManager">
     <list default="true" id="de60918f-91cf-4a7b-b7ab-ee9eced42347" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/clientui/target/classes/templates/FicheLivre.html" beforeDir="false" afterPath="$PROJECT_DIR$/clientui/target/classes/templates/FicheLivre.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/microservice-books/src/main/java/com/books/batch/BatchJob2.java" beforeDir="false" afterPath="$PROJECT_DIR$/microservice-books/src/main/java/com/books/batch/BatchJob2.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/microservice-books/src/main/java/com/books/services/implementations/EmpruntServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/microservice-books/src/main/java/com/books/services/implementations/EmpruntServiceImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/microservice-books/src/main/java/com/books/services/implementations/ReservationServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/microservice-books/src/main/java/com/books/services/implementations/ReservationServiceImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/microservice-utilisateur/src/main/java/com/utilisateur/UtilisateurApplication.java" beforeDir="false" afterPath="$PROJECT_DIR$/microservice-utilisateur/src/main/java/com/utilisateur/UtilisateurApplication.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/microservice-utilisateur/target/classes/com/utilisateur/UtilisateurApplication.class" beforeDir="false" afterPath="$PROJECT_DIR$/microservice-utilisateur/target/classes/com/utilisateur/UtilisateurApplication.class" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -84,7 +85,7 @@
       <command value="mvn clean install" />
     </option>
   </component>
-  <component name="RunManager" selected="Spring Boot.ClientuiApplication">
+  <component name="RunManager" selected="JUnit.BookServiceUnitTest">
     <configuration default="true" type="ArquillianTestNG" factoryName="" nameIsGenerated="true">
       <option name="arquillianRunConfiguration">
         <value>
@@ -94,6 +95,67 @@
       <option name="TEST_OBJECT" value="CLASS" />
       <properties />
       <listeners />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="BookServiceUnitTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="books" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.books.booksServicesUnitTest.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="com.books.booksServicesUnitTest" />
+      <option name="MAIN_CLASS_NAME" value="com.books.booksServicesUnitTest.BookServiceUnitTest" />
+      <option name="TEST_OBJECT" value="class" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="BookServiceUnitTest.findBookByID_test" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="books" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.books.booksServicesUnitTest.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="com.books.booksServicesUnitTest" />
+      <option name="MAIN_CLASS_NAME" value="com.books.booksServicesUnitTest.BookServiceUnitTest" />
+      <option name="METHOD_NAME" value="findBookByID_test" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="CopyServiceUnitTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="books" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.books.booksServicesUnitTest.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="com.books.booksServicesUnitTest" />
+      <option name="MAIN_CLASS_NAME" value="com.books.booksServicesUnitTest.CopyServiceUnitTest" />
+      <option name="TEST_OBJECT" value="class" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="EmpruntServiceUnitTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="books" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.books.booksServicesUnitTest.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="com.books.booksServicesUnitTest" />
+      <option name="MAIN_CLASS_NAME" value="com.books.booksServicesUnitTest.EmpruntServiceUnitTest" />
+      <option name="TEST_OBJECT" value="class" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
@@ -109,54 +171,6 @@
       <option name="PACKAGE_NAME" value="com.books.booksServicesUnitTest" />
       <option name="MAIN_CLASS_NAME" value="com.books.booksServicesUnitTest.ReservationServiceUnitTest" />
       <option name="TEST_OBJECT" value="class" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="ReservationServiceUnitTest.annulerReservation_test" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="books" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="com.books.booksServicesUnitTest.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="com.books.booksServicesUnitTest" />
-      <option name="MAIN_CLASS_NAME" value="com.books.booksServicesUnitTest.ReservationServiceUnitTest" />
-      <option name="METHOD_NAME" value="annulerReservation_test" />
-      <option name="TEST_OBJECT" value="method" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="ReservationServiceUnitTest.reservationsByBook_test" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="books" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="com.books.booksServicesUnitTest.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="com.books.booksServicesUnitTest" />
-      <option name="MAIN_CLASS_NAME" value="com.books.booksServicesUnitTest.ReservationServiceUnitTest" />
-      <option name="METHOD_NAME" value="reservationsByBook_test" />
-      <option name="TEST_OBJECT" value="method" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="ReservationServiceUnitTest.reserverLivre_test" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="books" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="com.books.booksServicesUnitTest.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="com.books.booksServicesUnitTest" />
-      <option name="MAIN_CLASS_NAME" value="com.books.booksServicesUnitTest.ReservationServiceUnitTest" />
-      <option name="METHOD_NAME" value="reserverLivre_test" />
-      <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
@@ -251,23 +265,25 @@
       </method>
     </configuration>
     <list>
-      <item itemvalue="JUnit.ReservationServiceUnitTest.annulerReservation_test" />
-      <item itemvalue="JUnit.ReservationServiceUnitTest.reservationsByBook_test" />
       <item itemvalue="JUnit.ReservationServiceUnitTest" />
-      <item itemvalue="JUnit.ReservationServiceUnitTest.reserverLivre_test" />
       <item itemvalue="Spring Boot.ConfigServerApplication" />
       <item itemvalue="Spring Boot.EurekaServerApplication" />
       <item itemvalue="Spring Boot.ZuulserverApplication" />
       <item itemvalue="Spring Boot.UtilisateurApplication" />
       <item itemvalue="Spring Boot.BooksApplication" />
       <item itemvalue="Spring Boot.ClientuiApplication" />
+      <item itemvalue="JUnit.BookServiceUnitTest" />
+      <item itemvalue="JUnit.CopyServiceUnitTest" />
+      <item itemvalue="JUnit.EmpruntServiceUnitTest" />
+      <item itemvalue="JUnit.BookServiceUnitTest.findBookByID_test" />
     </list>
     <recent_temporary>
       <list>
-        <item itemvalue="JUnit.ReservationServiceUnitTest.reserverLivre_test" />
+        <item itemvalue="JUnit.BookServiceUnitTest" />
+        <item itemvalue="JUnit.BookServiceUnitTest.findBookByID_test" />
         <item itemvalue="JUnit.ReservationServiceUnitTest" />
-        <item itemvalue="JUnit.ReservationServiceUnitTest.reservationsByBook_test" />
-        <item itemvalue="JUnit.ReservationServiceUnitTest.annulerReservation_test" />
+        <item itemvalue="JUnit.EmpruntServiceUnitTest" />
+        <item itemvalue="JUnit.CopyServiceUnitTest" />
       </list>
     </recent_temporary>
   </component>
@@ -286,7 +302,7 @@
       <workItem from="1601300487200" duration="7531000" />
       <workItem from="1601365555875" duration="2302000" />
       <workItem from="1601894322324" duration="40155000" />
-      <workItem from="1603207479075" duration="8092000" />
+      <workItem from="1603207479075" duration="13249000" />
     </task>
     <task id="LOCAL-00001" summary="fixed dependency bug on sleuth">
       <created>1601305177323</created>
@@ -379,7 +395,14 @@
       <option name="project" value="LOCAL" />
       <updated>1603277512590</updated>
     </task>
-    <option name="localTasksCounter" value="14" />
+    <task id="LOCAL-00014" summary="fixed bug on fichelivre about waiting list">
+      <created>1603279283154</created>
+      <option name="number" value="00014" />
+      <option name="presentableId" value="LOCAL-00014" />
+      <option name="project" value="LOCAL" />
+      <updated>1603279283154</updated>
+    </task>
+    <option name="localTasksCounter" value="15" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -412,7 +435,8 @@
     <MESSAGE value="fixed bug on date" />
     <MESSAGE value="fixed bug on date reservation bis" />
     <MESSAGE value="updated postman collection for demo" />
-    <option name="LAST_COMMIT_MESSAGE" value="updated postman collection for demo" />
+    <MESSAGE value="fixed bug on fichelivre about waiting list" />
+    <option name="LAST_COMMIT_MESSAGE" value="fixed bug on fichelivre about waiting list" />
   </component>
   <component name="WindowStateProjectService">
     <state x="1780" y="175" width="1092" height="714" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1602161031544">
@@ -424,11 +448,11 @@
       <screen x="0" y="0" width="1366" height="728" />
     </state>
     <state x="488" y="70" key="#com.intellij.ide.util.MemberChooser/0.0.1366.728/1366.0.1680.1010@0.0.1366.728" timestamp="1601478833412" />
-    <state x="1923" y="88" key="CommitChangelistDialog2" timestamp="1603277511974">
+    <state x="1923" y="88" key="CommitChangelistDialog2" timestamp="1603279282531">
       <screen x="1366" y="0" width="1920" height="1040" />
     </state>
     <state x="396" y="0" key="CommitChangelistDialog2/0.0.1366.728/1366.0.1680.1010@0.0.1366.728" timestamp="1601479939473" />
-    <state x="1923" y="88" key="CommitChangelistDialog2/0.0.1366.728/1366.0.1920.1040@1366.0.1920.1040" timestamp="1603277511974" />
+    <state x="1923" y="88" key="CommitChangelistDialog2/0.0.1366.728/1366.0.1920.1040@1366.0.1920.1040" timestamp="1603279282531" />
     <state width="559" height="442" key="Diff.GoToChangePopup" timestamp="1601385208299">
       <screen x="1366" y="0" width="1680" height="1010" />
     </state>
@@ -441,74 +465,82 @@
       <screen x="0" y="0" width="1366" height="728" />
     </state>
     <state x="463" y="119" key="FileChooserDialogImpl/0.0.1366.728/1366.0.1680.1010@0.0.1366.728" timestamp="1601471179420" />
-    <state width="1877" height="350" key="GridCell.Tab.0.bottom" timestamp="1603278792062">
-      <screen x="1366" y="0" width="1920" height="1040" />
+    <state width="1323" height="162" key="GridCell.Tab.0.bottom" timestamp="1603366517047">
+      <screen x="0" y="0" width="1366" height="728" />
     </state>
     <state width="1323" height="84" key="GridCell.Tab.0.bottom/0.0.1366.728/1366.0.1680.1010@0.0.1366.728" timestamp="1601479837676" />
     <state width="1637" height="349" key="GridCell.Tab.0.bottom/0.0.1366.728/1366.0.1680.1010@1366.0.1680.1010" timestamp="1601391411331" />
-    <state width="1877" height="350" key="GridCell.Tab.0.bottom/0.0.1366.728/1366.0.1920.1040@1366.0.1920.1040" timestamp="1603278792062" />
-    <state width="1877" height="350" key="GridCell.Tab.0.center" timestamp="1603278792062">
-      <screen x="1366" y="0" width="1920" height="1040" />
+    <state width="1877" height="336" key="GridCell.Tab.0.bottom/0.0.1366.728/1366.0.1920.1040@1366.0.1920.1040" timestamp="1603280669614" />
+    <state width="1323" height="162" key="GridCell.Tab.0.bottom/0.0.1366.728@0.0.1366.728" timestamp="1603366517047" />
+    <state width="1323" height="162" key="GridCell.Tab.0.center" timestamp="1603366517047">
+      <screen x="0" y="0" width="1366" height="728" />
     </state>
     <state width="1323" height="84" key="GridCell.Tab.0.center/0.0.1366.728/1366.0.1680.1010@0.0.1366.728" timestamp="1601479837676" />
     <state width="1637" height="349" key="GridCell.Tab.0.center/0.0.1366.728/1366.0.1680.1010@1366.0.1680.1010" timestamp="1601391411331" />
-    <state width="1877" height="350" key="GridCell.Tab.0.center/0.0.1366.728/1366.0.1920.1040@1366.0.1920.1040" timestamp="1603278792062" />
-    <state width="1877" height="350" key="GridCell.Tab.0.left" timestamp="1603278792062">
-      <screen x="1366" y="0" width="1920" height="1040" />
+    <state width="1877" height="336" key="GridCell.Tab.0.center/0.0.1366.728/1366.0.1920.1040@1366.0.1920.1040" timestamp="1603280669614" />
+    <state width="1323" height="162" key="GridCell.Tab.0.center/0.0.1366.728@0.0.1366.728" timestamp="1603366517047" />
+    <state width="1323" height="162" key="GridCell.Tab.0.left" timestamp="1603366517047">
+      <screen x="0" y="0" width="1366" height="728" />
     </state>
     <state width="1323" height="84" key="GridCell.Tab.0.left/0.0.1366.728/1366.0.1680.1010@0.0.1366.728" timestamp="1601479837676" />
     <state width="1637" height="349" key="GridCell.Tab.0.left/0.0.1366.728/1366.0.1680.1010@1366.0.1680.1010" timestamp="1601391411331" />
-    <state width="1877" height="350" key="GridCell.Tab.0.left/0.0.1366.728/1366.0.1920.1040@1366.0.1920.1040" timestamp="1603278792062" />
-    <state width="1877" height="350" key="GridCell.Tab.0.right" timestamp="1603278792062">
-      <screen x="1366" y="0" width="1920" height="1040" />
+    <state width="1877" height="336" key="GridCell.Tab.0.left/0.0.1366.728/1366.0.1920.1040@1366.0.1920.1040" timestamp="1603280669614" />
+    <state width="1323" height="162" key="GridCell.Tab.0.left/0.0.1366.728@0.0.1366.728" timestamp="1603366517047" />
+    <state width="1323" height="162" key="GridCell.Tab.0.right" timestamp="1603366517047">
+      <screen x="0" y="0" width="1366" height="728" />
     </state>
     <state width="1323" height="84" key="GridCell.Tab.0.right/0.0.1366.728/1366.0.1680.1010@0.0.1366.728" timestamp="1601479837676" />
     <state width="1637" height="349" key="GridCell.Tab.0.right/0.0.1366.728/1366.0.1680.1010@1366.0.1680.1010" timestamp="1601391411331" />
-    <state width="1877" height="350" key="GridCell.Tab.0.right/0.0.1366.728/1366.0.1920.1040@1366.0.1920.1040" timestamp="1603278792062" />
-    <state width="1877" height="350" key="GridCell.Tab.1.bottom" timestamp="1603278859091">
-      <screen x="1366" y="0" width="1920" height="1040" />
+    <state width="1877" height="336" key="GridCell.Tab.0.right/0.0.1366.728/1366.0.1920.1040@1366.0.1920.1040" timestamp="1603280669614" />
+    <state width="1323" height="162" key="GridCell.Tab.0.right/0.0.1366.728@0.0.1366.728" timestamp="1603366517047" />
+    <state width="1323" height="162" key="GridCell.Tab.1.bottom" timestamp="1603366517047">
+      <screen x="0" y="0" width="1366" height="728" />
     </state>
     <state width="1323" height="84" key="GridCell.Tab.1.bottom/0.0.1366.728/1366.0.1680.1010@0.0.1366.728" timestamp="1601479837676" />
     <state width="1637" height="349" key="GridCell.Tab.1.bottom/0.0.1366.728/1366.0.1680.1010@1366.0.1680.1010" timestamp="1601391411331" />
-    <state width="1877" height="350" key="GridCell.Tab.1.bottom/0.0.1366.728/1366.0.1920.1040@1366.0.1920.1040" timestamp="1603278859091" />
-    <state width="1877" height="350" key="GridCell.Tab.1.center" timestamp="1603278859091">
-      <screen x="1366" y="0" width="1920" height="1040" />
+    <state width="1877" height="336" key="GridCell.Tab.1.bottom/0.0.1366.728/1366.0.1920.1040@1366.0.1920.1040" timestamp="1603280669614" />
+    <state width="1323" height="162" key="GridCell.Tab.1.bottom/0.0.1366.728@0.0.1366.728" timestamp="1603366517047" />
+    <state width="1323" height="162" key="GridCell.Tab.1.center" timestamp="1603366517047">
+      <screen x="0" y="0" width="1366" height="728" />
     </state>
     <state width="1323" height="84" key="GridCell.Tab.1.center/0.0.1366.728/1366.0.1680.1010@0.0.1366.728" timestamp="1601479837676" />
     <state width="1637" height="349" key="GridCell.Tab.1.center/0.0.1366.728/1366.0.1680.1010@1366.0.1680.1010" timestamp="1601391411331" />
-    <state width="1877" height="350" key="GridCell.Tab.1.center/0.0.1366.728/1366.0.1920.1040@1366.0.1920.1040" timestamp="1603278859091" />
-    <state width="1877" height="350" key="GridCell.Tab.1.left" timestamp="1603278859091">
-      <screen x="1366" y="0" width="1920" height="1040" />
+    <state width="1877" height="336" key="GridCell.Tab.1.center/0.0.1366.728/1366.0.1920.1040@1366.0.1920.1040" timestamp="1603280669614" />
+    <state width="1323" height="162" key="GridCell.Tab.1.center/0.0.1366.728@0.0.1366.728" timestamp="1603366517047" />
+    <state width="1323" height="162" key="GridCell.Tab.1.left" timestamp="1603366517047">
+      <screen x="0" y="0" width="1366" height="728" />
     </state>
     <state width="1323" height="84" key="GridCell.Tab.1.left/0.0.1366.728/1366.0.1680.1010@0.0.1366.728" timestamp="1601479837676" />
     <state width="1637" height="349" key="GridCell.Tab.1.left/0.0.1366.728/1366.0.1680.1010@1366.0.1680.1010" timestamp="1601391411331" />
-    <state width="1877" height="350" key="GridCell.Tab.1.left/0.0.1366.728/1366.0.1920.1040@1366.0.1920.1040" timestamp="1603278859091" />
-    <state width="1877" height="350" key="GridCell.Tab.1.right" timestamp="1603278859091">
-      <screen x="1366" y="0" width="1920" height="1040" />
+    <state width="1877" height="336" key="GridCell.Tab.1.left/0.0.1366.728/1366.0.1920.1040@1366.0.1920.1040" timestamp="1603280669614" />
+    <state width="1323" height="162" key="GridCell.Tab.1.left/0.0.1366.728@0.0.1366.728" timestamp="1603366517047" />
+    <state width="1323" height="162" key="GridCell.Tab.1.right" timestamp="1603366517047">
+      <screen x="0" y="0" width="1366" height="728" />
     </state>
     <state width="1323" height="84" key="GridCell.Tab.1.right/0.0.1366.728/1366.0.1680.1010@0.0.1366.728" timestamp="1601479837676" />
     <state width="1637" height="349" key="GridCell.Tab.1.right/0.0.1366.728/1366.0.1680.1010@1366.0.1680.1010" timestamp="1601391411331" />
-    <state width="1877" height="350" key="GridCell.Tab.1.right/0.0.1366.728/1366.0.1920.1040@1366.0.1920.1040" timestamp="1603278859091" />
-    <state width="1877" height="350" key="GridCell.Tab.2.bottom" timestamp="1603278791777">
+    <state width="1877" height="336" key="GridCell.Tab.1.right/0.0.1366.728/1366.0.1920.1040@1366.0.1920.1040" timestamp="1603280669614" />
+    <state width="1323" height="162" key="GridCell.Tab.1.right/0.0.1366.728@0.0.1366.728" timestamp="1603366517047" />
+    <state width="1877" height="350" key="GridCell.Tab.2.bottom" timestamp="1603279037114">
       <screen x="1366" y="0" width="1920" height="1040" />
     </state>
     <state width="1637" height="131" key="GridCell.Tab.2.bottom/0.0.1366.728/1366.0.1680.1010@1366.0.1680.1010" timestamp="1601390977879" />
-    <state width="1877" height="350" key="GridCell.Tab.2.bottom/0.0.1366.728/1366.0.1920.1040@1366.0.1920.1040" timestamp="1603278791777" />
-    <state width="1877" height="350" key="GridCell.Tab.2.center" timestamp="1603278791777">
+    <state width="1877" height="350" key="GridCell.Tab.2.bottom/0.0.1366.728/1366.0.1920.1040@1366.0.1920.1040" timestamp="1603279037114" />
+    <state width="1877" height="350" key="GridCell.Tab.2.center" timestamp="1603279037114">
       <screen x="1366" y="0" width="1920" height="1040" />
     </state>
     <state width="1637" height="131" key="GridCell.Tab.2.center/0.0.1366.728/1366.0.1680.1010@1366.0.1680.1010" timestamp="1601390977879" />
-    <state width="1877" height="350" key="GridCell.Tab.2.center/0.0.1366.728/1366.0.1920.1040@1366.0.1920.1040" timestamp="1603278791777" />
-    <state width="1877" height="350" key="GridCell.Tab.2.left" timestamp="1603278791777">
+    <state width="1877" height="350" key="GridCell.Tab.2.center/0.0.1366.728/1366.0.1920.1040@1366.0.1920.1040" timestamp="1603279037114" />
+    <state width="1877" height="350" key="GridCell.Tab.2.left" timestamp="1603279037114">
       <screen x="1366" y="0" width="1920" height="1040" />
     </state>
     <state width="1637" height="131" key="GridCell.Tab.2.left/0.0.1366.728/1366.0.1680.1010@1366.0.1680.1010" timestamp="1601390977879" />
-    <state width="1877" height="350" key="GridCell.Tab.2.left/0.0.1366.728/1366.0.1920.1040@1366.0.1920.1040" timestamp="1603278791777" />
-    <state width="1877" height="350" key="GridCell.Tab.2.right" timestamp="1603278791777">
+    <state width="1877" height="350" key="GridCell.Tab.2.left/0.0.1366.728/1366.0.1920.1040@1366.0.1920.1040" timestamp="1603279037114" />
+    <state width="1877" height="350" key="GridCell.Tab.2.right" timestamp="1603279037114">
       <screen x="1366" y="0" width="1920" height="1040" />
     </state>
     <state width="1637" height="131" key="GridCell.Tab.2.right/0.0.1366.728/1366.0.1680.1010@1366.0.1680.1010" timestamp="1601390977879" />
-    <state width="1877" height="350" key="GridCell.Tab.2.right/0.0.1366.728/1366.0.1920.1040@1366.0.1920.1040" timestamp="1603278791777" />
+    <state width="1877" height="350" key="GridCell.Tab.2.right/0.0.1366.728/1366.0.1920.1040@1366.0.1920.1040" timestamp="1603279037114" />
     <state x="1808" y="320" key="Maven.ArtifactSearchDialog" timestamp="1601390101953">
       <screen x="1366" y="0" width="1680" height="1010" />
     </state>

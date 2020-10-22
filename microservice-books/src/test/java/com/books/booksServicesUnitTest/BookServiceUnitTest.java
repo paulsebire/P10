@@ -2,6 +2,7 @@ package com.books.booksServicesUnitTest;
 
 import com.books.dao.BookRepository;
 import com.books.dao.CopiesRepository;
+import com.books.dao.EmpruntRepository;
 import com.books.entities.Book;
 import com.books.entities.Copy;
 import com.books.services.implementations.BookServiceImpl;
@@ -29,7 +30,8 @@ public class BookServiceUnitTest {
     private BookRepository bookRepository;
     @Mock
     private CopiesRepository copiesRepository;
-
+    @Mock
+    private EmpruntRepository empruntRepository;
     @Autowired
     @InjectMocks
     private BookServiceImpl bookService;
@@ -74,6 +76,9 @@ public class BookServiceUnitTest {
 
         Mockito.when(copiesRepository.findAllByBook_Id(1L)).thenReturn(book1.getCopies());
         Mockito.when(copiesRepository.findAllByBook_Id(2L)).thenReturn(book2.getCopies());
+
+        Mockito.when(empruntRepository.findAllByCopy_BookIdAndCloturerIsFalseOrderByDateRetourAsc(1L)).thenReturn(new ArrayList<>());
+        Mockito.when(empruntRepository.findAllByCopy_BookIdAndCloturerIsFalseOrderByDateRetourAsc(2L)).thenReturn(new ArrayList<>());
 
     }
 

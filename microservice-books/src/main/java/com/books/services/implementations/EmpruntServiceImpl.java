@@ -112,11 +112,12 @@ public class EmpruntServiceImpl implements EmpruntService {
                 List<Reservation> fileAttente = reservationRepository.findAllByBookIdAndEnCoursIsTrueAndNotifiedIsFalseOrderByDateReservationAsc(copy.getBook().getId());
                 if (!fileAttente.isEmpty()){
                     Reservation reservation =fileAttente.get(0);
+                    UtilisateurBean reservant= utilisateurProxy.utilisateurById(reservation.getIdUtilisateur());
                     String text = email.getContenu()
-                            .replace("[USERNAME]",utilisateur.getUsername())
+                            .replace("[USERNAME]",reservant.getUsername())
                             .replace("[LIVRE_TITRE]", reservation.getBook().getName())
                             .replace("[DATE_RENDU]", dateDuJour);
-                    emailService.sendSimpleMessage(utilisateur.getEmail(), email.getObjet(), text);
+                    emailService.sendSimpleMessage(reservant.getEmail(), email.getObjet(), text);
                     reservation.setNotified(true);
                     reservation.setDateNotification(new Date());
                     reservationRepository.save(reservation);
